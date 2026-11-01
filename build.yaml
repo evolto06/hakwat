@@ -1,0 +1,8 @@
+targets:
+  $default:
+    builders:
+      drift_dev:
+        options:
+          # ISO-8601 text keeps millisecond precision and an explicit UTC marker,
+          # so an export and restore gives back exactly the same timestamps.
+          store_date_time_values_as_text: true

@@ -1,0 +1,3379 @@
+{
+ "app": "hakwat",
+ "schemaVersion": 1,
+ "exportedAt": "2026-11-01T00:00:00.000Z",
+ "exercises": [
+  {
+   "id": "779d7a0f-478a-5fbd-ac6e-7736faccc640",
+   "name": "Cable Crunch",
+   "category": "Abs",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "b2182c5f-fa8f-5aec-b050-b7f4482a1641",
+   "name": "Crunch",
+   "category": "Abs",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "fcdae727-18df-58d3-baca-24bbd10fd536",
+   "name": "Hanging Leg Raise",
+   "category": "Abs",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "59a8785d-c1f1-52ca-8f08-8e81feee493c",
+   "name": "Plank",
+   "category": "Abs",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "5b6a49dc-b7d0-5577-81b3-fcdd1dfda5f7",
+   "name": "Sit-Up",
+   "category": "Abs",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "5bf8d6cc-e0be-5f21-8190-a024d777fb21",
+   "name": "Barbell Row",
+   "category": "Back",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "2f243ea1-7a20-567c-a8f4-990bb5c928a5",
+   "name": "Chest Supported Row",
+   "category": "Back",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "281ea609-da5c-54aa-9e14-3932725cf928",
+   "name": "Deadlift",
+   "category": "Back",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "959747ee-6827-5126-8678-f5039ab59064",
+   "name": "Dumbbell Row",
+   "category": "Back",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "7e85db9c-d49a-5680-a0e9-9c71bc8864d6",
+   "name": "Lat Pulldown",
+   "category": "Back",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "587b6196-0c87-55a9-a043-be9067911137",
+   "name": "Pull-Up",
+   "category": "Back",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "aa016d8f-e1a7-527f-b4d1-4ee06f923bc2",
+   "name": "Seated Cable Row",
+   "category": "Back",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "be01ec56-77cd-5049-95e5-19c8c74e1394",
+   "name": "Barbell Curl",
+   "category": "Biceps",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "8c03c811-71c9-5342-b9ba-4c75e9129169",
+   "name": "Cable Curl",
+   "category": "Biceps",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "9bfc043e-4f64-51c4-99a2-ba4e04670d8b",
+   "name": "Dumbbell Curl",
+   "category": "Biceps",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "7af12e9a-453a-5b46-959f-c311a3e5d3f2",
+   "name": "Hammer Curl",
+   "category": "Biceps",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "0a8479c4-5047-5c7e-b761-c01a819829fc",
+   "name": "Preacher Curl",
+   "category": "Biceps",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "6cabc1b0-ff70-5d9e-9f59-db24faff5705",
+   "name": "Bench Press",
+   "category": "Chest",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "9adb8b28-338d-5264-808f-9a0650a395dd",
+   "name": "Cable Fly",
+   "category": "Chest",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "2e3f8075-ff75-5e68-a7e7-02e2921498af",
+   "name": "Chest Dip",
+   "category": "Chest",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "5d3f8f3e-0c5f-5c7a-bc83-2f931da7b399",
+   "name": "Dumbbell Bench Press",
+   "category": "Chest",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "a4896f74-2200-520e-873b-dbbe8a96134c",
+   "name": "Incline Bench Press",
+   "category": "Chest",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "e397b65f-400f-51da-ad14-12815108d1e5",
+   "name": "Incline Dumbbell Press",
+   "category": "Chest",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "4af72617-6c9b-5c96-9805-1ce3943b0235",
+   "name": "Machine Chest Press",
+   "category": "Chest",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "a1052d55-3fb8-5103-9842-b48586a39433",
+   "name": "Push-Up",
+   "category": "Chest",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "dc6e87a4-7858-54bb-9b2e-1f110681fcdc",
+   "name": "Bulgarian Split Squat",
+   "category": "Legs",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "40b2dede-5cf6-5699-8926-51ca50dabb3b",
+   "name": "Hip Thrust",
+   "category": "Legs",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "0de49362-e3ef-56e9-984d-1b889e03fc9b",
+   "name": "Leg Curl",
+   "category": "Legs",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "3aca9abc-ff4a-5e50-a712-cf8199acf14c",
+   "name": "Leg Extension",
+   "category": "Legs",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "12431968-7359-5f57-b861-df0bfaa67e27",
+   "name": "Leg Press",
+   "category": "Legs",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "557f4375-cc13-56ef-a36f-60a11f26dabb",
+   "name": "Romanian Deadlift",
+   "category": "Legs",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "4534d229-aaac-536c-9bf3-23602bb42822",
+   "name": "Squat",
+   "category": "Legs",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "ea6cc324-fec9-5c9b-b3a6-b5664bd4ec59",
+   "name": "Standing Calf Raise",
+   "category": "Legs",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "0ec40d72-39ac-56bf-9018-b21b493799f2",
+   "name": "Cable Lateral Raise",
+   "category": "Shoulders",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "2aaa14d4-9512-5b8b-9193-a3dbb08825a6",
+   "name": "Dumbbell Lateral Raise",
+   "category": "Shoulders",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "0675904c-ab83-56fb-9cc6-17a37fd163bd",
+   "name": "Face Pull",
+   "category": "Shoulders",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "9b63829a-7017-52be-b76c-b09836058559",
+   "name": "Overhead Press",
+   "category": "Shoulders",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "c8d142dd-1066-5568-a4b7-83a18a7f26c2",
+   "name": "Rear Delt Fly",
+   "category": "Shoulders",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+   "name": "Shoulder Dumbbell Press",
+   "category": "Shoulders",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "f0dfc1a7-301c-53dd-8e06-4bdd7bd473e9",
+   "name": "Close Grip Bench Press",
+   "category": "Triceps",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "390db313-891b-5d5e-bf96-b8f42a7537ac",
+   "name": "Overhead Tricep Extension",
+   "category": "Triceps",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "0337ee61-9fec-597d-b99d-49587a6486df",
+   "name": "Skull Crusher",
+   "category": "Triceps",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "b88ae536-3457-5b32-b3b7-c73d9cf99e97",
+   "name": "Tricep Dip",
+   "category": "Triceps",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "cb8f0d86-6ace-5c3c-bcdb-76db749c3359",
+   "name": "Tricep Pushdown",
+   "category": "Triceps",
+   "isCustom": false,
+   "archivedAt": null
+  },
+  {
+   "id": "441927d8-bfad-54c8-adb1-4da774a214cf",
+   "name": "Tony Machine Fly",
+   "category": "Chest",
+   "isCustom": true,
+   "archivedAt": null
+  },
+  {
+   "id": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+   "name": "Tonys Single Arm Lat Pulldown",
+   "category": "Back",
+   "isCustom": true,
+   "archivedAt": null
+  },
+  {
+   "id": "7d0684d0-6633-54fc-830e-58a02a9b789c",
+   "name": "Recline Curls",
+   "category": "Biceps",
+   "isCustom": true,
+   "archivedAt": null
+  },
+  {
+   "id": "feb61737-f841-5832-aeab-908eac0439ee",
+   "name": "Tonys Straight Bar Pushdown",
+   "category": "Triceps",
+   "isCustom": true,
+   "archivedAt": null
+  },
+  {
+   "id": "33afb774-b43c-5387-94bf-5fbc65558aa0",
+   "name": "Tonys Cable Lat Raise",
+   "category": "Shoulders",
+   "isCustom": true,
+   "archivedAt": null
+  }
+ ],
+ "routines": [
+  {
+   "id": "151656db-7573-5ccf-bbf2-39e16ea149af",
+   "name": "Gladiator Upper",
+   "sortOrder": 0,
+   "exercises": [
+    {
+     "id": "5ab150cd-4c6b-57c8-b095-93678ae9dae2",
+     "exerciseId": "6cabc1b0-ff70-5d9e-9f59-db24faff5705",
+     "sortOrder": 0,
+     "targetSets": 3
+    },
+    {
+     "id": "fb358761-5962-526b-b4f4-f4395d1c8d75",
+     "exerciseId": "5bf8d6cc-e0be-5f21-8190-a024d777fb21",
+     "sortOrder": 1,
+     "targetSets": 3
+    },
+    {
+     "id": "a7788d7b-c840-5467-b1d7-3f0408d8a527",
+     "exerciseId": "9b63829a-7017-52be-b76c-b09836058559",
+     "sortOrder": 2,
+     "targetSets": 3
+    },
+    {
+     "id": "b35e0c67-4388-5ff4-95a2-10840ab61997",
+     "exerciseId": "be01ec56-77cd-5049-95e5-19c8c74e1394",
+     "sortOrder": 3,
+     "targetSets": 2
+    },
+    {
+     "id": "45d0aca7-39a1-53c9-be7d-82ba3f7724af",
+     "exerciseId": "0337ee61-9fec-597d-b99d-49587a6486df",
+     "sortOrder": 4,
+     "targetSets": 2
+    }
+   ]
+  },
+  {
+   "id": "e4b53532-3b9e-5bcf-bd48-f5b8e845ce65",
+   "name": "Tonys Upper SARMS Focus",
+   "sortOrder": 1,
+   "exercises": [
+    {
+     "id": "4c9e8c24-470f-539b-a6cb-4af8174c9e5a",
+     "exerciseId": "441927d8-bfad-54c8-adb1-4da774a214cf",
+     "sortOrder": 0,
+     "targetSets": 2
+    },
+    {
+     "id": "44f59672-f1be-5d9e-b16d-1520e9049381",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 1,
+     "targetSets": 2
+    },
+    {
+     "id": "31127ffa-80d1-5c70-b991-b26e0d9ede9b",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 2,
+     "targetSets": 2
+    },
+    {
+     "id": "29704535-0511-5e38-a2b1-4c88e8195f19",
+     "exerciseId": "33afb774-b43c-5387-94bf-5fbc65558aa0",
+     "sortOrder": 3,
+     "targetSets": 2
+    },
+    {
+     "id": "f41c83f8-740c-5479-99fa-fd9833f1aa1d",
+     "exerciseId": "7d0684d0-6633-54fc-830e-58a02a9b789c",
+     "sortOrder": 4,
+     "targetSets": 1
+    },
+    {
+     "id": "89ea80f0-f8f7-5ce8-abaa-24712d52b751",
+     "exerciseId": "feb61737-f841-5832-aeab-908eac0439ee",
+     "sortOrder": 5,
+     "targetSets": 1
+    }
+   ]
+  },
+  {
+   "id": "7adee5cb-a4a4-5062-af8b-279fb80b0efc",
+   "name": "Tonys Legs B",
+   "sortOrder": 2,
+   "exercises": [
+    {
+     "id": "ca21d196-04a8-545f-8a8e-ac7dd58331ba",
+     "exerciseId": "557f4375-cc13-56ef-a36f-60a11f26dabb",
+     "sortOrder": 0,
+     "targetSets": 3
+    },
+    {
+     "id": "30e59e4b-45fe-5a1e-bff6-48a0d469652f",
+     "exerciseId": "0de49362-e3ef-56e9-984d-1b889e03fc9b",
+     "sortOrder": 1,
+     "targetSets": 2
+    },
+    {
+     "id": "34ed641e-91c8-520e-ae71-f64f9da1ba2d",
+     "exerciseId": "dc6e87a4-7858-54bb-9b2e-1f110681fcdc",
+     "sortOrder": 2,
+     "targetSets": 2
+    },
+    {
+     "id": "d2694e24-98b9-51f5-9329-1d2a1299061f",
+     "exerciseId": "ea6cc324-fec9-5c9b-b3a6-b5664bd4ec59",
+     "sortOrder": 3,
+     "targetSets": 2
+    }
+   ]
+  },
+  {
+   "id": "3325a2eb-4f5b-5ff2-82b8-894f21dcd791",
+   "name": "Tonys Upper A",
+   "sortOrder": 3,
+   "exercises": [
+    {
+     "id": "6a455ae4-1e60-5df6-8149-a2faea9bb934",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 0,
+     "targetSets": 1
+    },
+    {
+     "id": "3b9ff8c0-ed15-52bb-82ae-8f04c942a47f",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 1,
+     "targetSets": 2
+    },
+    {
+     "id": "8873d7ca-c18b-52cd-a76d-b6d3219e2be9",
+     "exerciseId": "e397b65f-400f-51da-ad14-12815108d1e5",
+     "sortOrder": 2,
+     "targetSets": 2
+    },
+    {
+     "id": "4b24e88e-7ea0-5936-a3e0-43f70a3f9061",
+     "exerciseId": "7d0684d0-6633-54fc-830e-58a02a9b789c",
+     "sortOrder": 3,
+     "targetSets": 1
+    },
+    {
+     "id": "8493b552-566e-5e60-b576-b528cb3616d9",
+     "exerciseId": "33afb774-b43c-5387-94bf-5fbc65558aa0",
+     "sortOrder": 4,
+     "targetSets": 1
+    }
+   ]
+  },
+  {
+   "id": "37cb688c-85ae-5d6b-8872-253c41137009",
+   "name": "Tonys Upper B",
+   "sortOrder": 4,
+   "exercises": [
+    {
+     "id": "7f7ba0e6-0ad5-5f5e-a8cd-2255337d9fb6",
+     "exerciseId": "e397b65f-400f-51da-ad14-12815108d1e5",
+     "sortOrder": 0,
+     "targetSets": 2
+    },
+    {
+     "id": "c7b625ec-619b-54b4-9c20-c9d26f31a013",
+     "exerciseId": "441927d8-bfad-54c8-adb1-4da774a214cf",
+     "sortOrder": 1,
+     "targetSets": 1
+    },
+    {
+     "id": "0e12d133-74e9-5c19-bca6-30af53ae7acd",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 2,
+     "targetSets": 2
+    },
+    {
+     "id": "9d635813-bbc8-53e0-91e4-92f65a936f24",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 3,
+     "targetSets": 1
+    },
+    {
+     "id": "73e903f3-3a20-5a38-8c09-22c92bf37b9b",
+     "exerciseId": "feb61737-f841-5832-aeab-908eac0439ee",
+     "sortOrder": 4,
+     "targetSets": 1
+    }
+   ]
+  },
+  {
+   "id": "12c871ee-adbb-5362-9188-44fb255850e5",
+   "name": "Tonys Legs",
+   "sortOrder": 5,
+   "exercises": [
+    {
+     "id": "9f3cf9f4-877e-560e-9186-ed592c67feac",
+     "exerciseId": "4534d229-aaac-536c-9bf3-23602bb42822",
+     "sortOrder": 0,
+     "targetSets": 3
+    },
+    {
+     "id": "f87fcf37-872c-5ce3-8257-392aa2925bad",
+     "exerciseId": "12431968-7359-5f57-b861-df0bfaa67e27",
+     "sortOrder": 1,
+     "targetSets": 2
+    },
+    {
+     "id": "dd24cb8c-4fe1-518c-97c1-d51fa12c44d9",
+     "exerciseId": "3aca9abc-ff4a-5e50-a712-cf8199acf14c",
+     "sortOrder": 2,
+     "targetSets": 2
+    },
+    {
+     "id": "158462d0-e728-5614-a4ac-742224cdc763",
+     "exerciseId": "0de49362-e3ef-56e9-984d-1b889e03fc9b",
+     "sortOrder": 3,
+     "targetSets": 2
+    }
+   ]
+  },
+  {
+   "id": "ad3f0676-b540-5a7e-a59f-182e32d58377",
+   "name": "Tony Chest",
+   "sortOrder": 6,
+   "exercises": [
+    {
+     "id": "d71ef5e9-388f-5c47-80fd-288675eb8cc9",
+     "exerciseId": "e397b65f-400f-51da-ad14-12815108d1e5",
+     "sortOrder": 0,
+     "targetSets": 3
+    },
+    {
+     "id": "80139ad6-f2b7-523f-9665-ca90db15df84",
+     "exerciseId": "441927d8-bfad-54c8-adb1-4da774a214cf",
+     "sortOrder": 1,
+     "targetSets": 3
+    },
+    {
+     "id": "dc7ca29b-b635-5ebc-96db-3f3aaf95ca1a",
+     "exerciseId": "2e3f8075-ff75-5e68-a7e7-02e2921498af",
+     "sortOrder": 2,
+     "targetSets": 2
+    }
+   ]
+  },
+  {
+   "id": "13c58d20-dd0e-595c-b0e0-9973260a87f0",
+   "name": "Tonys Back",
+   "sortOrder": 7,
+   "exercises": [
+    {
+     "id": "aa84c173-2a5f-5615-84b5-4f216cc9cc82",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 0,
+     "targetSets": 3
+    },
+    {
+     "id": "0524267b-75b1-5238-88d8-6eed9099119f",
+     "exerciseId": "2f243ea1-7a20-567c-a8f4-990bb5c928a5",
+     "sortOrder": 1,
+     "targetSets": 3
+    },
+    {
+     "id": "9ca873e5-aa86-55e9-b41e-b55475be297d",
+     "exerciseId": "aa016d8f-e1a7-527f-b4d1-4ee06f923bc2",
+     "sortOrder": 2,
+     "targetSets": 2
+    }
+   ]
+  },
+  {
+   "id": "93253c43-a930-5f17-a4c2-917651a9d764",
+   "name": "Full Body",
+   "sortOrder": 8,
+   "exercises": [
+    {
+     "id": "f49a2a2d-71c1-51f6-b325-334b2a3d6bde",
+     "exerciseId": "4534d229-aaac-536c-9bf3-23602bb42822",
+     "sortOrder": 0,
+     "targetSets": 2
+    },
+    {
+     "id": "0851dfc2-41a3-509e-8808-a6b37d0ec4c8",
+     "exerciseId": "6cabc1b0-ff70-5d9e-9f59-db24faff5705",
+     "sortOrder": 1,
+     "targetSets": 2
+    },
+    {
+     "id": "13960007-1593-5b13-863c-92287cdef2a0",
+     "exerciseId": "5bf8d6cc-e0be-5f21-8190-a024d777fb21",
+     "sortOrder": 2,
+     "targetSets": 2
+    },
+    {
+     "id": "d5a98558-be49-50b4-a20e-876759828579",
+     "exerciseId": "9b63829a-7017-52be-b76c-b09836058559",
+     "sortOrder": 3,
+     "targetSets": 2
+    },
+    {
+     "id": "c3119245-b9e2-5fbf-95aa-24a417075a8f",
+     "exerciseId": "59a8785d-c1f1-52ca-8f08-8e81feee493c",
+     "sortOrder": 4,
+     "targetSets": 2
+    }
+   ]
+  },
+  {
+   "id": "6f35bb6a-a64f-58c4-b8de-d9dcef887e0d",
+   "name": "Legs",
+   "sortOrder": 9,
+   "exercises": [
+    {
+     "id": "9f89d253-5a42-54be-a8ed-fb2a4799bb63",
+     "exerciseId": "4534d229-aaac-536c-9bf3-23602bb42822",
+     "sortOrder": 0,
+     "targetSets": 3
+    },
+    {
+     "id": "118991e6-00ae-598c-abb3-1126a4b4b3d6",
+     "exerciseId": "557f4375-cc13-56ef-a36f-60a11f26dabb",
+     "sortOrder": 1,
+     "targetSets": 2
+    },
+    {
+     "id": "378950eb-ebee-5caa-8dc5-85178a84a232",
+     "exerciseId": "12431968-7359-5f57-b861-df0bfaa67e27",
+     "sortOrder": 2,
+     "targetSets": 2
+    }
+   ]
+  },
+  {
+   "id": "dc267ea9-ecb7-5357-bfaf-f6fb2fd77846",
+   "name": "Tonys Upper C",
+   "sortOrder": 10,
+   "exercises": [
+    {
+     "id": "ccb47ce7-1283-50d2-86be-6566be751fc2",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 0,
+     "targetSets": 1
+    },
+    {
+     "id": "eae9418a-d757-5a9e-abd0-0ff9684114b0",
+     "exerciseId": "e397b65f-400f-51da-ad14-12815108d1e5",
+     "sortOrder": 1,
+     "targetSets": 2
+    },
+    {
+     "id": "5183eeef-e9e0-5166-9c99-07dc740ce6e1",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 2,
+     "targetSets": 1
+    },
+    {
+     "id": "8b19d0fa-d917-5834-bea4-b7a6a3ffc6ed",
+     "exerciseId": "441927d8-bfad-54c8-adb1-4da774a214cf",
+     "sortOrder": 3,
+     "targetSets": 1
+    },
+    {
+     "id": "8a87345e-95ac-51cf-a5e3-9624d5177ff9",
+     "exerciseId": "7d0684d0-6633-54fc-830e-58a02a9b789c",
+     "sortOrder": 4,
+     "targetSets": 1
+    },
+    {
+     "id": "1f2a3c99-d9b1-5c14-8b7f-5ac5e07437da",
+     "exerciseId": "feb61737-f841-5832-aeab-908eac0439ee",
+     "sortOrder": 5,
+     "targetSets": 1
+    }
+   ]
+  },
+  {
+   "id": "7fd76518-5f77-53e4-88c4-591a5d46e38d",
+   "name": "Tonys Upper Minimalist",
+   "sortOrder": 11,
+   "exercises": [
+    {
+     "id": "09a4b719-d5bc-52c3-b799-3c0156a8a8b4",
+     "exerciseId": "441927d8-bfad-54c8-adb1-4da774a214cf",
+     "sortOrder": 0,
+     "targetSets": 2
+    },
+    {
+     "id": "08c9d5c8-32ab-5e90-8dc1-9518507c91ff",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 1,
+     "targetSets": 1
+    },
+    {
+     "id": "6a8c7d47-7eb6-509d-8bd5-6ab5dba55905",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 2,
+     "targetSets": 1
+    },
+    {
+     "id": "9def194b-1acb-51b5-9f92-0a741f2c9268",
+     "exerciseId": "7d0684d0-6633-54fc-830e-58a02a9b789c",
+     "sortOrder": 3,
+     "targetSets": 1
+    },
+    {
+     "id": "98ef946c-b158-594a-b91d-49e6827adefd",
+     "exerciseId": "feb61737-f841-5832-aeab-908eac0439ee",
+     "sortOrder": 4,
+     "targetSets": 1
+    },
+    {
+     "id": "6946bcdc-164f-5f8e-8cbf-6f83e05ea839",
+     "exerciseId": "33afb774-b43c-5387-94bf-5fbc65558aa0",
+     "sortOrder": 5,
+     "targetSets": 1
+    }
+   ]
+  }
+ ],
+ "workouts": [
+  {
+   "id": "83cc1694-9821-56d0-9b0d-9545c0ecaa33",
+   "routineId": "7fd76518-5f77-53e4-88c4-591a5d46e38d",
+   "name": "Tonys Upper Minimalist",
+   "startedAt": "2026-10-30T10:00:00.000Z",
+   "finishedAt": null,
+   "exercises": [
+    {
+     "id": "679ee93c-0dfd-5192-934f-9774bcb7c4e6",
+     "exerciseId": "441927d8-bfad-54c8-adb1-4da774a214cf",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "b8f4af1f-f3af-59d8-b2a3-cef4fe374f5c",
+       "sortOrder": 0,
+       "weightKg": 45.0,
+       "reps": 12,
+       "completedAt": "2026-10-30T10:04:17.000Z"
+      },
+      {
+       "id": "330ae843-4457-574a-90da-b2a5d84f9fd3",
+       "sortOrder": 1,
+       "weightKg": 45.0,
+       "reps": 10,
+       "completedAt": "2026-10-30T10:08:34.000Z"
+      }
+     ]
+    },
+    {
+     "id": "e39da49f-527f-5a5c-939c-bbc57c657ffc",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "ee0f6ae3-6ab4-5f08-a666-bdde5f9157a1",
+       "sortOrder": 0,
+       "weightKg": 40.0,
+       "reps": 9,
+       "completedAt": "2026-10-30T10:12:51.000Z"
+      }
+     ]
+    },
+    {
+     "id": "377259af-f1df-5a89-bd42-ad398e5207ec",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "b045f66b-1314-5f74-b368-1ffc300e0a89",
+       "sortOrder": 0,
+       "weightKg": 22.5,
+       "reps": 10,
+       "completedAt": "2026-10-30T10:17:09.000Z"
+      }
+     ]
+    },
+    {
+     "id": "c41f5f4f-d677-5933-969d-a9fe7bb5908a",
+     "exerciseId": "7d0684d0-6633-54fc-830e-58a02a9b789c",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "de074d3e-54d1-5479-a816-74eaac155566",
+       "sortOrder": 0,
+       "weightKg": 12.5,
+       "reps": 11,
+       "completedAt": "2026-10-30T10:21:26.000Z"
+      }
+     ]
+    },
+    {
+     "id": "5aa3169f-70f1-5206-8ddb-d8dd42c1db67",
+     "exerciseId": "feb61737-f841-5832-aeab-908eac0439ee",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "15f09317-fe86-52ae-b8d2-cd76ae497eec",
+       "sortOrder": 0,
+       "weightKg": 35.0,
+       "reps": 11,
+       "completedAt": "2026-10-30T10:25:43.000Z"
+      }
+     ]
+    },
+    {
+     "id": "e4c6b1ed-76b5-5af4-9c46-7e17f56ba54c",
+     "exerciseId": "33afb774-b43c-5387-94bf-5fbc65558aa0",
+     "sortOrder": 5,
+     "sets": [
+      {
+       "id": "f71a4a78-3e57-5832-bc38-8d132f9ca104",
+       "sortOrder": 0,
+       "weightKg": 7.5,
+       "reps": 15,
+       "completedAt": "2026-10-30T10:30:00.000Z"
+      },
+      {
+       "id": "2515dc5e-4bed-59e6-ac91-30d35cd10fc7",
+       "sortOrder": 1,
+       "weightKg": null,
+       "reps": null,
+       "completedAt": null
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ee4803c7-7148-560a-87d9-9d0f382d75eb",
+   "routineId": "dc267ea9-ecb7-5357-bfaf-f6fb2fd77846",
+   "name": "Tonys Upper C",
+   "startedAt": "2026-10-22T10:00:00.000Z",
+   "finishedAt": "2026-10-22T11:47:00.000Z",
+   "exercises": [
+    {
+     "id": "5244a48f-edd6-58a8-8a60-93a00609f0a4",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "6e6c7954-dd41-51db-b28d-bb34823f0fa3",
+       "sortOrder": 0,
+       "weightKg": 40.0,
+       "reps": 10,
+       "completedAt": "2026-10-22T10:15:17.000Z"
+      }
+     ]
+    },
+    {
+     "id": "df943f8d-6ae6-5a27-b795-e8f92a0d4c7b",
+     "exerciseId": "e397b65f-400f-51da-ad14-12815108d1e5",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "9e6aab2b-7705-5d59-86c0-905ee0ee93cf",
+       "sortOrder": 0,
+       "weightKg": 27.5,
+       "reps": 9,
+       "completedAt": "2026-10-22T10:30:34.000Z"
+      },
+      {
+       "id": "d3c3dbde-fb12-5a2c-9195-3af9147ead73",
+       "sortOrder": 1,
+       "weightKg": 27.5,
+       "reps": 9,
+       "completedAt": "2026-10-22T10:45:51.000Z"
+      }
+     ]
+    },
+    {
+     "id": "9aaaca63-4c11-595a-b55e-17b9494ab032",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "63de6375-4d67-590e-8ea3-fde00909275e",
+       "sortOrder": 0,
+       "weightKg": 22.5,
+       "reps": 10,
+       "completedAt": "2026-10-22T11:01:09.000Z"
+      }
+     ]
+    },
+    {
+     "id": "dae7f17c-19ce-50db-9c3b-dd69d17301ce",
+     "exerciseId": "441927d8-bfad-54c8-adb1-4da774a214cf",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "aa1baa5a-453c-57fe-b141-f962718e128c",
+       "sortOrder": 0,
+       "weightKg": 45.0,
+       "reps": 12,
+       "completedAt": "2026-10-22T11:16:26.000Z"
+      }
+     ]
+    },
+    {
+     "id": "e9ae717e-a610-5891-9a24-8841bf0134fa",
+     "exerciseId": "7d0684d0-6633-54fc-830e-58a02a9b789c",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "639075a1-7240-5c1b-b6be-c8fb62470574",
+       "sortOrder": 0,
+       "weightKg": 12.5,
+       "reps": 11,
+       "completedAt": "2026-10-22T11:31:43.000Z"
+      }
+     ]
+    },
+    {
+     "id": "4a0b943f-0662-5092-9e86-4d9d40acd8cb",
+     "exerciseId": "feb61737-f841-5832-aeab-908eac0439ee",
+     "sortOrder": 5,
+     "sets": [
+      {
+       "id": "910b6749-edc2-5665-8d99-738bdc3010d4",
+       "sortOrder": 0,
+       "weightKg": 35.0,
+       "reps": 12,
+       "completedAt": "2026-10-22T11:47:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5b3a456e-4fd4-5bfd-95d9-b4083b006524",
+   "routineId": "dc267ea9-ecb7-5357-bfaf-f6fb2fd77846",
+   "name": "Tonys Upper C",
+   "startedAt": "2026-10-18T10:00:00.000Z",
+   "finishedAt": "2026-10-18T10:33:00.000Z",
+   "exercises": [
+    {
+     "id": "a6bdce28-775a-5603-9775-262e70b3f524",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "60f3dcc3-c484-5b27-b4c9-8d853216efa3",
+       "sortOrder": 0,
+       "weightKg": 40.0,
+       "reps": 9,
+       "completedAt": "2026-10-18T10:05:30.000Z"
+      }
+     ]
+    },
+    {
+     "id": "984399d2-a1c3-5ba7-ba65-f1f2cc8f24b3",
+     "exerciseId": "e397b65f-400f-51da-ad14-12815108d1e5",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "0d0a353b-421c-5a6d-94b9-1c4952e93de5",
+       "sortOrder": 0,
+       "weightKg": 27.5,
+       "reps": 9,
+       "completedAt": "2026-10-18T10:11:00.000Z"
+      },
+      {
+       "id": "cfee006c-c739-5bf1-b152-9e966d1f6881",
+       "sortOrder": 1,
+       "weightKg": 27.5,
+       "reps": 8,
+       "completedAt": "2026-10-18T10:16:30.000Z"
+      }
+     ]
+    },
+    {
+     "id": "54849145-4486-547f-851f-7a2a2ef8942d",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "6e6f2e78-4c2f-5a7b-94a5-76575956e666",
+       "sortOrder": 0,
+       "weightKg": 22.5,
+       "reps": 9,
+       "completedAt": "2026-10-18T10:22:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "3021bc76-3853-51e1-95c5-904f5ea4637a",
+     "exerciseId": "441927d8-bfad-54c8-adb1-4da774a214cf",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "b415dc3e-9bab-537e-a7a5-749b4f8115e9",
+       "sortOrder": 0,
+       "weightKg": 45.0,
+       "reps": 11,
+       "completedAt": "2026-10-18T10:27:30.000Z"
+      }
+     ]
+    },
+    {
+     "id": "5ef571d8-9434-57db-b4ba-ab87e63ee5c9",
+     "exerciseId": "7d0684d0-6633-54fc-830e-58a02a9b789c",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "e9517cf2-fa47-5625-85f8-0dd78dedd072",
+       "sortOrder": 0,
+       "weightKg": 12.5,
+       "reps": 12,
+       "completedAt": "2026-10-18T10:33:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "afa8346a-eb10-5344-955e-bd6401411ed2",
+   "routineId": "3325a2eb-4f5b-5ff2-82b8-894f21dcd791",
+   "name": "Tonys Upper A",
+   "startedAt": "2026-10-15T10:00:00.000Z",
+   "finishedAt": "2026-10-15T11:04:00.000Z",
+   "exercises": [
+    {
+     "id": "1a69bab3-af18-58ee-a880-695104fee79a",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "1fb2a000-e22a-5ac6-b35a-cb5443dee6ed",
+       "sortOrder": 0,
+       "weightKg": 22.5,
+       "reps": 10,
+       "completedAt": "2026-10-15T10:09:09.000Z"
+      }
+     ]
+    },
+    {
+     "id": "e8c8681c-651f-5d8e-a65b-1edb6850f9bd",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "fbe1648d-ec9f-5b2f-9fae-94ab7876acd5",
+       "sortOrder": 0,
+       "weightKg": 40.0,
+       "reps": 9,
+       "completedAt": "2026-10-15T10:18:17.000Z"
+      },
+      {
+       "id": "7240edbd-515a-51d7-b375-18f05db9d849",
+       "sortOrder": 1,
+       "weightKg": 40.0,
+       "reps": 9,
+       "completedAt": "2026-10-15T10:27:26.000Z"
+      }
+     ]
+    },
+    {
+     "id": "e2bb7c3b-2e8c-543b-a150-a8973c2a8e30",
+     "exerciseId": "e397b65f-400f-51da-ad14-12815108d1e5",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "0ad81ce2-6af4-5c14-83b6-f0065339b4ae",
+       "sortOrder": 0,
+       "weightKg": 27.5,
+       "reps": 9,
+       "completedAt": "2026-10-15T10:36:34.000Z"
+      },
+      {
+       "id": "daff7e07-7313-5a00-8a12-8724a2b68f31",
+       "sortOrder": 1,
+       "weightKg": 27.5,
+       "reps": 9,
+       "completedAt": "2026-10-15T10:45:43.000Z"
+      }
+     ]
+    },
+    {
+     "id": "43be4133-a1d1-5a95-a46c-d2064f2f5454",
+     "exerciseId": "7d0684d0-6633-54fc-830e-58a02a9b789c",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "2a867c49-ced3-55f6-bcb3-c762d67be8d5",
+       "sortOrder": 0,
+       "weightKg": 10.0,
+       "reps": 11,
+       "completedAt": "2026-10-15T10:54:51.000Z"
+      }
+     ]
+    },
+    {
+     "id": "c2243857-8cef-58d6-b420-dd5f93118ea8",
+     "exerciseId": "33afb774-b43c-5387-94bf-5fbc65558aa0",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "ce5f4bbb-2cee-59fb-8695-12dde2bc59b2",
+       "sortOrder": 0,
+       "weightKg": 7.5,
+       "reps": 14,
+       "completedAt": "2026-10-15T11:04:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c732fd72-70ed-5ab3-88b2-12d13ae5cb51",
+   "routineId": "3325a2eb-4f5b-5ff2-82b8-894f21dcd791",
+   "name": "Tonys Upper A",
+   "startedAt": "2026-10-12T10:00:00.000Z",
+   "finishedAt": "2026-10-12T11:10:00.000Z",
+   "exercises": [
+    {
+     "id": "15bbf8ea-187e-5293-8371-452927356060",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "c6f5f4cd-4b64-52cc-a03b-b5ffecf420b6",
+       "sortOrder": 0,
+       "weightKg": 22.5,
+       "reps": 9,
+       "completedAt": "2026-10-12T10:10:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "0492dd19-8152-53b9-abd1-27775f172dec",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "b6fa99a9-0b0c-5284-b111-a00c4b1f58ee",
+       "sortOrder": 0,
+       "weightKg": 40.0,
+       "reps": 10,
+       "completedAt": "2026-10-12T10:20:00.000Z"
+      },
+      {
+       "id": "fd0c5c2f-1cbd-53eb-9c95-b8540b7dcbf9",
+       "sortOrder": 1,
+       "weightKg": 40.0,
+       "reps": 8,
+       "completedAt": "2026-10-12T10:30:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "c296c60f-c897-5ef7-859c-ed55ea95fdea",
+     "exerciseId": "e397b65f-400f-51da-ad14-12815108d1e5",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "1cf76ec3-c28e-5295-958b-366073d473ad",
+       "sortOrder": 0,
+       "weightKg": 27.5,
+       "reps": 9,
+       "completedAt": "2026-10-12T10:40:00.000Z"
+      },
+      {
+       "id": "06d8cb74-e551-5688-84f8-749259a1aa01",
+       "sortOrder": 1,
+       "weightKg": 27.5,
+       "reps": 8,
+       "completedAt": "2026-10-12T10:50:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "4c0a22d1-ebd2-5952-9004-4e15933cdecb",
+     "exerciseId": "7d0684d0-6633-54fc-830e-58a02a9b789c",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "8c06a92e-b944-5e53-ad9d-b350ee563138",
+       "sortOrder": 0,
+       "weightKg": 10.0,
+       "reps": 12,
+       "completedAt": "2026-10-12T11:00:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "f7bbf822-249f-5e46-a213-1e13a29deb3d",
+     "exerciseId": "33afb774-b43c-5387-94bf-5fbc65558aa0",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "f6f0bb74-bc15-5d3b-befd-680bc379a2d5",
+       "sortOrder": 0,
+       "weightKg": 7.5,
+       "reps": 15,
+       "completedAt": "2026-10-12T11:10:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "a7514619-2c71-53e5-87f4-66f93f9febc2",
+   "routineId": "12c871ee-adbb-5362-9188-44fb255850e5",
+   "name": "Tonys Legs",
+   "startedAt": "2026-10-08T10:00:00.000Z",
+   "finishedAt": "2026-10-08T11:29:00.000Z",
+   "exercises": [
+    {
+     "id": "97404ba6-fc23-584b-9983-7b01bc6909f8",
+     "exerciseId": "4534d229-aaac-536c-9bf3-23602bb42822",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "0bb94909-9539-55aa-9522-c38c44002279",
+       "sortOrder": 0,
+       "weightKg": 100.0,
+       "reps": 5,
+       "completedAt": "2026-10-08T10:09:53.000Z"
+      },
+      {
+       "id": "3eda1db2-5ac6-5801-9012-0d9920427822",
+       "sortOrder": 1,
+       "weightKg": 100.0,
+       "reps": 5,
+       "completedAt": "2026-10-08T10:19:47.000Z"
+      },
+      {
+       "id": "68d917d3-b006-54a0-b183-4b7b59e9e910",
+       "sortOrder": 2,
+       "weightKg": 100.0,
+       "reps": 4,
+       "completedAt": "2026-10-08T10:29:40.000Z"
+      }
+     ]
+    },
+    {
+     "id": "7507977b-88c4-5935-b7d3-f580a01ffda5",
+     "exerciseId": "12431968-7359-5f57-b861-df0bfaa67e27",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "763c1809-0103-5443-ad1b-015de55ffa90",
+       "sortOrder": 0,
+       "weightKg": 155.0,
+       "reps": 10,
+       "completedAt": "2026-10-08T10:39:33.000Z"
+      },
+      {
+       "id": "7d169dd9-51dc-5746-a26a-60642c439e1f",
+       "sortOrder": 1,
+       "weightKg": 155.0,
+       "reps": 9,
+       "completedAt": "2026-10-08T10:49:27.000Z"
+      }
+     ]
+    },
+    {
+     "id": "a27755b3-1c0d-52b2-9f3a-219f794b6fbf",
+     "exerciseId": "3aca9abc-ff4a-5e50-a712-cf8199acf14c",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "2e5f6dd1-381a-5ff1-b2a4-c2259f05819b",
+       "sortOrder": 0,
+       "weightKg": 55.0,
+       "reps": 12,
+       "completedAt": "2026-10-08T10:59:20.000Z"
+      },
+      {
+       "id": "ff28c345-570e-5b7f-95d6-4f4d41e10b85",
+       "sortOrder": 1,
+       "weightKg": 55.0,
+       "reps": 11,
+       "completedAt": "2026-10-08T11:09:13.000Z"
+      }
+     ]
+    },
+    {
+     "id": "a995f5e6-16cc-5ff6-835f-d3c5f2f238e1",
+     "exerciseId": "0de49362-e3ef-56e9-984d-1b889e03fc9b",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "1b25e4b0-f299-5b53-9307-080fb96647eb",
+       "sortOrder": 0,
+       "weightKg": 45.0,
+       "reps": 12,
+       "completedAt": "2026-10-08T11:19:07.000Z"
+      },
+      {
+       "id": "72c82e30-1c51-5738-87a4-a1f53d90709f",
+       "sortOrder": 1,
+       "weightKg": 45.0,
+       "reps": 10,
+       "completedAt": "2026-10-08T11:29:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "8e464b1b-e151-5049-b557-311b61ba6f56",
+   "routineId": "37cb688c-85ae-5d6b-8872-253c41137009",
+   "name": "Tonys Upper B",
+   "startedAt": "2026-10-05T10:00:00.000Z",
+   "finishedAt": "2026-10-05T11:10:00.000Z",
+   "exercises": [
+    {
+     "id": "2e6d33ea-e980-5d04-8482-7e718653669c",
+     "exerciseId": "e397b65f-400f-51da-ad14-12815108d1e5",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "4117c5f1-1b90-5cf2-aead-99e32fef0df8",
+       "sortOrder": 0,
+       "weightKg": 27.5,
+       "reps": 9,
+       "completedAt": "2026-10-05T10:10:00.000Z"
+      },
+      {
+       "id": "16cfe194-b6ee-51a4-a3e7-d75264f418a0",
+       "sortOrder": 1,
+       "weightKg": 27.5,
+       "reps": 8,
+       "completedAt": "2026-10-05T10:20:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "6ceffe4f-1daf-5744-9212-aaf3afeebedf",
+     "exerciseId": "441927d8-bfad-54c8-adb1-4da774a214cf",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "360b3e61-98f5-5b8b-a60b-0b79e1b057e9",
+       "sortOrder": 0,
+       "weightKg": 45.0,
+       "reps": 12,
+       "completedAt": "2026-10-05T10:30:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "462afbe8-8855-5394-b395-a1f4e8d7713f",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "f7c76c00-f8b3-5e4d-b560-d9c862165d9c",
+       "sortOrder": 0,
+       "weightKg": 40.0,
+       "reps": 10,
+       "completedAt": "2026-10-05T10:40:00.000Z"
+      },
+      {
+       "id": "b8eefa0d-7ee0-545e-8e7e-e7b25cec9c3c",
+       "sortOrder": 1,
+       "weightKg": 40.0,
+       "reps": 8,
+       "completedAt": "2026-10-05T10:50:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "126e3cec-796d-5bdf-9920-546fcb7df1aa",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "a6d3e9e3-ff04-5c50-bba4-b5f49bac8cfb",
+       "sortOrder": 0,
+       "weightKg": 22.5,
+       "reps": 9,
+       "completedAt": "2026-10-05T11:00:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "7835cbc3-a875-50cb-8ff5-7246ae380882",
+     "exerciseId": "feb61737-f841-5832-aeab-908eac0439ee",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "44bd53bc-0e37-532c-b999-64ed80a04de1",
+       "sortOrder": 0,
+       "weightKg": 32.5,
+       "reps": 11,
+       "completedAt": "2026-10-05T11:10:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d0a85672-b482-51d7-a762-98756029d36f",
+   "routineId": "13c58d20-dd0e-595c-b0e0-9973260a87f0",
+   "name": "Tonys Back",
+   "startedAt": "2026-10-01T10:00:00.000Z",
+   "finishedAt": "2026-10-01T11:06:00.000Z",
+   "exercises": [
+    {
+     "id": "0015b7f7-4564-5094-9d24-c301fa903b25",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "95826c63-8b04-5130-8d30-bacd77a524f6",
+       "sortOrder": 0,
+       "weightKg": 37.5,
+       "reps": 9,
+       "completedAt": "2026-10-01T10:08:15.000Z"
+      },
+      {
+       "id": "17b59467-7c79-5cb1-bd0b-3f4ed1e53173",
+       "sortOrder": 1,
+       "weightKg": 37.5,
+       "reps": 9,
+       "completedAt": "2026-10-01T10:16:30.000Z"
+      },
+      {
+       "id": "867808db-1879-50f4-9c14-0c8925874f2a",
+       "sortOrder": 2,
+       "weightKg": 37.5,
+       "reps": 8,
+       "completedAt": "2026-10-01T10:24:45.000Z"
+      }
+     ]
+    },
+    {
+     "id": "a1aedf2b-d2f7-5f91-8138-920fc96f9a36",
+     "exerciseId": "2f243ea1-7a20-567c-a8f4-990bb5c928a5",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "990e9182-4a55-5bec-943c-39953dee4cac",
+       "sortOrder": 0,
+       "weightKg": 32.5,
+       "reps": 10,
+       "completedAt": "2026-10-01T10:33:00.000Z"
+      },
+      {
+       "id": "cbaa005c-b204-59a8-9fad-f7adefa6ba1d",
+       "sortOrder": 1,
+       "weightKg": 32.5,
+       "reps": 9,
+       "completedAt": "2026-10-01T10:41:15.000Z"
+      },
+      {
+       "id": "e4df2126-f47d-544d-94b7-764daee60563",
+       "sortOrder": 2,
+       "weightKg": 32.5,
+       "reps": 7,
+       "completedAt": "2026-10-01T10:49:30.000Z"
+      }
+     ]
+    },
+    {
+     "id": "77ac1e4d-abc1-52b6-96c6-1a272d323703",
+     "exerciseId": "aa016d8f-e1a7-527f-b4d1-4ee06f923bc2",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "d0b20745-36f1-596d-af96-841f4e0eefe2",
+       "sortOrder": 0,
+       "weightKg": 60.0,
+       "reps": 10,
+       "completedAt": "2026-10-01T10:57:45.000Z"
+      },
+      {
+       "id": "d15615b7-9beb-556b-8cff-065f1bbddc6c",
+       "sortOrder": 1,
+       "weightKg": 60.0,
+       "reps": 9,
+       "completedAt": "2026-10-01T11:06:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "0eefbe81-74f1-5ac0-b78b-d9fca4556a71",
+   "routineId": "ad3f0676-b540-5a7e-a59f-182e32d58377",
+   "name": "Tony Chest",
+   "startedAt": "2026-09-28T10:00:00.000Z",
+   "finishedAt": "2026-09-28T11:30:00.000Z",
+   "exercises": [
+    {
+     "id": "950f84ed-ec8d-5e8a-bc76-9f783d53420d",
+     "exerciseId": "e397b65f-400f-51da-ad14-12815108d1e5",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "e7dccbef-875e-5319-a6cc-4119582abae6",
+       "sortOrder": 0,
+       "weightKg": 27.5,
+       "reps": 9,
+       "completedAt": "2026-09-28T10:11:15.000Z"
+      },
+      {
+       "id": "393488dd-c414-5512-b427-8335fe102b50",
+       "sortOrder": 1,
+       "weightKg": 27.5,
+       "reps": 8,
+       "completedAt": "2026-09-28T10:22:30.000Z"
+      },
+      {
+       "id": "1bbe2a5f-e133-520a-81f6-1285c23431ba",
+       "sortOrder": 2,
+       "weightKg": 27.5,
+       "reps": 8,
+       "completedAt": "2026-09-28T10:33:45.000Z"
+      }
+     ]
+    },
+    {
+     "id": "ed9ae3cb-67d6-5df0-9ad6-376bc5fd0aea",
+     "exerciseId": "441927d8-bfad-54c8-adb1-4da774a214cf",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "a7ebc8e3-cad8-520e-beaf-524f6ec4ca5e",
+       "sortOrder": 0,
+       "weightKg": 45.0,
+       "reps": 11,
+       "completedAt": "2026-09-28T10:45:00.000Z"
+      },
+      {
+       "id": "6f78f3f2-d2c5-52d2-9b89-d9c825555810",
+       "sortOrder": 1,
+       "weightKg": 45.0,
+       "reps": 10,
+       "completedAt": "2026-09-28T10:56:15.000Z"
+      },
+      {
+       "id": "9584645e-827a-50d4-a377-8ea866f34665",
+       "sortOrder": 2,
+       "weightKg": 45.0,
+       "reps": 10,
+       "completedAt": "2026-09-28T11:07:30.000Z"
+      }
+     ]
+    },
+    {
+     "id": "61cd45bc-686f-5c66-b794-21fdbae1a4a4",
+     "exerciseId": "2e3f8075-ff75-5e68-a7e7-02e2921498af",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "fc1c774e-56d3-5469-92c8-ec34423f7151",
+       "sortOrder": 0,
+       "weightKg": 0.0,
+       "reps": 12,
+       "completedAt": "2026-09-28T11:18:45.000Z"
+      },
+      {
+       "id": "c8b153fc-24de-5b20-a20b-f8d052a6e6db",
+       "sortOrder": 1,
+       "weightKg": 0.0,
+       "reps": 11,
+       "completedAt": "2026-09-28T11:30:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "4feb9f4f-6aad-5293-bd6d-18316f79caf0",
+   "routineId": "7adee5cb-a4a4-5062-af8b-279fb80b0efc",
+   "name": "Tonys Legs B",
+   "startedAt": "2026-09-24T10:00:00.000Z",
+   "finishedAt": "2026-09-24T11:00:00.000Z",
+   "exercises": [
+    {
+     "id": "aac67b43-1c89-5b1d-ba5a-ee308899e03a",
+     "exerciseId": "557f4375-cc13-56ef-a36f-60a11f26dabb",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "de1343a8-b4da-5a00-bc4f-bb47b02b2d17",
+       "sortOrder": 0,
+       "weightKg": 87.5,
+       "reps": 8,
+       "completedAt": "2026-09-24T10:06:40.000Z"
+      },
+      {
+       "id": "a0ba1eef-a6b8-550e-a8bf-6a7f08886148",
+       "sortOrder": 1,
+       "weightKg": 87.5,
+       "reps": 7,
+       "completedAt": "2026-09-24T10:13:20.000Z"
+      },
+      {
+       "id": "359dbf6d-0e9e-5746-9fb4-68f70183f48a",
+       "sortOrder": 2,
+       "weightKg": 87.5,
+       "reps": 5,
+       "completedAt": "2026-09-24T10:20:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "2e63fa30-864d-596c-bcc0-af1f86f88330",
+     "exerciseId": "0de49362-e3ef-56e9-984d-1b889e03fc9b",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "fd1876b5-6231-5545-b278-809d4e518df1",
+       "sortOrder": 0,
+       "weightKg": 42.5,
+       "reps": 11,
+       "completedAt": "2026-09-24T10:26:40.000Z"
+      },
+      {
+       "id": "e5751131-f7ab-5553-9fa6-a1db59fc825a",
+       "sortOrder": 1,
+       "weightKg": 42.5,
+       "reps": 11,
+       "completedAt": "2026-09-24T10:33:20.000Z"
+      }
+     ]
+    },
+    {
+     "id": "e2fc0aa2-a326-5117-bd92-1f74a81d4d12",
+     "exerciseId": "dc6e87a4-7858-54bb-9b2e-1f110681fcdc",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "936aa50a-b189-544f-9de3-8d0ddd2f02b4",
+       "sortOrder": 0,
+       "weightKg": 22.5,
+       "reps": 9,
+       "completedAt": "2026-09-24T10:40:00.000Z"
+      },
+      {
+       "id": "3729ce82-0eb1-5d01-bd9f-f4b5ef87ceeb",
+       "sortOrder": 1,
+       "weightKg": 22.5,
+       "reps": 8,
+       "completedAt": "2026-09-24T10:46:40.000Z"
+      }
+     ]
+    },
+    {
+     "id": "6bfda71e-98e7-5c91-bb4c-090dabf4dd19",
+     "exerciseId": "ea6cc324-fec9-5c9b-b3a6-b5664bd4ec59",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "1801b0da-6e60-5da8-bbc3-409f5959dd89",
+       "sortOrder": 0,
+       "weightKg": 65.0,
+       "reps": 15,
+       "completedAt": "2026-09-24T10:53:20.000Z"
+      },
+      {
+       "id": "c880b283-a0c8-5262-b028-9a26dad1b67f",
+       "sortOrder": 1,
+       "weightKg": 65.0,
+       "reps": 13,
+       "completedAt": "2026-09-24T11:00:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "323857c4-f45e-53ca-9f03-7bd0a1216c24",
+   "routineId": "e4b53532-3b9e-5bcf-bd48-f5b8e845ce65",
+   "name": "Tonys Upper SARMS Focus",
+   "startedAt": "2026-09-21T10:00:00.000Z",
+   "finishedAt": "2026-09-21T11:25:00.000Z",
+   "exercises": [
+    {
+     "id": "8ee45250-dcdc-5db1-b7aa-539d56328e59",
+     "exerciseId": "441927d8-bfad-54c8-adb1-4da774a214cf",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "8372bb20-2c7b-5085-9f15-665048bb633b",
+       "sortOrder": 0,
+       "weightKg": 42.5,
+       "reps": 11,
+       "completedAt": "2026-09-21T10:08:30.000Z"
+      },
+      {
+       "id": "891b8d29-7112-5b59-b6b6-c756efee7024",
+       "sortOrder": 1,
+       "weightKg": 42.5,
+       "reps": 10,
+       "completedAt": "2026-09-21T10:17:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "f31cb975-b2d2-57f8-a158-f606133a18a4",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "5803abd0-1217-5963-9003-d1cbef5fd38f",
+       "sortOrder": 0,
+       "weightKg": 37.5,
+       "reps": 9,
+       "completedAt": "2026-09-21T10:25:30.000Z"
+      },
+      {
+       "id": "4c4a28c8-408f-51f0-8dd8-75cf0a8f07a6",
+       "sortOrder": 1,
+       "weightKg": 37.5,
+       "reps": 9,
+       "completedAt": "2026-09-21T10:34:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "7d6e557a-8e68-5c29-96b3-1a73d962eca2",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "717d27b5-4c0a-516c-aa94-f4a0c851020c",
+       "sortOrder": 0,
+       "weightKg": 22.5,
+       "reps": 9,
+       "completedAt": "2026-09-21T10:42:30.000Z"
+      },
+      {
+       "id": "84869796-439b-50df-8e0e-a9061f06228b",
+       "sortOrder": 1,
+       "weightKg": 22.5,
+       "reps": 8,
+       "completedAt": "2026-09-21T10:51:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "3afbcdae-0982-552d-9779-28e52c508ae6",
+     "exerciseId": "33afb774-b43c-5387-94bf-5fbc65558aa0",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "639fee39-13b4-59fe-83c7-a774aa2467d2",
+       "sortOrder": 0,
+       "weightKg": 7.5,
+       "reps": 15,
+       "completedAt": "2026-09-21T10:59:30.000Z"
+      },
+      {
+       "id": "cc7a1d1c-6334-5634-99e7-b9937a54c367",
+       "sortOrder": 1,
+       "weightKg": 7.5,
+       "reps": 13,
+       "completedAt": "2026-09-21T11:08:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "6368f327-b773-52f7-9016-6ef487abeaf3",
+     "exerciseId": "7d0684d0-6633-54fc-830e-58a02a9b789c",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "16489fa4-9fe6-5275-ac58-c0baf4a32b63",
+       "sortOrder": 0,
+       "weightKg": 10.0,
+       "reps": 12,
+       "completedAt": "2026-09-21T11:16:30.000Z"
+      }
+     ]
+    },
+    {
+     "id": "9af4b74c-c7a7-55f1-aef5-52d9a1fbf9b6",
+     "exerciseId": "feb61737-f841-5832-aeab-908eac0439ee",
+     "sortOrder": 5,
+     "sets": [
+      {
+       "id": "25b345b0-8aa4-5f32-b147-b4cc73301a69",
+       "sortOrder": 0,
+       "weightKg": 32.5,
+       "reps": 11,
+       "completedAt": "2026-09-21T11:25:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "80228457-6288-5d31-8af8-7482ea30358e",
+   "routineId": "93253c43-a930-5f17-a4c2-917651a9d764",
+   "name": "Full Body",
+   "startedAt": "2026-09-17T10:00:00.000Z",
+   "finishedAt": "2026-09-17T11:31:00.000Z",
+   "exercises": [
+    {
+     "id": "40161935-c56b-5eda-8a6d-5f38d4ea4287",
+     "exerciseId": "4534d229-aaac-536c-9bf3-23602bb42822",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "7cad1ad8-caab-5006-856a-8e00f39c608b",
+       "sortOrder": 0,
+       "weightKg": 97.5,
+       "reps": 6,
+       "completedAt": "2026-09-17T10:09:06.000Z"
+      },
+      {
+       "id": "8b3d1c47-9c61-5d19-bd55-727be73d74a1",
+       "sortOrder": 1,
+       "weightKg": 97.5,
+       "reps": 5,
+       "completedAt": "2026-09-17T10:18:12.000Z"
+      }
+     ]
+    },
+    {
+     "id": "bfe81eb8-a6a6-5499-b6c8-7ba37ba459b8",
+     "exerciseId": "6cabc1b0-ff70-5d9e-9f59-db24faff5705",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "b31ef386-e59c-52b6-9139-678c13714acd",
+       "sortOrder": 0,
+       "weightKg": 75.0,
+       "reps": 7,
+       "completedAt": "2026-09-17T10:27:18.000Z"
+      },
+      {
+       "id": "120060b5-cfa1-5fa2-b86f-2819c9531f75",
+       "sortOrder": 1,
+       "weightKg": 75.0,
+       "reps": 7,
+       "completedAt": "2026-09-17T10:36:24.000Z"
+      }
+     ]
+    },
+    {
+     "id": "dfeb4930-699b-5b99-864c-9414426afb3e",
+     "exerciseId": "5bf8d6cc-e0be-5f21-8190-a024d777fb21",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "e8ab985d-35e6-5c7e-b68f-330f333feebe",
+       "sortOrder": 0,
+       "weightKg": 65.0,
+       "reps": 8,
+       "completedAt": "2026-09-17T10:45:30.000Z"
+      },
+      {
+       "id": "e7773a8a-37dc-5f3d-bd97-31463c48044d",
+       "sortOrder": 1,
+       "weightKg": 65.0,
+       "reps": 7,
+       "completedAt": "2026-09-17T10:54:36.000Z"
+      }
+     ]
+    },
+    {
+     "id": "70c5bf1b-8f8b-54dd-b0ed-1a4784129d39",
+     "exerciseId": "9b63829a-7017-52be-b76c-b09836058559",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "a5c22390-c671-558d-9040-18436e9f81dd",
+       "sortOrder": 0,
+       "weightKg": 42.5,
+       "reps": 8,
+       "completedAt": "2026-09-17T11:03:42.000Z"
+      },
+      {
+       "id": "2cb074cf-baf9-59d4-bcc5-60214df86e83",
+       "sortOrder": 1,
+       "weightKg": 42.5,
+       "reps": 6,
+       "completedAt": "2026-09-17T11:12:48.000Z"
+      }
+     ]
+    },
+    {
+     "id": "585f5a3a-3f8a-53a6-a1dc-ef037a1aa7af",
+     "exerciseId": "59a8785d-c1f1-52ca-8f08-8e81feee493c",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "93d7c9b7-355e-5a05-871c-0dfc386b7b09",
+       "sortOrder": 0,
+       "weightKg": 0.0,
+       "reps": 1,
+       "completedAt": "2026-09-17T11:21:54.000Z"
+      },
+      {
+       "id": "278d0bfc-dfc3-5eff-b4e9-593419a43e53",
+       "sortOrder": 1,
+       "weightKg": 0.0,
+       "reps": 1,
+       "completedAt": "2026-09-17T11:31:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "86638dda-143a-56aa-b3d2-ba57e9e38fdd",
+   "routineId": "151656db-7573-5ccf-bbf2-39e16ea149af",
+   "name": "Gladiator Upper",
+   "startedAt": "2026-09-14T10:00:00.000Z",
+   "finishedAt": "2026-09-14T10:54:00.000Z",
+   "exercises": [
+    {
+     "id": "6abf842c-23aa-5aa4-8188-d1d8d54f1195",
+     "exerciseId": "6cabc1b0-ff70-5d9e-9f59-db24faff5705",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "b11486a9-3c8f-5f60-acd9-3e2da3242b6b",
+       "sortOrder": 0,
+       "weightKg": 75.0,
+       "reps": 8,
+       "completedAt": "2026-09-14T10:04:09.000Z"
+      },
+      {
+       "id": "0a21d630-df3f-5558-9a17-04d32f6d8194",
+       "sortOrder": 1,
+       "weightKg": 75.0,
+       "reps": 7,
+       "completedAt": "2026-09-14T10:08:18.000Z"
+      },
+      {
+       "id": "85451685-4bfa-5af4-9178-4738e6dfdab1",
+       "sortOrder": 2,
+       "weightKg": 75.0,
+       "reps": 6,
+       "completedAt": "2026-09-14T10:12:28.000Z"
+      }
+     ]
+    },
+    {
+     "id": "ed377d4e-5d1b-57bf-b8d4-083a1609d3b8",
+     "exerciseId": "5bf8d6cc-e0be-5f21-8190-a024d777fb21",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "2ea224c9-7ddf-5385-9511-dcb5e80d676a",
+       "sortOrder": 0,
+       "weightKg": 65.0,
+       "reps": 7,
+       "completedAt": "2026-09-14T10:16:37.000Z"
+      },
+      {
+       "id": "e90f5dd4-72e3-59b5-a0e9-66eb3068e975",
+       "sortOrder": 1,
+       "weightKg": 65.0,
+       "reps": 6,
+       "completedAt": "2026-09-14T10:20:46.000Z"
+      },
+      {
+       "id": "ef843603-56d6-556e-97f2-67f2a83a7d1b",
+       "sortOrder": 2,
+       "weightKg": 65.0,
+       "reps": 6,
+       "completedAt": "2026-09-14T10:24:55.000Z"
+      }
+     ]
+    },
+    {
+     "id": "1ccce412-ad36-5405-86a4-8ce013ef12b7",
+     "exerciseId": "9b63829a-7017-52be-b76c-b09836058559",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "1cbc348d-f9e9-5e9c-91a2-ab493213f8c8",
+       "sortOrder": 0,
+       "weightKg": 42.5,
+       "reps": 7,
+       "completedAt": "2026-09-14T10:29:05.000Z"
+      },
+      {
+       "id": "0bcce09e-dcd4-5114-a90d-5f12df12d2b5",
+       "sortOrder": 1,
+       "weightKg": 42.5,
+       "reps": 6,
+       "completedAt": "2026-09-14T10:33:14.000Z"
+      },
+      {
+       "id": "cb2d564b-ca4d-54ec-998c-c411a41a0d0c",
+       "sortOrder": 2,
+       "weightKg": 42.5,
+       "reps": 6,
+       "completedAt": "2026-09-14T10:37:23.000Z"
+      }
+     ]
+    },
+    {
+     "id": "ee107dbc-0049-50da-9194-c3ddd66b80cc",
+     "exerciseId": "be01ec56-77cd-5049-95e5-19c8c74e1394",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "9100a976-48ee-5a84-bbf6-3311eba31c8a",
+       "sortOrder": 0,
+       "weightKg": 32.5,
+       "reps": 10,
+       "completedAt": "2026-09-14T10:41:32.000Z"
+      },
+      {
+       "id": "f6123c8c-bd10-5a5f-88d2-1e7940af7f0a",
+       "sortOrder": 1,
+       "weightKg": 32.5,
+       "reps": 8,
+       "completedAt": "2026-09-14T10:45:42.000Z"
+      }
+     ]
+    },
+    {
+     "id": "b5fb567c-f876-511c-aa17-1c775e63e3e6",
+     "exerciseId": "0337ee61-9fec-597d-b99d-49587a6486df",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "7f744e57-3e9e-5b5d-be73-e077ac99cdee",
+       "sortOrder": 0,
+       "weightKg": 27.5,
+       "reps": 10,
+       "completedAt": "2026-09-14T10:49:51.000Z"
+      },
+      {
+       "id": "4af7c39c-5b96-5d81-9180-9d977279a846",
+       "sortOrder": 1,
+       "weightKg": 27.5,
+       "reps": 8,
+       "completedAt": "2026-09-14T10:54:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5d05cc32-6194-5ca5-b832-a2eb31ef1204",
+   "routineId": "6f35bb6a-a64f-58c4-b8de-d9dcef887e0d",
+   "name": "Legs",
+   "startedAt": "2026-09-10T10:00:00.000Z",
+   "finishedAt": "2026-09-10T11:04:00.000Z",
+   "exercises": [
+    {
+     "id": "cf82ef49-6cfa-55f7-a999-e15cd73400c8",
+     "exerciseId": "4534d229-aaac-536c-9bf3-23602bb42822",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "a3a20df9-b4dc-5fd9-8702-ca62dde31a41",
+       "sortOrder": 0,
+       "weightKg": 95.0,
+       "reps": 5,
+       "completedAt": "2026-09-10T10:09:09.000Z"
+      },
+      {
+       "id": "ae95bdc3-19a4-59be-a4e4-c5f2cf66c47a",
+       "sortOrder": 1,
+       "weightKg": 95.0,
+       "reps": 4,
+       "completedAt": "2026-09-10T10:18:17.000Z"
+      },
+      {
+       "id": "35f54431-abc4-50de-8d5a-a6aa9a0eb2b9",
+       "sortOrder": 2,
+       "weightKg": 95.0,
+       "reps": 3,
+       "completedAt": "2026-09-10T10:27:26.000Z"
+      }
+     ]
+    },
+    {
+     "id": "2f6c0019-725f-5f04-b1de-041fc79e55cc",
+     "exerciseId": "557f4375-cc13-56ef-a36f-60a11f26dabb",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "48036ec6-6715-5e47-a9f7-1cbd84230f19",
+       "sortOrder": 0,
+       "weightKg": 85.0,
+       "reps": 7,
+       "completedAt": "2026-09-10T10:36:34.000Z"
+      },
+      {
+       "id": "95832a13-34c2-5447-bebc-de8de958c0b7",
+       "sortOrder": 1,
+       "weightKg": 85.0,
+       "reps": 7,
+       "completedAt": "2026-09-10T10:45:43.000Z"
+      }
+     ]
+    },
+    {
+     "id": "e41387be-5bd5-53cc-be2e-cf69fbb926db",
+     "exerciseId": "12431968-7359-5f57-b861-df0bfaa67e27",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "95a301f8-d3c3-5324-bc4b-818241559088",
+       "sortOrder": 0,
+       "weightKg": 150.0,
+       "reps": 9,
+       "completedAt": "2026-09-10T10:54:51.000Z"
+      },
+      {
+       "id": "7a510fae-d425-52f6-aa5b-7e8e59f60769",
+       "sortOrder": 1,
+       "weightKg": 150.0,
+       "reps": 8,
+       "completedAt": "2026-09-10T11:04:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "8142436e-1ab0-5aae-91f2-f3f3d37727be",
+   "routineId": "3325a2eb-4f5b-5ff2-82b8-894f21dcd791",
+   "name": "Tonys Upper A",
+   "startedAt": "2026-09-07T10:00:00.000Z",
+   "finishedAt": "2026-09-07T11:31:00.000Z",
+   "exercises": [
+    {
+     "id": "7fca8ca0-cebf-529b-8c1f-1de32ce3eb07",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "b9b22de2-4a8c-5d29-aaa1-4fa0057d5dbe",
+       "sortOrder": 0,
+       "weightKg": 20.0,
+       "reps": 10,
+       "completedAt": "2026-09-07T10:13:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "45fffe1c-845b-51a1-bd50-792adcffea98",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "6379ac73-1f2a-5420-a9c1-6451fa1bd2b2",
+       "sortOrder": 0,
+       "weightKg": 37.5,
+       "reps": 9,
+       "completedAt": "2026-09-07T10:26:00.000Z"
+      },
+      {
+       "id": "c4089e42-8498-5d28-8082-73927363427d",
+       "sortOrder": 1,
+       "weightKg": 37.5,
+       "reps": 8,
+       "completedAt": "2026-09-07T10:39:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "9e6fdc5b-8ab0-5a00-8a1c-dbc7f0259393",
+     "exerciseId": "e397b65f-400f-51da-ad14-12815108d1e5",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "4488c70e-b828-5e1d-a2dd-d01cab14a4fb",
+       "sortOrder": 0,
+       "weightKg": 25.0,
+       "reps": 10,
+       "completedAt": "2026-09-07T10:52:00.000Z"
+      },
+      {
+       "id": "6bca2f12-9548-5ab8-8437-0f0edc3ceab3",
+       "sortOrder": 1,
+       "weightKg": 25.0,
+       "reps": 8,
+       "completedAt": "2026-09-07T11:05:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "7fb7ea1f-3f57-5ad3-9576-c455b329d946",
+     "exerciseId": "7d0684d0-6633-54fc-830e-58a02a9b789c",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "a9f95988-4181-512f-b047-8d572326650c",
+       "sortOrder": 0,
+       "weightKg": 10.0,
+       "reps": 12,
+       "completedAt": "2026-09-07T11:18:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "420bc261-789d-5111-a311-ce8a3e5fa796",
+     "exerciseId": "33afb774-b43c-5387-94bf-5fbc65558aa0",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "fb52a6f2-e0b6-56e1-b577-50178faf6225",
+       "sortOrder": 0,
+       "weightKg": 7.5,
+       "reps": 15,
+       "completedAt": "2026-09-07T11:31:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "9b5f4778-098b-570c-84c8-a8235ab84049",
+   "routineId": "12c871ee-adbb-5362-9188-44fb255850e5",
+   "name": "Tonys Legs",
+   "startedAt": "2026-09-03T10:00:00.000Z",
+   "finishedAt": "2026-09-03T11:21:00.000Z",
+   "exercises": [
+    {
+     "id": "3cae8967-f506-55db-8a56-d0f1da366d13",
+     "exerciseId": "4534d229-aaac-536c-9bf3-23602bb42822",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "6296479a-d9a2-597f-a8cb-1ce5a6200b89",
+       "sortOrder": 0,
+       "weightKg": 95.0,
+       "reps": 6,
+       "completedAt": "2026-09-03T10:09:00.000Z"
+      },
+      {
+       "id": "be94b4c6-f17c-5ff6-a5aa-deb4da87b770",
+       "sortOrder": 1,
+       "weightKg": 95.0,
+       "reps": 5,
+       "completedAt": "2026-09-03T10:18:00.000Z"
+      },
+      {
+       "id": "291a551a-6ca0-58b4-9a09-03a21e823f7c",
+       "sortOrder": 2,
+       "weightKg": 95.0,
+       "reps": 4,
+       "completedAt": "2026-09-03T10:27:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "96237161-3804-57f5-aee2-8b30e8319380",
+     "exerciseId": "12431968-7359-5f57-b861-df0bfaa67e27",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "8f27618d-dd63-5a51-a33d-87d9b814f380",
+       "sortOrder": 0,
+       "weightKg": 147.5,
+       "reps": 10,
+       "completedAt": "2026-09-03T10:36:00.000Z"
+      },
+      {
+       "id": "d5ddac2f-ca1e-59dd-8a89-940f4e182119",
+       "sortOrder": 1,
+       "weightKg": 147.5,
+       "reps": 9,
+       "completedAt": "2026-09-03T10:45:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "f4115b96-2484-5165-9212-f8995f79eda1",
+     "exerciseId": "3aca9abc-ff4a-5e50-a712-cf8199acf14c",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "91f0c0c9-4940-5a8f-9fb7-ca8e1b1fe7b3",
+       "sortOrder": 0,
+       "weightKg": 52.5,
+       "reps": 12,
+       "completedAt": "2026-09-03T10:54:00.000Z"
+      },
+      {
+       "id": "c280100a-440c-55be-826c-5210b05bfcbe",
+       "sortOrder": 1,
+       "weightKg": 52.5,
+       "reps": 11,
+       "completedAt": "2026-09-03T11:03:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "e993ad95-f050-5692-b2bc-789deb93e2e0",
+     "exerciseId": "0de49362-e3ef-56e9-984d-1b889e03fc9b",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "42cd25cd-a747-539c-af36-cf8f858be5e0",
+       "sortOrder": 0,
+       "weightKg": 42.5,
+       "reps": 11,
+       "completedAt": "2026-09-03T11:12:00.000Z"
+      },
+      {
+       "id": "3fe14de5-bc3d-51a8-8442-49eff9061369",
+       "sortOrder": 1,
+       "weightKg": 42.5,
+       "reps": 10,
+       "completedAt": "2026-09-03T11:21:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "192218eb-698f-546f-93b4-dd8858056a34",
+   "routineId": "37cb688c-85ae-5d6b-8872-253c41137009",
+   "name": "Tonys Upper B",
+   "startedAt": "2026-08-31T10:00:00.000Z",
+   "finishedAt": "2026-08-31T11:13:00.000Z",
+   "exercises": [
+    {
+     "id": "b8398f17-a4ef-5aa1-b779-8e2417e4d8c0",
+     "exerciseId": "e397b65f-400f-51da-ad14-12815108d1e5",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "6593e5e1-034c-51ad-98cb-25e5275ed67b",
+       "sortOrder": 0,
+       "weightKg": 25.0,
+       "reps": 9,
+       "completedAt": "2026-08-31T10:10:26.000Z"
+      },
+      {
+       "id": "ebe6b67b-7e30-5a81-85fd-0dffa04f71bd",
+       "sortOrder": 1,
+       "weightKg": 25.0,
+       "reps": 9,
+       "completedAt": "2026-08-31T10:20:51.000Z"
+      }
+     ]
+    },
+    {
+     "id": "30eed0c5-7450-596e-8221-31ccbc4f27a6",
+     "exerciseId": "441927d8-bfad-54c8-adb1-4da774a214cf",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "2ca4c1f9-7a67-52f6-b7be-26c7d924b82e",
+       "sortOrder": 0,
+       "weightKg": 42.5,
+       "reps": 12,
+       "completedAt": "2026-08-31T10:31:17.000Z"
+      }
+     ]
+    },
+    {
+     "id": "0e076776-25a7-5aae-bfdb-18201dc24bad",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "1ac33ccb-8e16-5dc4-a1c1-d8a1861efe91",
+       "sortOrder": 0,
+       "weightKg": 37.5,
+       "reps": 10,
+       "completedAt": "2026-08-31T10:41:43.000Z"
+      },
+      {
+       "id": "f00f267c-9d9d-591c-8364-126be495cad2",
+       "sortOrder": 1,
+       "weightKg": 37.5,
+       "reps": 9,
+       "completedAt": "2026-08-31T10:52:09.000Z"
+      }
+     ]
+    },
+    {
+     "id": "0919f7cf-3c05-5621-9544-2e02a1e2318e",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "7082ba92-7c62-54ac-9ca6-640d1104ea72",
+       "sortOrder": 0,
+       "weightKg": 20.0,
+       "reps": 10,
+       "completedAt": "2026-08-31T11:02:34.000Z"
+      }
+     ]
+    },
+    {
+     "id": "005f5fa4-678d-56af-8757-c41fa6ac894a",
+     "exerciseId": "feb61737-f841-5832-aeab-908eac0439ee",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "72d34195-6afc-5eae-b17a-e4b58e299223",
+       "sortOrder": 0,
+       "weightKg": 32.5,
+       "reps": 11,
+       "completedAt": "2026-08-31T11:13:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5892d569-0c35-5c6f-97c1-1035b296a55b",
+   "routineId": "13c58d20-dd0e-595c-b0e0-9973260a87f0",
+   "name": "Tonys Back",
+   "startedAt": "2026-08-27T10:00:00.000Z",
+   "finishedAt": "2026-08-27T11:14:00.000Z",
+   "exercises": [
+    {
+     "id": "9ad63540-30bb-5c11-86dc-72a3447017c1",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "e670b58d-c7b7-53bf-90eb-f8c19d922b94",
+       "sortOrder": 0,
+       "weightKg": 37.5,
+       "reps": 9,
+       "completedAt": "2026-08-27T10:09:15.000Z"
+      },
+      {
+       "id": "a4685157-1004-51ce-bfc5-76481788f591",
+       "sortOrder": 1,
+       "weightKg": 37.5,
+       "reps": 9,
+       "completedAt": "2026-08-27T10:18:30.000Z"
+      },
+      {
+       "id": "08f3e70d-3b8d-5a6a-8cae-5c550ec89466",
+       "sortOrder": 2,
+       "weightKg": 37.5,
+       "reps": 8,
+       "completedAt": "2026-08-27T10:27:45.000Z"
+      }
+     ]
+    },
+    {
+     "id": "0898ea86-7b26-57b8-9a38-9daf59bc5ff3",
+     "exerciseId": "2f243ea1-7a20-567c-a8f4-990bb5c928a5",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "c5e93abb-6d60-5630-b335-03c6fe5bb351",
+       "sortOrder": 0,
+       "weightKg": 30.0,
+       "reps": 10,
+       "completedAt": "2026-08-27T10:37:00.000Z"
+      },
+      {
+       "id": "b0630c44-8281-5a40-a76a-61c4b011491a",
+       "sortOrder": 1,
+       "weightKg": 30.0,
+       "reps": 9,
+       "completedAt": "2026-08-27T10:46:15.000Z"
+      },
+      {
+       "id": "d60f01f2-1bd3-59ca-ab50-f330e5beac5c",
+       "sortOrder": 2,
+       "weightKg": 30.0,
+       "reps": 7,
+       "completedAt": "2026-08-27T10:55:30.000Z"
+      }
+     ]
+    },
+    {
+     "id": "2329f668-3fe3-5db5-b7db-2e848ff61ccb",
+     "exerciseId": "aa016d8f-e1a7-527f-b4d1-4ee06f923bc2",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "f16bce65-1ec1-5c3f-949f-700c3d072012",
+       "sortOrder": 0,
+       "weightKg": 57.5,
+       "reps": 9,
+       "completedAt": "2026-08-27T11:04:45.000Z"
+      },
+      {
+       "id": "c8565cb2-1791-5457-8eaa-41c7e62a27e5",
+       "sortOrder": 1,
+       "weightKg": 57.5,
+       "reps": 9,
+       "completedAt": "2026-08-27T11:14:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "a8cab9f2-00f8-5c64-b3d6-4cb1abc6ae28",
+   "routineId": "ad3f0676-b540-5a7e-a59f-182e32d58377",
+   "name": "Tony Chest",
+   "startedAt": "2026-08-24T10:00:00.000Z",
+   "finishedAt": "2026-08-24T10:46:00.000Z",
+   "exercises": [
+    {
+     "id": "cf8e3cdf-9361-5bb3-910b-b16eb532a6ff",
+     "exerciseId": "e397b65f-400f-51da-ad14-12815108d1e5",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "945729c5-1c13-59ae-bd67-7e1a47cc7523",
+       "sortOrder": 0,
+       "weightKg": 25.0,
+       "reps": 9,
+       "completedAt": "2026-08-24T10:05:45.000Z"
+      },
+      {
+       "id": "e83bae81-b114-5492-8e48-2ec3e07b47b4",
+       "sortOrder": 1,
+       "weightKg": 25.0,
+       "reps": 8,
+       "completedAt": "2026-08-24T10:11:30.000Z"
+      },
+      {
+       "id": "1d88d14f-6d8b-56f3-8583-d7cb99c130b0",
+       "sortOrder": 2,
+       "weightKg": 25.0,
+       "reps": 7,
+       "completedAt": "2026-08-24T10:17:15.000Z"
+      }
+     ]
+    },
+    {
+     "id": "a2b2d392-e8a2-5e4d-861e-4446fd1c3b8e",
+     "exerciseId": "441927d8-bfad-54c8-adb1-4da774a214cf",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "d1510558-8b02-5209-b85b-e20ae9f915ff",
+       "sortOrder": 0,
+       "weightKg": 42.5,
+       "reps": 11,
+       "completedAt": "2026-08-24T10:23:00.000Z"
+      },
+      {
+       "id": "2e9c22e3-9c64-5bc8-a377-9733185778ab",
+       "sortOrder": 1,
+       "weightKg": 42.5,
+       "reps": 10,
+       "completedAt": "2026-08-24T10:28:45.000Z"
+      },
+      {
+       "id": "f0e620f3-7b6a-5912-bf5d-9d17847af56c",
+       "sortOrder": 2,
+       "weightKg": 42.5,
+       "reps": 10,
+       "completedAt": "2026-08-24T10:34:30.000Z"
+      }
+     ]
+    },
+    {
+     "id": "296fc1c3-7a76-5a0b-96fa-2999cb2fbd0c",
+     "exerciseId": "2e3f8075-ff75-5e68-a7e7-02e2921498af",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "d41c40d4-a4e9-5d4e-9d83-3cbdbeca2bf8",
+       "sortOrder": 0,
+       "weightKg": 0.0,
+       "reps": 11,
+       "completedAt": "2026-08-24T10:40:15.000Z"
+      },
+      {
+       "id": "d0cb8aeb-28b8-55d4-adff-4e76f8b2ebfd",
+       "sortOrder": 1,
+       "weightKg": 0.0,
+       "reps": 11,
+       "completedAt": "2026-08-24T10:46:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "a5dbf9bb-0dd5-57cc-96cf-3c00f41f1d00",
+   "routineId": "7adee5cb-a4a4-5062-af8b-279fb80b0efc",
+   "name": "Tonys Legs B",
+   "startedAt": "2026-08-20T10:00:00.000Z",
+   "finishedAt": "2026-08-20T11:08:00.000Z",
+   "exercises": [
+    {
+     "id": "c25734d5-a3a9-5de8-aa20-6baeab22f7f6",
+     "exerciseId": "557f4375-cc13-56ef-a36f-60a11f26dabb",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "e5ecd153-a2fd-54a6-ab3f-6fa273553942",
+       "sortOrder": 0,
+       "weightKg": 82.5,
+       "reps": 8,
+       "completedAt": "2026-08-20T10:07:33.000Z"
+      },
+      {
+       "id": "28534582-dc38-5c7d-a52f-cbf5a6c59de5",
+       "sortOrder": 1,
+       "weightKg": 82.5,
+       "reps": 7,
+       "completedAt": "2026-08-20T10:15:07.000Z"
+      },
+      {
+       "id": "a8525748-8f77-54b5-a236-db03d0f8f845",
+       "sortOrder": 2,
+       "weightKg": 82.5,
+       "reps": 5,
+       "completedAt": "2026-08-20T10:22:40.000Z"
+      }
+     ]
+    },
+    {
+     "id": "dcac1ccd-4812-5bac-8c53-25eea8e28056",
+     "exerciseId": "0de49362-e3ef-56e9-984d-1b889e03fc9b",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "d8d34ad6-1d77-58d5-9117-b7e200be5342",
+       "sortOrder": 0,
+       "weightKg": 40.0,
+       "reps": 11,
+       "completedAt": "2026-08-20T10:30:13.000Z"
+      },
+      {
+       "id": "8f9a3b66-5792-584c-94d2-f1b3ad0580ee",
+       "sortOrder": 1,
+       "weightKg": 40.0,
+       "reps": 11,
+       "completedAt": "2026-08-20T10:37:47.000Z"
+      }
+     ]
+    },
+    {
+     "id": "45321a8e-ed31-55a9-9409-d30e4cb5b824",
+     "exerciseId": "dc6e87a4-7858-54bb-9b2e-1f110681fcdc",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "3cb8ea4b-bd40-5e7d-84ed-b938adc5ea46",
+       "sortOrder": 0,
+       "weightKg": 20.0,
+       "reps": 10,
+       "completedAt": "2026-08-20T10:45:20.000Z"
+      },
+      {
+       "id": "420f8e59-830d-5f01-a8c8-b87d9b5a018d",
+       "sortOrder": 1,
+       "weightKg": 20.0,
+       "reps": 9,
+       "completedAt": "2026-08-20T10:52:53.000Z"
+      }
+     ]
+    },
+    {
+     "id": "56ae4de4-1e3a-55b4-bf3a-0b0d08c35aac",
+     "exerciseId": "ea6cc324-fec9-5c9b-b3a6-b5664bd4ec59",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "9a3b4fe3-4f0f-5ec8-aa15-ea273cd36c87",
+       "sortOrder": 0,
+       "weightKg": 62.5,
+       "reps": 15,
+       "completedAt": "2026-08-20T11:00:27.000Z"
+      },
+      {
+       "id": "2bcd37a2-0f84-5359-ae78-5ad887eaef5d",
+       "sortOrder": 1,
+       "weightKg": 62.5,
+       "reps": 14,
+       "completedAt": "2026-08-20T11:08:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "a29aa6c6-0419-5ff1-8a3a-da75bb707e05",
+   "routineId": "e4b53532-3b9e-5bcf-bd48-f5b8e845ce65",
+   "name": "Tonys Upper SARMS Focus",
+   "startedAt": "2026-08-17T10:00:00.000Z",
+   "finishedAt": "2026-08-17T10:49:00.000Z",
+   "exercises": [
+    {
+     "id": "7666990a-b0fe-5230-9e8b-1c1a9d925706",
+     "exerciseId": "441927d8-bfad-54c8-adb1-4da774a214cf",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "5d93a7e5-d979-5844-b51d-3f4b5446f2fa",
+       "sortOrder": 0,
+       "weightKg": 40.0,
+       "reps": 12,
+       "completedAt": "2026-08-17T10:04:54.000Z"
+      },
+      {
+       "id": "657690cd-ee9e-562b-becc-05ed1634839a",
+       "sortOrder": 1,
+       "weightKg": 40.0,
+       "reps": 10,
+       "completedAt": "2026-08-17T10:09:48.000Z"
+      }
+     ]
+    },
+    {
+     "id": "1a7ef401-24a5-5afc-85d0-af8c79321abe",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "897e71c1-4824-505a-bb8e-3e2bf30a352a",
+       "sortOrder": 0,
+       "weightKg": 35.0,
+       "reps": 10,
+       "completedAt": "2026-08-17T10:14:42.000Z"
+      },
+      {
+       "id": "bd0ee401-de34-57e3-82b6-ff3f8d8a548e",
+       "sortOrder": 1,
+       "weightKg": 35.0,
+       "reps": 8,
+       "completedAt": "2026-08-17T10:19:36.000Z"
+      }
+     ]
+    },
+    {
+     "id": "bace6781-833a-545c-a29c-20c096639dec",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "0d4ae358-073c-54db-a065-075523c2f3dd",
+       "sortOrder": 0,
+       "weightKg": 20.0,
+       "reps": 10,
+       "completedAt": "2026-08-17T10:24:30.000Z"
+      },
+      {
+       "id": "ffffbf0a-3133-5180-b3d9-ab2988779dc0",
+       "sortOrder": 1,
+       "weightKg": 20.0,
+       "reps": 9,
+       "completedAt": "2026-08-17T10:29:24.000Z"
+      }
+     ]
+    },
+    {
+     "id": "ea8c7ca1-f3e9-58ee-9a64-b609b329cbf0",
+     "exerciseId": "33afb774-b43c-5387-94bf-5fbc65558aa0",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "8dbc41b6-7f24-50a5-b480-416abf4d2466",
+       "sortOrder": 0,
+       "weightKg": 7.5,
+       "reps": 15,
+       "completedAt": "2026-08-17T10:34:18.000Z"
+      },
+      {
+       "id": "be783d7a-0476-5bb5-b4fb-0f06fb98d3c6",
+       "sortOrder": 1,
+       "weightKg": 7.5,
+       "reps": 13,
+       "completedAt": "2026-08-17T10:39:12.000Z"
+      }
+     ]
+    },
+    {
+     "id": "d4ab7f6f-0787-5b55-b7d1-94df0d4107ad",
+     "exerciseId": "7d0684d0-6633-54fc-830e-58a02a9b789c",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "5364141f-1d3b-5bb8-b821-bc274e6d9518",
+       "sortOrder": 0,
+       "weightKg": 10.0,
+       "reps": 11,
+       "completedAt": "2026-08-17T10:44:06.000Z"
+      }
+     ]
+    },
+    {
+     "id": "88e8a870-4a73-507d-b968-49b317559dc2",
+     "exerciseId": "feb61737-f841-5832-aeab-908eac0439ee",
+     "sortOrder": 5,
+     "sets": [
+      {
+       "id": "dfc86a08-a014-557b-a080-3bae0ef53cb9",
+       "sortOrder": 0,
+       "weightKg": 30.0,
+       "reps": 12,
+       "completedAt": "2026-08-17T10:49:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "f38f59c0-5ab4-5d7d-b5fb-63650f86261a",
+   "routineId": "93253c43-a930-5f17-a4c2-917651a9d764",
+   "name": "Full Body",
+   "startedAt": "2026-08-13T10:00:00.000Z",
+   "finishedAt": "2026-08-13T11:16:00.000Z",
+   "exercises": [
+    {
+     "id": "e2e7044e-3ba3-5e2a-a916-437060a25a78",
+     "exerciseId": "4534d229-aaac-536c-9bf3-23602bb42822",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "3860a45f-7407-5ac6-8800-0ee3c415eb8b",
+       "sortOrder": 0,
+       "weightKg": 92.5,
+       "reps": 6,
+       "completedAt": "2026-08-13T10:07:36.000Z"
+      },
+      {
+       "id": "9322e9c1-1819-5936-8b1f-302e157b5d77",
+       "sortOrder": 1,
+       "weightKg": 92.5,
+       "reps": 5,
+       "completedAt": "2026-08-13T10:15:12.000Z"
+      }
+     ]
+    },
+    {
+     "id": "091f29d2-ca84-53b3-808b-d0995c500b93",
+     "exerciseId": "6cabc1b0-ff70-5d9e-9f59-db24faff5705",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "40643c7c-0252-5978-a9b6-8bf717e3677b",
+       "sortOrder": 0,
+       "weightKg": 70.0,
+       "reps": 7,
+       "completedAt": "2026-08-13T10:22:48.000Z"
+      },
+      {
+       "id": "eb395498-db26-5b28-955b-c58da630c05e",
+       "sortOrder": 1,
+       "weightKg": 70.0,
+       "reps": 7,
+       "completedAt": "2026-08-13T10:30:24.000Z"
+      }
+     ]
+    },
+    {
+     "id": "0fb338d9-faf1-5afa-bd8e-f9888b3579aa",
+     "exerciseId": "5bf8d6cc-e0be-5f21-8190-a024d777fb21",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "ea480bd0-ddd1-512e-ac8c-6d9bc1a45335",
+       "sortOrder": 0,
+       "weightKg": 60.0,
+       "reps": 7,
+       "completedAt": "2026-08-13T10:38:00.000Z"
+      },
+      {
+       "id": "8a04ad9d-6223-5ac6-b9ae-ed567737c314",
+       "sortOrder": 1,
+       "weightKg": 60.0,
+       "reps": 6,
+       "completedAt": "2026-08-13T10:45:36.000Z"
+      }
+     ]
+    },
+    {
+     "id": "9d26a2b1-0060-5b85-b317-8c117cc2d5cc",
+     "exerciseId": "9b63829a-7017-52be-b76c-b09836058559",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "fa5f6e81-4678-5524-ae7c-f3c6fb2fa601",
+       "sortOrder": 0,
+       "weightKg": 40.0,
+       "reps": 7,
+       "completedAt": "2026-08-13T10:53:12.000Z"
+      },
+      {
+       "id": "d3f6bb26-4609-5abd-92f9-dad2d96755ea",
+       "sortOrder": 1,
+       "weightKg": 40.0,
+       "reps": 6,
+       "completedAt": "2026-08-13T11:00:48.000Z"
+      }
+     ]
+    },
+    {
+     "id": "114c7009-3428-5444-99ed-abe97ed36b2b",
+     "exerciseId": "59a8785d-c1f1-52ca-8f08-8e81feee493c",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "d3ee7dda-e005-5f60-a634-7ab6d0fc787e",
+       "sortOrder": 0,
+       "weightKg": 0.0,
+       "reps": 1,
+       "completedAt": "2026-08-13T11:08:24.000Z"
+      },
+      {
+       "id": "cf8d3586-d551-5c4f-89ff-f3cebad6d8ae",
+       "sortOrder": 1,
+       "weightKg": 0.0,
+       "reps": 1,
+       "completedAt": "2026-08-13T11:16:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "0053883f-d2d8-57ac-a1b2-cdcbefadafd7",
+   "routineId": "151656db-7573-5ccf-bbf2-39e16ea149af",
+   "name": "Gladiator Upper",
+   "startedAt": "2026-08-10T10:00:00.000Z",
+   "finishedAt": "2026-08-10T10:45:00.000Z",
+   "exercises": [
+    {
+     "id": "466743a0-7117-513c-a641-070465b35b34",
+     "exerciseId": "6cabc1b0-ff70-5d9e-9f59-db24faff5705",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "0664713e-d186-5720-8daa-f3aa21d1b625",
+       "sortOrder": 0,
+       "weightKg": 70.0,
+       "reps": 7,
+       "completedAt": "2026-08-10T10:03:28.000Z"
+      },
+      {
+       "id": "30e0c196-5b3e-555c-a360-eb518ca28380",
+       "sortOrder": 1,
+       "weightKg": 70.0,
+       "reps": 7,
+       "completedAt": "2026-08-10T10:06:55.000Z"
+      },
+      {
+       "id": "d39daff2-6496-5372-b9a5-653884f9a838",
+       "sortOrder": 2,
+       "weightKg": 70.0,
+       "reps": 6,
+       "completedAt": "2026-08-10T10:10:23.000Z"
+      }
+     ]
+    },
+    {
+     "id": "290c9484-7e62-513d-8bc9-0ac2457f723d",
+     "exerciseId": "5bf8d6cc-e0be-5f21-8190-a024d777fb21",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "fa6535ea-cfd9-5c34-9ce0-75a68da2db4c",
+       "sortOrder": 0,
+       "weightKg": 60.0,
+       "reps": 7,
+       "completedAt": "2026-08-10T10:13:51.000Z"
+      },
+      {
+       "id": "7425f091-e6cc-5423-9e77-c801f4ff4c1d",
+       "sortOrder": 1,
+       "weightKg": 60.0,
+       "reps": 7,
+       "completedAt": "2026-08-10T10:17:18.000Z"
+      },
+      {
+       "id": "b6e0cd96-0dd6-5378-90c6-58784e323ce2",
+       "sortOrder": 2,
+       "weightKg": 60.0,
+       "reps": 5,
+       "completedAt": "2026-08-10T10:20:46.000Z"
+      }
+     ]
+    },
+    {
+     "id": "4ffe2a1c-6efb-5330-85f2-9ffe3e28ddfd",
+     "exerciseId": "9b63829a-7017-52be-b76c-b09836058559",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "2020e6ec-57b8-5e81-a9bd-9744a01a9490",
+       "sortOrder": 0,
+       "weightKg": 40.0,
+       "reps": 7,
+       "completedAt": "2026-08-10T10:24:14.000Z"
+      },
+      {
+       "id": "e19ebab0-ddd6-5143-b27b-2c06df223afa",
+       "sortOrder": 1,
+       "weightKg": 40.0,
+       "reps": 7,
+       "completedAt": "2026-08-10T10:27:42.000Z"
+      },
+      {
+       "id": "2aad6fdf-97bb-5352-942b-571f27fba29b",
+       "sortOrder": 2,
+       "weightKg": 40.0,
+       "reps": 5,
+       "completedAt": "2026-08-10T10:31:09.000Z"
+      }
+     ]
+    },
+    {
+     "id": "929434b4-ea0e-5e37-b385-8119b33c0889",
+     "exerciseId": "be01ec56-77cd-5049-95e5-19c8c74e1394",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "24964c60-5b48-554f-b779-4671a33db356",
+       "sortOrder": 0,
+       "weightKg": 30.0,
+       "reps": 9,
+       "completedAt": "2026-08-10T10:34:37.000Z"
+      },
+      {
+       "id": "34c3fdd1-34d2-5f56-90c2-de034c90377c",
+       "sortOrder": 1,
+       "weightKg": 30.0,
+       "reps": 9,
+       "completedAt": "2026-08-10T10:38:05.000Z"
+      }
+     ]
+    },
+    {
+     "id": "471474f1-71e4-596a-98b6-43e6b64ec493",
+     "exerciseId": "0337ee61-9fec-597d-b99d-49587a6486df",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "d49902b9-fdef-591e-b9b5-b0ccff1e31d0",
+       "sortOrder": 0,
+       "weightKg": 25.0,
+       "reps": 10,
+       "completedAt": "2026-08-10T10:41:32.000Z"
+      },
+      {
+       "id": "31d653ca-4242-565b-85f6-97cf2672aea0",
+       "sortOrder": 1,
+       "weightKg": 25.0,
+       "reps": 8,
+       "completedAt": "2026-08-10T10:45:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d87527dd-3724-5c3c-94c7-2367b2462747",
+   "routineId": "6f35bb6a-a64f-58c4-b8de-d9dcef887e0d",
+   "name": "Legs",
+   "startedAt": "2026-08-06T10:00:00.000Z",
+   "finishedAt": "2026-08-06T11:13:00.000Z",
+   "exercises": [
+    {
+     "id": "c26d3166-a71d-539d-bb97-ccc7ed3c928a",
+     "exerciseId": "4534d229-aaac-536c-9bf3-23602bb42822",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "fb8f4048-efea-547c-8954-c44a8b91f71f",
+       "sortOrder": 0,
+       "weightKg": 90.0,
+       "reps": 5,
+       "completedAt": "2026-08-06T10:10:26.000Z"
+      },
+      {
+       "id": "6546ee87-a11c-5262-a2e4-af6ed5425001",
+       "sortOrder": 1,
+       "weightKg": 90.0,
+       "reps": 5,
+       "completedAt": "2026-08-06T10:20:51.000Z"
+      },
+      {
+       "id": "3c579f3b-2c67-575a-acc3-f067816d4c38",
+       "sortOrder": 2,
+       "weightKg": 90.0,
+       "reps": 3,
+       "completedAt": "2026-08-06T10:31:17.000Z"
+      }
+     ]
+    },
+    {
+     "id": "46d3ba07-ace4-54ae-9e81-bbd5b3b20561",
+     "exerciseId": "557f4375-cc13-56ef-a36f-60a11f26dabb",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "3804db28-5bc0-5b6a-92b5-7dc5b86133b7",
+       "sortOrder": 0,
+       "weightKg": 80.0,
+       "reps": 7,
+       "completedAt": "2026-08-06T10:41:43.000Z"
+      },
+      {
+       "id": "cbf10b35-e4cf-5d98-a9f5-f62bf3d73cbb",
+       "sortOrder": 1,
+       "weightKg": 80.0,
+       "reps": 6,
+       "completedAt": "2026-08-06T10:52:09.000Z"
+      }
+     ]
+    },
+    {
+     "id": "5e66536c-369d-51d1-adbb-48af3274cce0",
+     "exerciseId": "12431968-7359-5f57-b861-df0bfaa67e27",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "308976d8-346b-5a6f-bf8d-f051a53fc9fc",
+       "sortOrder": 0,
+       "weightKg": 140.0,
+       "reps": 9,
+       "completedAt": "2026-08-06T11:02:34.000Z"
+      },
+      {
+       "id": "b37a8c4c-1b0a-5ec8-bf71-24fdaba950ca",
+       "sortOrder": 1,
+       "weightKg": 140.0,
+       "reps": 9,
+       "completedAt": "2026-08-06T11:13:00.000Z"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "99d55b3f-6f31-5e9a-8dde-71b589b2279f",
+   "routineId": "3325a2eb-4f5b-5ff2-82b8-894f21dcd791",
+   "name": "Tonys Upper A",
+   "startedAt": "2026-08-03T10:00:00.000Z",
+   "finishedAt": "2026-08-03T11:33:00.000Z",
+   "exercises": [
+    {
+     "id": "0b89446f-ea44-54d4-a533-d4da65a62c6a",
+     "exerciseId": "166ffc19-08eb-581c-8b9f-1f2056ba1742",
+     "sortOrder": 0,
+     "sets": [
+      {
+       "id": "f6610e8a-35cd-5b15-9f3d-6ab8d9e08dba",
+       "sortOrder": 0,
+       "weightKg": 20.0,
+       "reps": 10,
+       "completedAt": "2026-08-03T10:13:17.000Z"
+      }
+     ]
+    },
+    {
+     "id": "7b21eab6-298a-5cc2-a629-730218021203",
+     "exerciseId": "7c4ce4fe-3b45-57a6-9ab4-e7e9db1a5e1d",
+     "sortOrder": 1,
+     "sets": [
+      {
+       "id": "0dacb1b7-929e-5333-a737-34c925a68dae",
+       "sortOrder": 0,
+       "weightKg": 35.0,
+       "reps": 9,
+       "completedAt": "2026-08-03T10:26:34.000Z"
+      },
+      {
+       "id": "015591f8-f7ed-5f1d-9a46-9294027edcff",
+       "sortOrder": 1,
+       "weightKg": 35.0,
+       "reps": 8,
+       "completedAt": "2026-08-03T10:39:51.000Z"
+      }
+     ]
+    },
+    {
+     "id": "64c64465-d961-5978-8747-ad6b2ac1319e",
+     "exerciseId": "e397b65f-400f-51da-ad14-12815108d1e5",
+     "sortOrder": 2,
+     "sets": [
+      {
+       "id": "85a9355e-55aa-5b24-bb75-c09b3fb6e6fa",
+       "sortOrder": 0,
+       "weightKg": 25.0,
+       "reps": 10,
+       "completedAt": "2026-08-03T10:53:09.000Z"
+      },
+      {
+       "id": "7e2ad294-2e15-5bc5-9219-d24956d532d7",
+       "sortOrder": 1,
+       "weightKg": 25.0,
+       "reps": 9,
+       "completedAt": "2026-08-03T11:06:26.000Z"
+      }
+     ]
+    },
+    {
+     "id": "7675cda9-faba-5fbc-8800-3c607b8145db",
+     "exerciseId": "7d0684d0-6633-54fc-830e-58a02a9b789c",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "ce0ac745-b704-5f62-96ad-19dc71762c38",
+       "sortOrder": 0,
+       "weightKg": 10.0,
+       "reps": 11,
+       "completedAt": "2026-08-03T11:19:43.000Z"
+      }
+     ]
+    },
+    {
+     "id": "a2005d46-c0f6-5849-ba0a-761c851d5ea9",
+     "exerciseId": "33afb774-b43c-5387-94bf-5fbc65558aa0",
+     "sortOrder": 4,
+     "sets": [
+      {
+       "id": "6bd37492-4322-57ae-bc49-211a145af3d7",
+       "sortOrder": 0,
+       "weightKg": 7.5,
+       "reps": 14,
+       "completedAt": "2026-08-03T11:33:00.000Z"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "bodyweight": [
+  {
+   "id": "60b9a3ee-1a1f-5916-a49a-ebf51d7eeb24",
+   "date": "2026-08-03",
+   "weightKg": 82.3
+  },
+  {
+   "id": "bd65ebc9-408d-5c4f-850a-a9e2cfbd213c",
+   "date": "2026-08-06",
+   "weightKg": 81.7
+  },
+  {
+   "id": "10de0bc0-a621-5349-a3bd-3facd2d163e5",
+   "date": "2026-08-10",
+   "weightKg": 81.8
+  },
+  {
+   "id": "ceecf891-6e32-5a9e-8e38-8c8b20cc6ffa",
+   "date": "2026-08-14",
+   "weightKg": 81.6
+  },
+  {
+   "id": "ce8ef819-5ab5-543c-935e-68a17a3d8cac",
+   "date": "2026-08-18",
+   "weightKg": 81.4
+  },
+  {
+   "id": "00121b53-e035-50eb-92d1-df55bd219525",
+   "date": "2026-08-22",
+   "weightKg": 81.2
+  },
+  {
+   "id": "fca96b98-f0f2-569d-938f-8abf5f9f2547",
+   "date": "2026-08-26",
+   "weightKg": 81.2
+  },
+  {
+   "id": "042ddb4d-f744-5b81-966a-481207a6483d",
+   "date": "2026-08-30",
+   "weightKg": 81.0
+  },
+  {
+   "id": "c41613dd-f35a-57c1-b6b0-2eac5cba18b3",
+   "date": "2026-09-03",
+   "weightKg": 80.9
+  },
+  {
+   "id": "76734eab-f88a-5e2d-8d25-d564dad6c7c4",
+   "date": "2026-09-07",
+   "weightKg": 81.2
+  },
+  {
+   "id": "83d2efc3-3169-5a07-9367-e500d808d192",
+   "date": "2026-09-11",
+   "weightKg": 81.0
+  },
+  {
+   "id": "060207a2-0062-5725-9332-05ae1e5cb32f",
+   "date": "2026-09-15",
+   "weightKg": 80.9
+  },
+  {
+   "id": "b3fef635-5cab-57e8-a3a5-ae4d0656364a",
+   "date": "2026-09-19",
+   "weightKg": 80.9
+  },
+  {
+   "id": "b1cc5303-d667-5630-927e-2a8e56007dba",
+   "date": "2026-09-23",
+   "weightKg": 80.7
+  },
+  {
+   "id": "aa931255-7c65-5ec3-a99a-dd40f350a002",
+   "date": "2026-09-27",
+   "weightKg": 80.6
+  },
+  {
+   "id": "24b0177c-f69b-5725-8c40-23cec4fec958",
+   "date": "2026-10-01",
+   "weightKg": 80.3
+  },
+  {
+   "id": "f4b3abea-dc0e-538f-875b-28dd5e8ac2cb",
+   "date": "2026-10-05",
+   "weightKg": 80.1
+  },
+  {
+   "id": "dcb743aa-391b-5a00-9109-52c95c123eef",
+   "date": "2026-10-09",
+   "weightKg": 80.3
+  },
+  {
+   "id": "09f8ad5a-ac65-5e47-8d8f-b0f968b70683",
+   "date": "2026-10-13",
+   "weightKg": 79.9
+  },
+  {
+   "id": "9f88e3c0-9d82-5305-bbfb-e656841b7a83",
+   "date": "2026-10-17",
+   "weightKg": 80.1
+  },
+  {
+   "id": "45dcfbf9-20ce-57f4-9c1e-3cfa8d509e2e",
+   "date": "2026-10-21",
+   "weightKg": 80.0
+  },
+  {
+   "id": "e9f194f3-6254-5db9-9ca9-0cd99b4545ab",
+   "date": "2026-10-25",
+   "weightKg": 79.9
+  },
+  {
+   "id": "91a3d848-fca0-50fe-a5e7-8a361ecb6481",
+   "date": "2026-10-29",
+   "weightKg": 79.3
+  }
+ ],
+ "settings": {}
+}
