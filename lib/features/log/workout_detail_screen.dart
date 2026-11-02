@@ -31,7 +31,9 @@ class WorkoutDetailScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final detail = ref.watch(workoutDetailProvider(workoutId)).value;
-    final unit = ref.watch(settingsProvider).unit;
+    final settings = ref.watch(settingsProvider);
+    final unit = settings.unit;
+    final gymNames = ref.watch(gymNamesProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -54,10 +56,18 @@ class WorkoutDetailScreen extends ConsumerWidget {
           : ListView(
               padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
               children: [
-                _SummaryHeader(detail: detail, unit: unit),
+                _SummaryHeader(
+                  detail: detail,
+                  unit: unit,
+                  pinIncrementLb: settings.pinIncrementLb,
+                ),
                 const SizedBox(height: 16),
                 for (final exercise in detail.exercises)
-                  _ExerciseCard(exercise: exercise, unit: unit),
+                  _ExerciseCard(
+                    exercise: exercise,
+                    unit: unitForMode(exercise.exercise.weightMode, unit),
+                    gymName: gymNames[exercise.exercise.gymId],
+                  ),
               ],
             ),
     );
@@ -65,7 +75,12 @@ class WorkoutDetailScreen extends ConsumerWidget {
 }
 
 class _SummaryHeader extends StatelessWidget {
-  const _SummaryHeader({required this.detail, required this.unit});
+  const _SummaryHeader({
+    required this.detail,
+    required this.unit,
+    required this.pinIncrementLb,
+  });
+  final int pinIncrementLb;
   final WorkoutDetail detail;
   final WeightUnit unit;
 
@@ -75,10 +90,16 @@ class _SummaryHeader extends StatelessWidget {
     final start = workout.startedAt.toLocal();
     final end = workout.finishedAt?.toLocal();
     var volumeKg = 0.0;
+    var hasPinSets = false;
     for (final exercise in detail.exercises) {
       for (final set in exercise.sets) {
         if (set.completedAt != null) {
-          volumeKg += (set.weightKg ?? 0) * (set.reps ?? 0);
+          final pin = set.pin;
+          if (pin != null) hasPinSets = true;
+          final weightKg = pin != null
+              ? pinWeightKg(pin, pinIncrementLb)
+              : set.weightKg ?? 0;
+          volumeKg += weightKg * (set.reps ?? 0);
         }
       }
     }
@@ -94,18 +115,13 @@ class _SummaryHeader extends StatelessWidget {
           style: const TextStyle(fontSize: 16),
         ),
         const SizedBox(height: 4),
-        Text(
-          timeRange,
-          style: const TextStyle(color: AppColors.textSecondary),
-        ),
+        Text(timeRange, style: const TextStyle(color: AppColors.textSecondary)),
         const SizedBox(height: 16),
         Row(
           children: [
             _Figure(
               label: 'Duration',
-              value: end == null
-                  ? '-'
-                  : formatDuration(end.difference(start)),
+              value: end == null ? '-' : formatDuration(end.difference(start)),
             ),
             _Figure(label: 'Sets', value: '${detail.completedSets}'),
             _Figure(
@@ -115,6 +131,10 @@ class _SummaryHeader extends StatelessWidget {
             ),
           ],
         ),
+        if (hasPinSets) ...[
+          const SizedBox(height: 12),
+          PinEstimateNote(incrementLb: pinIncrementLb),
+        ],
       ],
     );
   }
@@ -146,9 +166,14 @@ class _Figure extends StatelessWidget {
 }
 
 class _ExerciseCard extends StatelessWidget {
-  const _ExerciseCard({required this.exercise, required this.unit});
+  const _ExerciseCard({
+    required this.exercise,
+    required this.unit,
+    required this.gymName,
+  });
   final WorkoutExerciseDetail exercise;
   final WeightUnit unit;
+  final String? gymName;
 
   @override
   Widget build(BuildContext context) {
@@ -163,7 +188,7 @@ class _ExerciseCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            exercise.exercise.name,
+            exerciseLabel(exercise.exercise.name, gymName),
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
           ),
           const SizedBox(height: 8),
@@ -180,7 +205,7 @@ class _ExerciseCard extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '${formatWeight(set.weightKg ?? 0, unit)} ${unit.label} '
+                    '${formatLoad(set.weightKg, set.pin, unit)} '
                     '× ${set.reps ?? 0}',
                     style: TextStyle(
                       color: set.completedAt == null

@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../app/providers.dart';
 import '../../app/theme.dart';
+import '../../core/format.dart';
 import '../../core/widgets.dart';
 import '../../data/database.dart';
 import '../../data/library_repositories.dart';
@@ -120,6 +121,7 @@ class _RoutineEditorScreenState extends ConsumerState<RoutineEditorScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final gymNames = ref.watch(gymNamesProvider);
     return PopScope(
       canPop: !_dirty,
       onPopInvokedWithResult: (didPop, _) async {
@@ -137,7 +139,9 @@ class _RoutineEditorScreenState extends ConsumerState<RoutineEditorScreen> {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text(widget.routineId == null ? 'New routine' : 'Edit routine'),
+          title: Text(
+            widget.routineId == null ? 'New routine' : 'Edit routine',
+          ),
           actions: [
             TextButton(onPressed: _save, child: const Text('Save')),
             const SizedBox(width: 8),
@@ -193,7 +197,14 @@ class _RoutineEditorScreenState extends ConsumerState<RoutineEditorScreen> {
                                   ),
                                 ),
                               ),
-                              Expanded(child: Text(item.exercise.name)),
+                              Expanded(
+                                child: Text(
+                                  exerciseLabel(
+                                    item.exercise.name,
+                                    gymNames[item.exercise.gymId],
+                                  ),
+                                ),
+                              ),
                               IconButton(
                                 icon: const Icon(Icons.remove),
                                 tooltip: 'Fewer sets',
