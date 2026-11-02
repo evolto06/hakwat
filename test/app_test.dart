@@ -6,9 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hakwat/app/providers.dart';
+import 'package:hakwat/core/widgets.dart';
 import 'package:hakwat/data/backup.dart';
 import 'package:hakwat/data/database.dart';
 import 'package:hakwat/data/library_repositories.dart';
+import 'package:hakwat/data/seed_exercises.dart';
+import 'package:hakwat/data/workout_repository.dart';
 import 'package:hakwat/main.dart';
 import 'package:hakwat/services/rest_alerts.dart';
 
@@ -100,13 +103,18 @@ void main() {
     await tester.drag(list.first, const Offset(0, -700));
     await settle(tester);
     expect(
-      find.descendant(of: find.byType(AppBar), matching: find.text('September')),
+      find.descendant(
+        of: find.byType(AppBar),
+        matching: find.text('September'),
+      ),
       findsOneWidget,
     );
     await closeApp(tester, db);
   });
 
-  testWidgets('the Routines tab lists routines in mockup order', (tester) async {
+  testWidgets('the Routines tab lists routines in mockup order', (
+    tester,
+  ) async {
     await pumpApp(tester);
     await tester.tap(find.text('Routines'));
     await settle(tester);
@@ -177,7 +185,7 @@ void main() {
 
     expect(find.text('Tonys Upper Minimalist'), findsOneWidget);
     await tester.scrollUntilVisible(
-      find.text('Tonys Cable Lat Raise'),
+      find.text('Tonys Cable Lat Raise · Tonys Gym'),
       200,
       scrollable: find.byType(Scrollable).first,
     );
@@ -190,10 +198,9 @@ void main() {
     await settle(tester);
 
     final saved = await tester.runAsync(
-      () =>
-          (db.select(db.workoutSets)
-                ..where((s) => s.completedAt.isNull()))
-              .getSingle(),
+      () => (db.select(
+        db.workoutSets,
+      )..where((s) => s.completedAt.isNull())).getSingle(),
     );
     expect(saved!.weightKg, 12.5, reason: 'saved before the set is ticked');
     expect(saved.reps, 11);
@@ -232,11 +239,161 @@ void main() {
     await closeApp(tester, db);
   });
 
+  testWidgets('each exercise logs in its own unit, or by pin', (tester) async {
+    await pumpApp(tester);
+    await tester.tap(find.text('Resume Workout'));
+    await settle(tester);
+
+    Finder inCard(String title, Finder finder) => find.descendant(
+      of: find
+          .ancestor(of: find.text(title), matching: find.byType(Column))
+          .first,
+      matching: finder,
+    );
+
+    const pulldown = 'Tonys Single Arm Lat Pulldown · Tonys Gym';
+    await tester.scrollUntilVisible(
+      find.text(pulldown),
+      200,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await settle(tester);
+    expect(inCard(pulldown, find.text('lb')), findsOneWidget);
+
+    const pushdown = 'Tonys Straight Bar Pushdown · Tonys Gym';
+    await tester.scrollUntilVisible(
+      find.text(pushdown),
+      200,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await settle(tester);
+    expect(inCard(pushdown, find.text('Pin')), findsOneWidget);
+    expect(inCard(pushdown, find.textContaining('Pin 8 ×')), findsOneWidget);
+    await closeApp(tester, db);
+  });
+
+  testWidgets('completing a pin set saves the pin and shows it in history', (
+    tester,
+  ) async {
+    await pumpApp(tester);
+    await tester.tap(find.text('Resume Workout'));
+    await settle(tester);
+
+    const pushdown = 'Tonys Straight Bar Pushdown · Tonys Gym';
+    await tester.scrollUntilVisible(
+      find.text(pushdown),
+      200,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await settle(tester);
+
+    final card = find
+        .ancestor(of: find.text(pushdown), matching: find.byType(Column))
+        .first;
+    await tester.tap(find.descendant(of: card, matching: find.text('Add set')));
+    await settle(tester);
+    final fields = find.descendant(of: card, matching: find.byType(TextField));
+    await tester.enterText(fields.at(fields.evaluate().length - 2), '11');
+    await tester.enterText(fields.last, '9');
+    await settle(tester);
+    await tester.tap(
+      find.descendant(of: card, matching: find.byTooltip('Mark set 2 done')),
+    );
+    await settle(tester);
+
+    final saved = await tester.runAsync(
+      () => (db.select(db.workoutSets)..where((s) => s.pin.equals(11))).get(),
+    );
+    expect(saved!.single.reps, 9);
+    expect(saved.single.weightKg, isNull);
+    await closeApp(tester, db);
+  });
+
+  testWidgets('volume warns that pin sets are estimated', (tester) async {
+    await pumpApp(tester);
+    await tester.tap(find.text('Statistics'));
+    await settle(tester);
+    await tester.tap(find.text('Volume'));
+    await settle(tester);
+    expect(find.textContaining('estimated at 10 lb per pin'), findsOneWidget);
+    await closeApp(tester, db);
+  });
+
+  testWidgets('no pin sets means no estimate warning', (tester) async {
+    await tester.runAsync(() async {
+      final repo = WorkoutRepository(db);
+      final id = await repo.startEmpty();
+      await repo.addExercises(id, [exerciseIdFor('Bench Press')]);
+      final detail = await repo.watchDetail(id).first;
+      await repo.completeSet(
+        detail!.exercises.single.sets.single.id,
+        weightKg: 60,
+        reps: 5,
+        at: DateTime.now(),
+      );
+      await repo.finish(id);
+    });
+    await pumpApp(tester, loadMock: false);
+    await tester.tap(find.text('Statistics'));
+    await settle(tester);
+    await tester.tap(find.text('Volume'));
+    await settle(tester);
+    expect(find.textContaining('per pin'), findsNothing);
+    await closeApp(tester, db);
+  });
+
+  testWidgets('a generic machine can be added to a gym from the library', (
+    tester,
+  ) async {
+    await pumpApp(tester);
+    await tester.tap(find.byTooltip('Menu').first);
+    await settle(tester);
+    await tester.tap(find.text('Exercises'));
+    await settle(tester);
+
+    final generic = find.byWidgetPredicate(
+      (w) =>
+          w is GroupedTile &&
+          (w.title as Text).data == 'Chest Fly' &&
+          (w.subtitle as Text?)?.data == 'Machine',
+    );
+    await tester.scrollUntilVisible(
+      generic,
+      300,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await settle(tester);
+    await tester.tap(
+      find.descendant(
+        of: generic,
+        matching: find.byTooltip('Exercise options'),
+      ),
+    );
+    await settle(tester);
+    await tester.tap(find.text('Add to a gym'));
+    await settle(tester);
+    expect(find.text('Generic (no gym)'), findsOneWidget);
+
+    await tester.tap(find.text('Generic (no gym)'));
+    await settle(tester);
+    await tester.tap(find.text('Gladiator Fitness').last);
+    await settle(tester);
+    await tester.tap(find.text('Save'));
+    await settle(tester);
+    expect(
+      find.text('This gym already has an exercise with this name'),
+      findsOneWidget,
+      reason: 'the mock data already has a Chest Fly at Gladiator Fitness',
+    );
+    await closeApp(tester, db);
+  });
+
   testWidgets('dev tools appear in the drawer in debug builds', (tester) async {
     await pumpApp(tester);
     await tester.tap(find.byTooltip('Menu').first);
     await settle(tester);
     expect(find.text('Exercises'), findsOneWidget);
+    expect(find.text('Gyms'), findsOneWidget);
     expect(find.text('Export and restore'), findsOneWidget);
     expect(find.text('Dev tools'), findsOneWidget);
 

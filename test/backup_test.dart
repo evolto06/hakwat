@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:drift/drift.dart' show driftRuntimeOptions;
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:hakwat/core/format.dart';
 import 'package:hakwat/data/backup.dart';
 import 'package:hakwat/data/database.dart';
 import 'package:hakwat/data/library_repositories.dart';
@@ -33,7 +34,11 @@ void main() {
 
     // Exercise everything the mock file doesn't cover.
     final exercises = ExerciseRepository(db);
-    final custom = await exercises.create('Zottman Curl', 'Biceps');
+    final custom = await exercises.create(
+      'Zottman Curl',
+      'Biceps',
+      weightMode: WeightMode.lb,
+    );
     await exercises.archive(custom, now: DateTime.utc(2026, 10, 31, 12));
     await SettingsRepository(db).set(AppSettings.unitKey, 'lb');
 
@@ -78,15 +83,39 @@ void main() {
       'not an object': () => '[]',
       'another app': () => jsonEncode(base()..['app'] = 'other'),
       'no version': () => jsonEncode(base()..remove('schemaVersion')),
-      'a newer version': () => jsonEncode(
-        base()..['schemaVersion'] = currentSchemaVersion + 1,
-      ),
+      'a newer version': () =>
+          jsonEncode(base()..['schemaVersion'] = currentSchemaVersion + 1),
       'a missing section': () => jsonEncode(base()..remove('routines')),
       'a wrong type': () => jsonEncode(base()..['workouts'] = 'nope'),
       'an unknown exercise': () {
         final root = base();
         final exercises = firstWorkout(root)['exercises'] as List;
         (exercises.first as Map)['exerciseId'] = 'missing';
+        return jsonEncode(root);
+      },
+      'an unknown gym': () {
+        final root = base();
+        final list = (root['exercises'] as List).cast<Map<String, dynamic>>();
+        list.firstWhere((e) => e['gymId'] != null)['gymId'] = 'missing';
+        return jsonEncode(root);
+      },
+      'a free weight at a gym': () {
+        final root = base();
+        final list = (root['exercises'] as List).cast<Map<String, dynamic>>();
+        list.firstWhere((e) => e['gymId'] != null)['isMachine'] = false;
+        return jsonEncode(root);
+      },
+      'an unknown weight mode': () {
+        final root = base();
+        final list = (root['exercises'] as List).cast<Map<String, dynamic>>();
+        list.first['weightMode'] = 'stone';
+        return jsonEncode(root);
+      },
+      'a pin on a free weight': () {
+        final root = base();
+        final list = (root['exercises'] as List).cast<Map<String, dynamic>>();
+        final free = list.firstWhere((e) => e['isMachine'] == false);
+        free['weightMode'] = 'pin';
         return jsonEncode(root);
       },
       'an unknown routine': () {
@@ -127,6 +156,36 @@ void main() {
     }
   });
 
+  test('a version 1 file still restores', () async {
+    final root = jsonDecode(mockSource) as Map<String, dynamic>;
+    root['schemaVersion'] = 1;
+    root.remove('gyms');
+    final exercises = (root['exercises'] as List).cast<Map<String, dynamic>>();
+    for (final e in exercises) {
+      e
+        ..remove('isMachine')
+        ..remove('gymId')
+        ..remove('weightMode');
+    }
+    for (final w in (root['workouts'] as List).cast<Map<String, dynamic>>()) {
+      for (final e in (w['exercises'] as List).cast<Map<String, dynamic>>()) {
+        for (final s in (e['sets'] as List).cast<Map<String, dynamic>>()) {
+          s.remove('pin');
+        }
+      }
+    }
+
+    final parsed = parseBackup(jsonEncode(root));
+    expect(parsed.gyms, isEmpty);
+    expect(parsed.sets.every((s) => s.pin == null), isTrue);
+    final byName = {for (final e in parsed.exercises) e.name: e};
+    expect(byName['Leg Press']!.isMachine, isTrue);
+    expect(byName['Bench Press']!.isMachine, isFalse);
+    expect(byName['Tony Machine Fly']!.isMachine, isFalse);
+    await replaceAllData(db, parsed);
+    expect(await db.select(db.exercises).get(), hasLength(exercises.length));
+  });
+
   test('a failed write rolls the whole restore back', () async {
     await replaceAllData(db, parseBackup(mockSource));
     final before = await snapshot(db);
@@ -135,6 +194,7 @@ void main() {
     // only if the check were skipped, so build the failure directly.
     final good = parseBackup(mockSource);
     final bad = ParsedBackup(
+      gyms: good.gyms,
       exercises: good.exercises,
       routines: good.routines,
       routineExercises: good.routineExercises,
@@ -161,9 +221,8 @@ Map<String, dynamic> _normalized(Map<String, dynamic> export) {
     if (value is List) {
       final items = value.map(sort).toList();
       items.sort(
-        (a, b) => ((a as Map)['id'] as String).compareTo(
-          (b as Map)['id'] as String,
-        ),
+        (a, b) =>
+            ((a as Map)['id'] as String).compareTo((b as Map)['id'] as String),
       );
       return items;
     }

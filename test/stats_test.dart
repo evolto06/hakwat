@@ -64,10 +64,18 @@ void main() {
       0,
       (sum, s) => sum + (s.$2['reps'] as int),
     );
+    // A pin counts as 10 lb per hole, the default estimate.
+    double setVolume(Map<String, dynamic> set) {
+      final pin = set['pin'] as int?;
+      final kg = pin != null
+          ? pin * 10 / 2.20462262185
+          : (set['weightKg'] as num).toDouble();
+      return kg * (set['reps'] as int);
+    }
+
     final expectedVolume = completedSets().fold<double>(
       0,
-      (sum, s) =>
-          sum + (s.$2['weightKg'] as num).toDouble() * (s.$2['reps'] as int),
+      (sum, s) => sum + setVolume(s.$2),
     );
     final expectedMinutes = finished.fold<int>(0, (sum, w) {
       final start = DateTime.parse(w['startedAt'] as String);
@@ -115,12 +123,7 @@ void main() {
         expect(
           stats.volumeKg,
           closeTo(
-            sets.fold<double>(
-              0,
-              (sum, s) =>
-                  sum +
-                  (s.$2['weightKg'] as num).toDouble() * (s.$2['reps'] as int),
-            ),
+            sets.fold<double>(0, (sum, s) => sum + setVolume(s.$2)),
             0.001,
           ),
           reason: category,
@@ -188,6 +191,62 @@ void main() {
       ('A', 0, 20),
       ('B', 60, 5),
     ]);
+  });
+
+  test('the pin increment setting changes the estimate', () async {
+    final stats = StatsRepository(db);
+    double totalAt(List<SetFact> sets) =>
+        StatsCalculator.volumeOf(sets.where((s) => s.pin != null));
+    final at10 = totalAt(await stats.watchSets().first);
+    final at5 = totalAt(await stats.watchSets(pinIncrementLb: 5).first);
+    expect(at10, greaterThan(0));
+    expect(at5, closeTo(at10 / 2, 0.001));
+  });
+
+  test('settings fall back to 10 lb per pin', () {
+    SettingRow row(String value) =>
+        SettingRow(key: AppSettings.pinIncrementKey, value: value);
+    expect(AppSettings.fromRows(const []).pinIncrementLb, 10);
+    expect(AppSettings.fromRows([row('15')]).pinIncrementLb, 15);
+    expect(AppSettings.fromRows([row('0')]).pinIncrementLb, 10);
+    expect(AppSettings.fromRows([row('x')]).pinIncrementLb, 10);
+  });
+
+  test('pin sets add estimated volume, and rank by pin then reps', () {
+    SetFact fact(int pin, int reps) => SetFact(
+      startedAt: DateTime.utc(2026),
+      exerciseName: 'Chest Fly · Gladiator Fitness',
+      category: 'Chest',
+      weightKg: pinWeightKg(pin, 10),
+      reps: reps,
+      pin: pin,
+      weightMode: WeightMode.pin,
+    );
+    final sets = [fact(5, 12), fact(8, 6), fact(8, 9), fact(7, 20)];
+    // 50x12 + 80x6 + 80x9 + 70x20 = 3,200 lb.
+    expect(
+      StatsCalculator.volumeOf(sets),
+      closeTo(3200 / 2.20462262185, 0.001),
+    );
+    expect(StatsCalculator.repsOf(sets), 47);
+    final best = CategoryStats(sets).bestSets.single;
+    expect((best.pin, best.reps), (8, 9));
+    expect(best.weightMode, WeightMode.pin);
+  });
+
+  test('two gyms with the same machine get separate best sets', () {
+    final best = StatsCalculator(
+      data,
+      WeightUnit.kg,
+    ).category('Chest').bestSets;
+    final names = best.map((b) => b.exerciseName).toList();
+    expect(names, contains('Chest Fly · Tonys Gym'));
+    expect(names, contains('Chest Fly · Gladiator Fitness'));
+    final gladiator = best.firstWhere(
+      (b) => b.exerciseName == 'Chest Fly · Gladiator Fitness',
+    );
+    expect(gladiator.pin, isNotNull);
+    expect(gladiator.weightKg, greaterThan(0));
   });
 
   test('bodyweight exercises count as zero volume', () {
