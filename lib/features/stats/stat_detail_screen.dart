@@ -9,6 +9,7 @@ import 'package:intl/intl.dart';
 import '../../app/providers.dart';
 import '../../app/theme.dart';
 import '../../core/format.dart';
+import '../../core/widgets.dart';
 import '../../data/stats.dart';
 
 class OverallStatScreen extends ConsumerStatefulWidget {
@@ -56,6 +57,13 @@ class _OverallStatScreenState extends ConsumerState<OverallStatScreen> {
             points: points,
             isLine: stat.isLine,
           ),
+          if (stat == OverallStat.volume &&
+              calculator.data.sets.any((s) => s.pin != null)) ...[
+            const SizedBox(height: 12),
+            PinEstimateNote(
+              incrementLb: ref.watch(settingsProvider).pinIncrementLb,
+            ),
+          ],
         ],
       ),
     );
@@ -116,6 +124,12 @@ class _CategoryStatScreenState extends ConsumerState<CategoryStatScreen> {
               StatTile('Sets', formatCount(stats.setCount)),
             ],
           ),
+          if (stats.sets.any((s) => s.pin != null)) ...[
+            const SizedBox(height: 12),
+            PinEstimateNote(
+              incrementLb: ref.watch(settingsProvider).pinIncrementLb,
+            ),
+          ],
           const SizedBox(height: 16),
           SegmentedButton<CategoryMetric>(
             showSelectedIcon: false,
@@ -157,7 +171,7 @@ class _CategoryStatScreenState extends ConsumerState<CategoryStatScreen> {
                   Expanded(child: Text(best.exerciseName)),
                   const SizedBox(width: 12),
                   Text(
-                    '${formatWeight(best.weightKg, unit)} ${unit.label} '
+                    '${formatLoad(best.pin == null ? best.weightKg : null, best.pin, unitForMode(best.weightMode, unit))} '
                     '× ${best.reps}',
                     style: const TextStyle(color: AppColors.textSecondary),
                   ),

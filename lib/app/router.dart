@@ -7,6 +7,7 @@ import '../features/drawer/bodyweight_screen.dart';
 import '../features/drawer/settings_screen.dart';
 import '../features/exercises/exercise_library_screen.dart';
 import '../features/exercises/exercise_picker_screen.dart';
+import '../features/exercises/gyms_screen.dart';
 import '../features/log/log_screen.dart';
 import '../features/log/workout_detail_screen.dart';
 import '../features/routines/routine_editor_screen.dart';
@@ -30,9 +31,7 @@ GoRouter _createRouter() => GoRouter(
       builder: (context, state, shell) => AppShell(shell: shell),
       branches: [
         StatefulShellBranch(
-          routes: [
-            GoRoute(path: '/log', builder: (_, _) => const LogScreen()),
-          ],
+          routes: [GoRoute(path: '/log', builder: (_, _) => const LogScreen())],
         ),
         StatefulShellBranch(
           routes: [
@@ -90,6 +89,7 @@ GoRouter _createRouter() => GoRouter(
       path: '/exercises',
       builder: (_, _) => const ExerciseLibraryScreen(),
     ),
+    GoRoute(path: '/gyms', builder: (_, _) => const GymsScreen()),
     GoRoute(path: '/bodyweight', builder: (_, _) => const BodyweightScreen()),
     GoRoute(path: '/settings', builder: (_, _) => const SettingsScreen()),
     GoRoute(path: '/backup', builder: (_, _) => const BackupScreen()),

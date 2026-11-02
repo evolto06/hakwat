@@ -33,6 +33,7 @@ const seedExerciseNames = <String, List<String>>{
     'Bench Press',
     'Cable Fly',
     'Chest Dip',
+    'Chest Fly',
     'Dumbbell Bench Press',
     'Incline Bench Press',
     'Incline Dumbbell Press',
@@ -64,6 +65,25 @@ const seedExerciseNames = <String, List<String>>{
     'Tricep Dip',
     'Tricep Pushdown',
   ],
+};
+
+/// Seeded exercises done on a machine. These start out generic, and can be
+/// copied to a gym.
+const seedMachineExercises = {
+  'Cable Crunch',
+  'Lat Pulldown',
+  'Seated Cable Row',
+  'Cable Curl',
+  'Cable Fly',
+  'Chest Fly',
+  'Machine Chest Press',
+  'Leg Curl',
+  'Leg Extension',
+  'Leg Press',
+  'Standing Calf Raise',
+  'Cable Lateral Raise',
+  'Face Pull',
+  'Tricep Pushdown',
 };
 
 /// A stable ID for an exercise name, so a seeded exercise has the same ID on

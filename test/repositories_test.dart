@@ -1,6 +1,7 @@
 import 'package:drift/drift.dart' show driftRuntimeOptions;
 import 'package:drift/native.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:hakwat/core/format.dart';
 import 'package:hakwat/data/database.dart';
 import 'package:hakwat/data/library_repositories.dart';
 import 'package:hakwat/data/seed_exercises.dart';
@@ -149,9 +150,11 @@ void main() {
       final setId = await firstSetId(workoutId);
       await workouts.updateSetWeight(setId, 42.5);
       await workouts.updateSetReps(setId, 7);
-      final set = (await workouts.watchDetail(
-        workoutId,
-      ).first)!.exercises.single.sets.single;
+      final set = (await workouts.watchDetail(workoutId).first)!
+          .exercises
+          .single
+          .sets
+          .single;
       expect(set.weightKg, 42.5);
       expect(set.reps, 7);
       expect(set.completedAt, isNull);
@@ -165,9 +168,8 @@ void main() {
       await workouts.updateSetWeight(setId, 50);
       await workouts.updateSetReps(setId, 5);
       await workouts.addSet(detail.exercises.single.row.id);
-      final sets = (await workouts.watchDetail(
-        workoutId,
-      ).first)!.exercises.single.sets;
+      final sets =
+          (await workouts.watchDetail(workoutId).first)!.exercises.single.sets;
       expect(sets.map((s) => s.sortOrder), [0, 1]);
       expect(sets.last.weightKg, 50);
       expect(sets.last.reps, 5);
@@ -230,43 +232,53 @@ void main() {
       );
     });
 
-    test('previous sets come from the latest earlier finished workout', () async {
-      Future<void> session(DateTime start, double weight, {bool finish = true}) async {
-        final id = await workouts.startEmpty(now: start);
-        await workouts.addExercises(id, [bench]);
-        await workouts.completeSet(
-          await firstSetId(id),
-          weightKg: weight,
-          reps: 8,
-          at: start.add(const Duration(minutes: 5)),
-        );
-        if (finish) {
-          await workouts.finish(id, now: start.add(const Duration(minutes: 30)));
+    test(
+      'previous sets come from the latest earlier finished workout',
+      () async {
+        Future<void> session(
+          DateTime start,
+          double weight, {
+          bool finish = true,
+        }) async {
+          final id = await workouts.startEmpty(now: start);
+          await workouts.addExercises(id, [bench]);
+          await workouts.completeSet(
+            await firstSetId(id),
+            weightKg: weight,
+            reps: 8,
+            at: start.add(const Duration(minutes: 5)),
+          );
+          if (finish) {
+            await workouts.finish(
+              id,
+              now: start.add(const Duration(minutes: 30)),
+            );
+          }
         }
-      }
 
-      await session(DateTime.utc(2026, 9, 1, 10), 50);
-      await session(DateTime.utc(2026, 9, 8, 10), 55);
-      await session(DateTime.utc(2026, 9, 15, 10), 60);
-      await session(DateTime.utc(2026, 9, 22, 10), 99, finish: false);
+        await session(DateTime.utc(2026, 9, 1, 10), 50);
+        await session(DateTime.utc(2026, 9, 8, 10), 55);
+        await session(DateTime.utc(2026, 9, 15, 10), 60);
+        await session(DateTime.utc(2026, 9, 22, 10), 99, finish: false);
 
-      final atEnd = await workouts.previousSets(
-        bench,
-        before: DateTime.utc(2026, 9, 23),
-      );
-      expect(atEnd.single.weightKg, 60, reason: 'open workouts are skipped');
+        final atEnd = await workouts.previousSets(
+          bench,
+          before: DateTime.utc(2026, 9, 23),
+        );
+        expect(atEnd.single.weightKg, 60, reason: 'open workouts are skipped');
 
-      final mid = await workouts.previousSets(
-        bench,
-        before: DateTime.utc(2026, 9, 15, 10),
-      );
-      expect(mid.single.weightKg, 55);
+        final mid = await workouts.previousSets(
+          bench,
+          before: DateTime.utc(2026, 9, 15, 10),
+        );
+        expect(mid.single.weightKg, 55);
 
-      expect(
-        await workouts.previousSets(squat, before: DateTime.utc(2027)),
-        isEmpty,
-      );
-    });
+        expect(
+          await workouts.previousSets(squat, before: DateTime.utc(2027)),
+          isEmpty,
+        );
+      },
+    );
 
     test('log counts completed sets and keeps exercise order', () async {
       final id = await routine([
@@ -304,6 +316,144 @@ void main() {
       expect(await db.select(db.workoutExercises).get(), isEmpty);
       expect(await workouts.watchOpen().first, isNull);
     });
+  });
+
+  group('gyms and machines', () {
+    late GymRepository gyms;
+    setUp(() => gyms = GymRepository(db));
+
+    Future<String> machine(String name, String gymId, [WeightMode? mode]) =>
+        exercises.create(
+          name,
+          'Chest',
+          isMachine: true,
+          gymId: gymId,
+          weightMode: mode,
+        );
+
+    test('each gym can have its own machine with the same name', () async {
+      final tonys = await gyms.create('Tonys Gym');
+      final gladiator = await gyms.create('Gladiator Fitness');
+      final a = await machine('Chest Fly', tonys);
+      final b = await machine('Chest Fly', gladiator);
+      expect(a, isNot(b));
+      await expectLater(
+        machine('chest fly', tonys),
+        throwsA(isA<DuplicateExerciseName>()),
+      );
+      await expectLater(
+        exercises.edit(
+          b,
+          'Chest Fly',
+          'Chest',
+          isMachine: true,
+          gymId: tonys,
+          weightMode: null,
+        ),
+        throwsA(isA<DuplicateExerciseName>()),
+      );
+    });
+
+    test('free weights cannot have a gym or a pin number', () async {
+      final tonys = await gyms.create('Tonys Gym');
+      expect(
+        () => exercises.create('Zottman Curl', 'Biceps', gymId: tonys),
+        throwsArgumentError,
+      );
+      expect(
+        () => exercises.create(
+          'Zottman Curl',
+          'Biceps',
+          weightMode: WeightMode.pin,
+        ),
+        throwsArgumentError,
+      );
+    });
+
+    test('seeded machines start generic and free weights stay free', () async {
+      final all = {for (final e in await exercises.watchAll().first) e.name: e};
+      expect(all['Chest Fly']!.isMachine, isTrue);
+      expect(all['Chest Fly']!.gymId, isNull);
+      expect(all['Bench Press']!.isMachine, isFalse);
+    });
+
+    test('gym names are unique and a gym in use cannot be deleted', () async {
+      final tonys = await gyms.create('Tonys Gym');
+      await expectLater(
+        gyms.create('tonys gym'),
+        throwsA(isA<DuplicateGymName>()),
+      );
+      final fly = await machine('Chest Fly', tonys);
+      await expectLater(gyms.delete(tonys), throwsA(isA<GymInUse>()));
+      await exercises.archive(fly);
+      await expectLater(gyms.delete(tonys), throwsA(isA<GymInUse>()));
+      expect(await gyms.watchAll().first, hasLength(1));
+
+      final empty = await gyms.create('Gladiator Fitness');
+      await gyms.delete(empty);
+      expect((await gyms.watchAll().first).single.id, tonys);
+    });
+
+    test('history is kept per gym, not per exercise name', () async {
+      final tonys = await machine('Chest Fly', await gyms.create('Tonys Gym'));
+      final gladiator = await machine(
+        'Chest Fly',
+        await gyms.create('Gladiator Fitness'),
+        WeightMode.pin,
+      );
+      final start = DateTime.utc(2026, 9, 1, 10);
+      final id = await workouts.startEmpty(now: start);
+      await workouts.addExercises(id, [tonys]);
+      await workouts.completeSet(
+        await firstSetId(id),
+        weightKg: 50,
+        reps: 8,
+        at: start,
+      );
+      await workouts.finish(id, now: start.add(const Duration(minutes: 30)));
+
+      final later = DateTime.utc(2026, 9, 8);
+      expect(await workouts.previousSets(tonys, before: later), hasLength(1));
+      expect(await workouts.previousSets(gladiator, before: later), isEmpty);
+    });
+
+    test('a set logs a pin instead of a weight', () async {
+      final id = await workouts.startEmpty();
+      final fly = await machine(
+        'Chest Fly',
+        await gyms.create('Gladiator Fitness'),
+        WeightMode.pin,
+      );
+      await workouts.addExercises(id, [fly]);
+      final setId = await firstSetId(id);
+      await workouts.updateSetWeight(setId, 40);
+      await workouts.updateSetPin(setId, 7);
+      await workouts.completeSet(setId, pin: 7, reps: 10, at: DateTime.now());
+
+      var detail = await workouts.watchDetail(id).first;
+      var set = detail!.exercises.single.sets.single;
+      expect(set.pin, 7);
+      expect(set.weightKg, isNull, reason: 'a set holds one or the other');
+
+      await workouts.addSet(detail.exercises.single.row.id);
+      detail = await workouts.watchDetail(id).first;
+      set = detail!.exercises.single.sets.last;
+      expect(set.pin, 7, reason: 'a new set carries over the pin');
+    });
+  });
+
+  test('upgrading from version 1 rebuilds the database', () async {
+    final old = AppDatabase(
+      NativeDatabase.memory(
+        setup: (raw) {
+          raw.execute('CREATE TABLE exercises (id TEXT PRIMARY KEY)');
+          raw.execute('PRAGMA user_version = 1');
+        },
+      ),
+    );
+    addTearDown(old.close);
+    expect(await old.select(old.exercises).get(), isNotEmpty);
+    expect(await old.select(old.gyms).get(), isEmpty);
   });
 
   group('bodyweight', () {

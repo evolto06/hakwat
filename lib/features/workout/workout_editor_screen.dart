@@ -13,6 +13,7 @@ import '../../core/format.dart';
 import '../../core/widgets.dart';
 import '../../data/database.dart';
 import '../../data/workout_repository.dart';
+import '../exercises/exercise_form.dart';
 
 /// Logs an open workout, and edits a finished one. An open workout also gets
 /// the running clock, the rest timer, Finish and Discard, and a screen kept
@@ -308,10 +309,7 @@ class _ElapsedClockState extends State<_ElapsedClock> {
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(
-      const Duration(seconds: 1),
-      (_) => setState(() {}),
-    );
+    _timer = Timer.periodic(const Duration(seconds: 1), (_) => setState(() {}));
   }
 
   @override
@@ -358,14 +356,14 @@ class _ExerciseCard extends ConsumerWidget {
     final previous =
         ref
             .watch(
-              previousSetsProvider((
-                exercise.exercise.id,
-                workout.startedAt,
-              )),
+              previousSetsProvider((exercise.exercise.id, workout.startedAt)),
             )
             .value ??
         const <WorkoutSet>[];
     final repo = ref.read(workoutRepositoryProvider);
+    final mode = exercise.exercise.weightMode;
+    final exerciseUnit = unitForMode(mode, unit);
+    final gymName = ref.watch(gymNamesProvider)[exercise.exercise.gymId];
 
     return Container(
       margin: const EdgeInsets.only(bottom: 12),
@@ -380,7 +378,7 @@ class _ExerciseCard extends ConsumerWidget {
             children: [
               Expanded(
                 child: Text(
-                  exercise.exercise.name,
+                  exerciseLabel(exercise.exercise.name, gymName),
                   style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -391,6 +389,11 @@ class _ExerciseCard extends ConsumerWidget {
                 tooltip: 'Exercise options',
                 icon: const Icon(Icons.more_horiz, color: AppColors.accent),
                 itemBuilder: (context) => [
+                  PopupMenuItem(
+                    onTap: () =>
+                        showExerciseForm(context, existing: exercise.exercise),
+                    child: const Text('Edit exercise'),
+                  ),
                   PopupMenuItem(
                     enabled: onMoveUp != null,
                     onTap: onMoveUp,
@@ -414,7 +417,9 @@ class _ExerciseCard extends ConsumerWidget {
             child: _SetLayout(
               number: const _ColumnLabel('Set'),
               previous: const _ColumnLabel('Previous'),
-              weight: _ColumnLabel(unit.label),
+              weight: _ColumnLabel(
+                mode == WeightMode.pin ? 'Pin' : exerciseUnit.label,
+              ),
               reps: const _ColumnLabel('Reps'),
               done: const Icon(
                 Icons.check,
@@ -431,14 +436,18 @@ class _ExerciseCard extends ConsumerWidget {
               background: Container(
                 alignment: Alignment.centerRight,
                 padding: const EdgeInsets.only(right: 16),
-                child: const Icon(Icons.delete_outline, color: AppColors.danger),
+                child: const Icon(
+                  Icons.delete_outline,
+                  color: AppColors.danger,
+                ),
               ),
               child: _SetRow(
                 key: ValueKey(set.id),
                 number: index + 1,
                 set: set,
                 previous: index < previous.length ? previous[index] : null,
-                unit: unit,
+                unit: exerciseUnit,
+                mode: mode,
                 workout: workout,
                 restSeconds: restSeconds,
                 onMessage: onMessage,
@@ -511,6 +520,7 @@ class _SetRow extends ConsumerStatefulWidget {
     required this.set,
     required this.previous,
     required this.unit,
+    required this.mode,
     required this.workout,
     required this.restSeconds,
     required this.onMessage,
@@ -519,7 +529,10 @@ class _SetRow extends ConsumerStatefulWidget {
   final int number;
   final WorkoutSet set;
   final WorkoutSet? previous;
+
+  /// The exercise's unit, already resolved against the app setting.
   final WeightUnit unit;
+  final WeightMode? mode;
   final Workout workout;
   final int restSeconds;
   final void Function(String) onMessage;
@@ -529,7 +542,7 @@ class _SetRow extends ConsumerStatefulWidget {
 }
 
 class _SetRowState extends ConsumerState<_SetRow> {
-  late final _weight = TextEditingController(text: _weightText(widget.set));
+  late final _weight = TextEditingController(text: _loadText());
   late final _reps = TextEditingController(
     text: widget.set.reps?.toString() ?? '',
   );
@@ -538,8 +551,22 @@ class _SetRowState extends ConsumerState<_SetRow> {
 
   WorkoutRepository get _repo => ref.read(workoutRepositoryProvider);
 
-  String _weightText(WorkoutSet set) =>
-      set.weightKg == null ? '' : formatWeight(set.weightKg!, widget.unit);
+  /// Whether this row's load field holds a pin rather than a weight. A
+  /// completed set keeps what it was logged with, even if the exercise has
+  /// changed since.
+  bool get _isPin {
+    final set = widget.set;
+    if (set.completedAt != null && (set.pin != null || set.weightKg != null)) {
+      return set.pin != null;
+    }
+    return widget.mode == WeightMode.pin;
+  }
+
+  String _loadText() {
+    final set = widget.set;
+    if (_isPin) return set.pin?.toString() ?? '';
+    return set.weightKg == null ? '' : formatWeight(set.weightKg!, widget.unit);
+  }
 
   double? _parseWeight(String text) =>
       double.tryParse(text.trim().replaceAll(',', '.'));
@@ -550,7 +577,7 @@ class _SetRowState extends ConsumerState<_SetRow> {
     // Never rewrite a field while it's being typed in: the database value is
     // just an echo of the same keystrokes.
     if (!_weightFocus.hasFocus) {
-      final text = _weightText(widget.set);
+      final text = _loadText();
       if (_weight.text != text) _weight.text = text;
     }
     if (!_repsFocus.hasFocus) {
@@ -569,6 +596,10 @@ class _SetRowState extends ConsumerState<_SetRow> {
   }
 
   void _onWeightChanged(String text) {
+    if (_isPin) {
+      _repo.updateSetPin(widget.set.id, int.tryParse(text));
+      return;
+    }
     if (text.trim().isEmpty) {
       _repo.updateSetWeight(widget.set.id, null);
       return;
@@ -591,11 +622,24 @@ class _SetRowState extends ConsumerState<_SetRow> {
     }
 
     // An empty field takes the value from last time, shown as its hint.
-    final typedWeight = _parseWeight(_weight.text);
-    final weightKg = typedWeight != null
-        ? widget.unit.toKg(typedWeight)
-        : widget.previous?.weightKg ?? 0;
-    final reps = int.tryParse(_reps.text) ?? widget.previous?.reps;
+    final previous = widget.previous;
+    final int? pin;
+    final double? weightKg;
+    if (_isPin) {
+      pin = int.tryParse(_weight.text) ?? previous?.pin;
+      weightKg = null;
+      if (pin == null || pin < 1) {
+        widget.onMessage('Enter the pin number first.');
+        return;
+      }
+    } else {
+      pin = null;
+      final typedWeight = _parseWeight(_weight.text);
+      weightKg = typedWeight != null
+          ? widget.unit.toKg(typedWeight)
+          : previous?.weightKg ?? 0;
+    }
+    final reps = int.tryParse(_reps.text) ?? previous?.reps;
     if (reps == null || reps < 1) {
       widget.onMessage('Enter your reps first.');
       return;
@@ -607,6 +651,7 @@ class _SetRowState extends ConsumerState<_SetRow> {
     await _repo.completeSet(
       set.id,
       weightKg: weightKg,
+      pin: pin,
       reps: reps,
       at: finishedAt ?? DateTime.now(),
     );
@@ -619,9 +664,16 @@ class _SetRowState extends ConsumerState<_SetRow> {
   Widget build(BuildContext context) {
     final done = widget.set.completedAt != null;
     final previous = widget.previous;
-    final previousWeight = previous?.weightKg == null
-        ? null
-        : formatWeight(previous!.weightKg!, widget.unit);
+    final isPin = _isPin;
+    // A hint is only useful if it's the same kind of number as this field.
+    final String? loadHint;
+    if (isPin) {
+      loadHint = previous?.pin?.toString();
+    } else {
+      loadHint = previous?.weightKg == null
+          ? null
+          : formatWeight(previous!.weightKg!, widget.unit);
+    }
 
     return Container(
       margin: const EdgeInsets.only(bottom: 2),
@@ -639,7 +691,8 @@ class _SetRowState extends ConsumerState<_SetRow> {
         previous: Text(
           previous == null
               ? '-'
-              : '${previousWeight ?? 0} × ${previous.reps ?? 0}',
+              : '${previous.pin != null ? 'Pin ${previous.pin}' : formatWeight(previous.weightKg ?? 0, widget.unit)}'
+                    ' × ${previous.reps ?? 0}',
           textAlign: TextAlign.center,
           maxLines: 1,
           overflow: TextOverflow.fade,
@@ -647,11 +700,11 @@ class _SetRowState extends ConsumerState<_SetRow> {
           style: const TextStyle(fontSize: 13, color: AppColors.textSecondary),
         ),
         weight: _SetField(
-          label: 'Weight for set ${widget.number}',
+          label: '${isPin ? 'Pin' : 'Weight'} for set ${widget.number}',
           controller: _weight,
           focusNode: _weightFocus,
-          hint: previousWeight,
-          decimal: true,
+          hint: loadHint,
+          decimal: !isPin,
           onChanged: _onWeightChanged,
         ),
         reps: _SetField(

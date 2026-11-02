@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../app/providers.dart';
 import '../../app/theme.dart';
+import '../../core/format.dart';
 import '../../core/widgets.dart';
 import '../workout/workout_button.dart';
 
@@ -16,6 +17,7 @@ class RoutinePreviewScreen extends ConsumerWidget {
     final detail = ref.watch(routineDetailProvider(routineId)).value;
     final hasOpenWorkout = ref.watch(openWorkoutProvider).value != null;
     final exercises = detail?.exercises ?? const [];
+    final gymNames = ref.watch(gymNamesProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -43,7 +45,12 @@ class RoutinePreviewScreen extends ConsumerWidget {
                 return GroupedTile(
                   index: index,
                   count: exercises.length,
-                  title: Text(item.exercise.name),
+                  title: Text(
+                    exerciseLabel(
+                      item.exercise.name,
+                      gymNames[item.exercise.gymId],
+                    ),
+                  ),
                   subtitle: Text(item.exercise.category),
                   trailing: Padding(
                     padding: const EdgeInsets.only(right: 8),

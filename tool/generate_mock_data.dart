@@ -7,6 +7,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 
+import 'package:hakwat/core/format.dart';
 import 'package:hakwat/data/seed_exercises.dart';
 import 'package:uuid/uuid.dart';
 
@@ -18,13 +19,66 @@ const pushdown = 'Tonys Straight Bar Pushdown';
 const latRaise = 'Tonys Cable Lat Raise';
 const inclinePress = 'Incline Dumbbell Press';
 
-/// Custom exercises from the mockup, with their categories.
-const customExercises = {
-  fly: 'Chest',
-  pulldown: 'Back',
-  curls: 'Biceps',
-  pushdown: 'Triceps',
-  latRaise: 'Shoulders',
+const tonysGym = 'Tonys Gym';
+const gladiator = 'Gladiator Fitness';
+
+/// Each gym has its own Chest Fly, logged differently. These keys only identify
+/// them in this file: both are named Chest Fly in the app.
+const tonysChestFly = 'Chest Fly@$tonysGym';
+const gladiatorChestFly = 'Chest Fly@$gladiator';
+
+class MockExercise {
+  const MockExercise(
+    this.category, {
+    this.name,
+    this.gym,
+    this.machine = false,
+    this.mode,
+  });
+  final String category;
+  final String? name;
+  final String? gym;
+  final bool machine;
+  final WeightMode? mode;
+}
+
+/// Custom exercises: the mockup's, placed at a gym where they are machines,
+/// plus a Chest Fly at each gym to show the same machine name at two gyms.
+const customExercises = <String, MockExercise>{
+  fly: MockExercise('Chest', gym: tonysGym, machine: true, mode: WeightMode.kg),
+  pulldown: MockExercise(
+    'Back',
+    gym: tonysGym,
+    machine: true,
+    mode: WeightMode.lb,
+  ),
+  curls: MockExercise('Biceps'),
+  pushdown: MockExercise(
+    'Triceps',
+    gym: tonysGym,
+    machine: true,
+    mode: WeightMode.pin,
+  ),
+  latRaise: MockExercise(
+    'Shoulders',
+    gym: tonysGym,
+    machine: true,
+    mode: WeightMode.kg,
+  ),
+  tonysChestFly: MockExercise(
+    'Chest',
+    name: 'Chest Fly',
+    gym: tonysGym,
+    machine: true,
+    mode: WeightMode.lb,
+  ),
+  gladiatorChestFly: MockExercise(
+    'Chest',
+    name: 'Chest Fly',
+    gym: gladiator,
+    machine: true,
+    mode: WeightMode.pin,
+  ),
 };
 
 /// Routines in mockup order. The last two rows are cut off in the mockup, so
@@ -36,6 +90,7 @@ const routines = <String, List<(String, int)>>{
     ('Overhead Press', 3),
     ('Barbell Curl', 2),
     ('Skull Crusher', 2),
+    (gladiatorChestFly, 2),
   ],
   'Tonys Upper SARMS Focus': [
     (fly, 2),
@@ -71,7 +126,12 @@ const routines = <String, List<(String, int)>>{
     ('Leg Extension', 2),
     ('Leg Curl', 2),
   ],
-  'Tony Chest': [(inclinePress, 3), (fly, 3), ('Chest Dip', 2)],
+  'Tony Chest': [
+    (inclinePress, 3),
+    (fly, 3),
+    (tonysChestFly, 2),
+    ('Chest Dip', 2),
+  ],
   'Tonys Back': [
     (pulldown, 3),
     ('Chest Supported Row', 3),
@@ -103,13 +163,16 @@ const routines = <String, List<(String, int)>>{
   ],
 };
 
-/// Starting working weight in kg and typical reps.
+/// Starting working weight in kg, or pin position for a pin exercise, and
+/// typical reps.
 const baselines = <String, (double, int)>{
   fly: (40, 12),
   pulldown: (35, 10),
   shoulderPress: (20, 10),
   curls: (10, 12),
-  pushdown: (30, 12),
+  pushdown: (7, 12),
+  tonysChestFly: (35, 12),
+  gladiatorChestFly: (6, 12),
   latRaise: (7.5, 15),
   inclinePress: (24, 10),
   'Bench Press': (70, 8),
@@ -246,14 +309,22 @@ void main() {
     for (final (order, (exercise, count)) in plan.exercises.indexed) {
       final linkKey = '$key|$order';
       final baseReps = baselines[exercise]?.$2 ?? 10;
+      final isPin = customExercises[exercise]?.mode == WeightMode.pin;
       final weight = weightOn(exercise, plan.date);
+      // Pins climb one hole at a time.
+      final pin = isPin
+          ? (baselines[exercise]!.$1 *
+                    (1 + 0.15 * plan.date.difference(first).inDays / span))
+                .round()
+          : null;
       final sets = <Map<String, dynamic>>[];
       for (var s = 0; s < count; s++) {
         setIndex++;
         sets.add({
           'id': idFor('$linkKey|set$s'),
           'sortOrder': s,
-          'weightKg': weight,
+          'weightKg': isPin ? null : weight,
+          'pin': pin,
           'reps': baseReps > 1 ? max(1, baseReps - s - random.nextInt(2)) : 1,
           'completedAt': time(
             startedAt.add(
@@ -269,6 +340,7 @@ void main() {
           'id': idFor('$linkKey|set$count'),
           'sortOrder': count,
           'weightKg': null,
+          'pin': null,
           'reps': null,
           'completedAt': null,
         });
@@ -315,22 +387,34 @@ void main() {
           'name': name,
           'category': entry.key,
           'isCustom': false,
+          'isMachine': seedMachineExercises.contains(name),
+          'gymId': null,
+          'weightMode': null,
           'archivedAt': null,
         },
     for (final entry in customExercises.entries)
       {
         'id': exerciseIdFor(entry.key),
-        'name': entry.key,
-        'category': entry.value,
+        'name': entry.value.name ?? entry.key,
+        'category': entry.value.category,
         'isCustom': true,
+        'isMachine': entry.value.machine,
+        'gymId': entry.value.gym == null
+            ? null
+            : idFor('gym|${entry.value.gym}'),
+        'weightMode': entry.value.mode?.name,
         'archivedAt': null,
       },
   ];
 
   final file = {
     'app': 'hakwat',
-    'schemaVersion': 1,
+    'schemaVersion': 2,
     'exportedAt': '2026-11-01T00:00:00.000Z',
+    'gyms': [
+      for (final gym in [tonysGym, gladiator])
+        {'id': idFor('gym|$gym'), 'name': gym},
+    ],
     'exercises': exercises,
     'routines': [
       for (final (order, entry) in routines.entries.indexed)

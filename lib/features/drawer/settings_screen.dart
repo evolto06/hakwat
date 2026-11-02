@@ -10,10 +10,13 @@ class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
 
   static const _restOptions = [0, 30, 45, 60, 90, 120, 150, 180, 240, 300];
+  static const _pinOptions = [5, 10, 15, 20, 25];
 
   String _restLabel(int seconds) {
     if (seconds == 0) return 'Off';
-    return seconds < 60 ? '$seconds s' : formatClock(Duration(seconds: seconds));
+    return seconds < 60
+        ? '$seconds s'
+        : formatClock(Duration(seconds: seconds));
   }
 
   @override
@@ -26,8 +29,8 @@ class SettingsScreen extends ConsumerWidget {
       body: ListView(
         children: [
           ListTile(
-            title: const Text('Weight unit'),
-            subtitle: const Text('Weights are stored in kg either way'),
+            title: const Text('Default weight unit'),
+            subtitle: const Text('Exercises can set their own'),
             trailing: SegmentedButton<WeightUnit>(
               showSelectedIcon: false,
               segments: [
@@ -37,6 +40,26 @@ class SettingsScreen extends ConsumerWidget {
               selected: {settings.unit},
               onSelectionChanged: (value) =>
                   repo.set(AppSettings.unitKey, value.single.name),
+            ),
+          ),
+          ListTile(
+            title: const Text('Pin increment'),
+            subtitle: const Text(
+              'Estimates weight for pin sets in volume. Actual stack weights '
+              'vary by machine.',
+            ),
+            trailing: DropdownButton<int>(
+              value: _pinOptions.contains(settings.pinIncrementLb)
+                  ? settings.pinIncrementLb
+                  : defaultPinIncrementLb,
+              underline: const SizedBox.shrink(),
+              dropdownColor: AppColors.navPill,
+              items: [
+                for (final lb in _pinOptions)
+                  DropdownMenuItem(value: lb, child: Text('$lb lb')),
+              ],
+              onChanged: (value) =>
+                  repo.set(AppSettings.pinIncrementKey, '$value'),
             ),
           ),
           ListTile(
@@ -61,7 +84,9 @@ class SettingsScreen extends ConsumerWidget {
           ),
           SwitchListTile(
             title: const Text('Rest alert'),
-            subtitle: const Text('Notifies you when rest ends, even when locked'),
+            subtitle: const Text(
+              'Notifies you when rest ends, even when locked',
+            ),
             value: settings.restAlert,
             onChanged: (value) async {
               await repo.set(AppSettings.restAlertKey, '$value');

@@ -1,13 +1,26 @@
 {
  "app": "hakwat",
- "schemaVersion": 1,
+ "schemaVersion": 2,
  "exportedAt": "2026-11-01T00:00:00.000Z",
+ "gyms": [
+  {
+   "id": "cdcd4c91-a875-5c25-991e-b3e032545bb8",
+   "name": "Tonys Gym"
+  },
+  {
+   "id": "da49b973-090f-55a2-b77a-92e62df8de98",
+   "name": "Gladiator Fitness"
+  }
+ ],
  "exercises": [
   {
    "id": "779d7a0f-478a-5fbd-ac6e-7736faccc640",
    "name": "Cable Crunch",
    "category": "Abs",
    "isCustom": false,
+   "isMachine": true,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -15,6 +28,9 @@
    "name": "Crunch",
    "category": "Abs",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -22,6 +38,9 @@
    "name": "Hanging Leg Raise",
    "category": "Abs",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -29,6 +48,9 @@
    "name": "Plank",
    "category": "Abs",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -36,6 +58,9 @@
    "name": "Sit-Up",
    "category": "Abs",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -43,6 +68,9 @@
    "name": "Barbell Row",
    "category": "Back",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -50,6 +78,9 @@
    "name": "Chest Supported Row",
    "category": "Back",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -57,6 +88,9 @@
    "name": "Deadlift",
    "category": "Back",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -64,6 +98,9 @@
    "name": "Dumbbell Row",
    "category": "Back",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -71,6 +108,9 @@
    "name": "Lat Pulldown",
    "category": "Back",
    "isCustom": false,
+   "isMachine": true,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -78,6 +118,9 @@
    "name": "Pull-Up",
    "category": "Back",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -85,6 +128,9 @@
    "name": "Seated Cable Row",
    "category": "Back",
    "isCustom": false,
+   "isMachine": true,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -92,6 +138,9 @@
    "name": "Barbell Curl",
    "category": "Biceps",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -99,6 +148,9 @@
    "name": "Cable Curl",
    "category": "Biceps",
    "isCustom": false,
+   "isMachine": true,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -106,6 +158,9 @@
    "name": "Dumbbell Curl",
    "category": "Biceps",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -113,6 +168,9 @@
    "name": "Hammer Curl",
    "category": "Biceps",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -120,6 +178,9 @@
    "name": "Preacher Curl",
    "category": "Biceps",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -127,6 +188,9 @@
    "name": "Bench Press",
    "category": "Chest",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -134,6 +198,9 @@
    "name": "Cable Fly",
    "category": "Chest",
    "isCustom": false,
+   "isMachine": true,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -141,6 +208,19 @@
    "name": "Chest Dip",
    "category": "Chest",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
+   "archivedAt": null
+  },
+  {
+   "id": "b397a2e6-bd2e-514b-b803-08f0c1f6d0ae",
+   "name": "Chest Fly",
+   "category": "Chest",
+   "isCustom": false,
+   "isMachine": true,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -148,6 +228,9 @@
    "name": "Dumbbell Bench Press",
    "category": "Chest",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -155,6 +238,9 @@
    "name": "Incline Bench Press",
    "category": "Chest",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -162,6 +248,9 @@
    "name": "Incline Dumbbell Press",
    "category": "Chest",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -169,6 +258,9 @@
    "name": "Machine Chest Press",
    "category": "Chest",
    "isCustom": false,
+   "isMachine": true,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -176,6 +268,9 @@
    "name": "Push-Up",
    "category": "Chest",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -183,6 +278,9 @@
    "name": "Bulgarian Split Squat",
    "category": "Legs",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -190,6 +288,9 @@
    "name": "Hip Thrust",
    "category": "Legs",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -197,6 +298,9 @@
    "name": "Leg Curl",
    "category": "Legs",
    "isCustom": false,
+   "isMachine": true,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -204,6 +308,9 @@
    "name": "Leg Extension",
    "category": "Legs",
    "isCustom": false,
+   "isMachine": true,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -211,6 +318,9 @@
    "name": "Leg Press",
    "category": "Legs",
    "isCustom": false,
+   "isMachine": true,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -218,6 +328,9 @@
    "name": "Romanian Deadlift",
    "category": "Legs",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -225,6 +338,9 @@
    "name": "Squat",
    "category": "Legs",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -232,6 +348,9 @@
    "name": "Standing Calf Raise",
    "category": "Legs",
    "isCustom": false,
+   "isMachine": true,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -239,6 +358,9 @@
    "name": "Cable Lateral Raise",
    "category": "Shoulders",
    "isCustom": false,
+   "isMachine": true,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -246,6 +368,9 @@
    "name": "Dumbbell Lateral Raise",
    "category": "Shoulders",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -253,6 +378,9 @@
    "name": "Face Pull",
    "category": "Shoulders",
    "isCustom": false,
+   "isMachine": true,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -260,6 +388,9 @@
    "name": "Overhead Press",
    "category": "Shoulders",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -267,6 +398,9 @@
    "name": "Rear Delt Fly",
    "category": "Shoulders",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -274,6 +408,9 @@
    "name": "Shoulder Dumbbell Press",
    "category": "Shoulders",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -281,6 +418,9 @@
    "name": "Close Grip Bench Press",
    "category": "Triceps",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -288,6 +428,9 @@
    "name": "Overhead Tricep Extension",
    "category": "Triceps",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -295,6 +438,9 @@
    "name": "Skull Crusher",
    "category": "Triceps",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -302,6 +448,9 @@
    "name": "Tricep Dip",
    "category": "Triceps",
    "isCustom": false,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -309,6 +458,9 @@
    "name": "Tricep Pushdown",
    "category": "Triceps",
    "isCustom": false,
+   "isMachine": true,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -316,6 +468,9 @@
    "name": "Tony Machine Fly",
    "category": "Chest",
    "isCustom": true,
+   "isMachine": true,
+   "gymId": "cdcd4c91-a875-5c25-991e-b3e032545bb8",
+   "weightMode": "kg",
    "archivedAt": null
   },
   {
@@ -323,6 +478,9 @@
    "name": "Tonys Single Arm Lat Pulldown",
    "category": "Back",
    "isCustom": true,
+   "isMachine": true,
+   "gymId": "cdcd4c91-a875-5c25-991e-b3e032545bb8",
+   "weightMode": "lb",
    "archivedAt": null
   },
   {
@@ -330,6 +488,9 @@
    "name": "Recline Curls",
    "category": "Biceps",
    "isCustom": true,
+   "isMachine": false,
+   "gymId": null,
+   "weightMode": null,
    "archivedAt": null
   },
   {
@@ -337,6 +498,9 @@
    "name": "Tonys Straight Bar Pushdown",
    "category": "Triceps",
    "isCustom": true,
+   "isMachine": true,
+   "gymId": "cdcd4c91-a875-5c25-991e-b3e032545bb8",
+   "weightMode": "pin",
    "archivedAt": null
   },
   {
@@ -344,6 +508,29 @@
    "name": "Tonys Cable Lat Raise",
    "category": "Shoulders",
    "isCustom": true,
+   "isMachine": true,
+   "gymId": "cdcd4c91-a875-5c25-991e-b3e032545bb8",
+   "weightMode": "kg",
+   "archivedAt": null
+  },
+  {
+   "id": "d0d87bd3-8bd6-533a-a101-3ffbcd3eaa8a",
+   "name": "Chest Fly",
+   "category": "Chest",
+   "isCustom": true,
+   "isMachine": true,
+   "gymId": "cdcd4c91-a875-5c25-991e-b3e032545bb8",
+   "weightMode": "lb",
+   "archivedAt": null
+  },
+  {
+   "id": "cd664222-7ddb-5857-ac80-ab1695f003b4",
+   "name": "Chest Fly",
+   "category": "Chest",
+   "isCustom": true,
+   "isMachine": true,
+   "gymId": "da49b973-090f-55a2-b77a-92e62df8de98",
+   "weightMode": "pin",
    "archivedAt": null
   }
  ],
@@ -381,6 +568,12 @@
      "id": "45d0aca7-39a1-53c9-be7d-82ba3f7724af",
      "exerciseId": "0337ee61-9fec-597d-b99d-49587a6486df",
      "sortOrder": 4,
+     "targetSets": 2
+    },
+    {
+     "id": "9ece02db-18fc-549e-8729-f06bda9b7c8c",
+     "exerciseId": "cd664222-7ddb-5857-ac80-ab1695f003b4",
+     "sortOrder": 5,
      "targetSets": 2
     }
    ]
@@ -583,8 +776,14 @@
     },
     {
      "id": "dc7ca29b-b635-5ebc-96db-3f3aaf95ca1a",
-     "exerciseId": "2e3f8075-ff75-5e68-a7e7-02e2921498af",
+     "exerciseId": "d0d87bd3-8bd6-533a-a101-3ffbcd3eaa8a",
      "sortOrder": 2,
+     "targetSets": 2
+    },
+    {
+     "id": "fd3eed9a-8489-52db-8f0d-51276d897ac8",
+     "exerciseId": "2e3f8075-ff75-5e68-a7e7-02e2921498af",
+     "sortOrder": 3,
      "targetSets": 2
     }
    ]
@@ -780,6 +979,7 @@
        "id": "b8f4af1f-f3af-59d8-b2a3-cef4fe374f5c",
        "sortOrder": 0,
        "weightKg": 45.0,
+       "pin": null,
        "reps": 12,
        "completedAt": "2026-10-30T10:04:17.000Z"
       },
@@ -787,6 +987,7 @@
        "id": "330ae843-4457-574a-90da-b2a5d84f9fd3",
        "sortOrder": 1,
        "weightKg": 45.0,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-10-30T10:08:34.000Z"
       }
@@ -801,6 +1002,7 @@
        "id": "ee0f6ae3-6ab4-5f08-a666-bdde5f9157a1",
        "sortOrder": 0,
        "weightKg": 40.0,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-30T10:12:51.000Z"
       }
@@ -815,6 +1017,7 @@
        "id": "b045f66b-1314-5f74-b368-1ffc300e0a89",
        "sortOrder": 0,
        "weightKg": 22.5,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-10-30T10:17:09.000Z"
       }
@@ -829,6 +1032,7 @@
        "id": "de074d3e-54d1-5479-a816-74eaac155566",
        "sortOrder": 0,
        "weightKg": 12.5,
+       "pin": null,
        "reps": 11,
        "completedAt": "2026-10-30T10:21:26.000Z"
       }
@@ -842,7 +1046,8 @@
       {
        "id": "15f09317-fe86-52ae-b8d2-cd76ae497eec",
        "sortOrder": 0,
-       "weightKg": 35.0,
+       "weightKg": null,
+       "pin": 8,
        "reps": 11,
        "completedAt": "2026-10-30T10:25:43.000Z"
       }
@@ -857,6 +1062,7 @@
        "id": "f71a4a78-3e57-5832-bc38-8d132f9ca104",
        "sortOrder": 0,
        "weightKg": 7.5,
+       "pin": null,
        "reps": 15,
        "completedAt": "2026-10-30T10:30:00.000Z"
       },
@@ -864,6 +1070,7 @@
        "id": "2515dc5e-4bed-59e6-ac91-30d35cd10fc7",
        "sortOrder": 1,
        "weightKg": null,
+       "pin": null,
        "reps": null,
        "completedAt": null
       }
@@ -887,6 +1094,7 @@
        "id": "6e6c7954-dd41-51db-b28d-bb34823f0fa3",
        "sortOrder": 0,
        "weightKg": 40.0,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-10-22T10:15:17.000Z"
       }
@@ -901,6 +1109,7 @@
        "id": "9e6aab2b-7705-5d59-86c0-905ee0ee93cf",
        "sortOrder": 0,
        "weightKg": 27.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-22T10:30:34.000Z"
       },
@@ -908,6 +1117,7 @@
        "id": "d3c3dbde-fb12-5a2c-9195-3af9147ead73",
        "sortOrder": 1,
        "weightKg": 27.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-22T10:45:51.000Z"
       }
@@ -922,6 +1132,7 @@
        "id": "63de6375-4d67-590e-8ea3-fde00909275e",
        "sortOrder": 0,
        "weightKg": 22.5,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-10-22T11:01:09.000Z"
       }
@@ -936,6 +1147,7 @@
        "id": "aa1baa5a-453c-57fe-b141-f962718e128c",
        "sortOrder": 0,
        "weightKg": 45.0,
+       "pin": null,
        "reps": 12,
        "completedAt": "2026-10-22T11:16:26.000Z"
       }
@@ -950,6 +1162,7 @@
        "id": "639075a1-7240-5c1b-b6be-c8fb62470574",
        "sortOrder": 0,
        "weightKg": 12.5,
+       "pin": null,
        "reps": 11,
        "completedAt": "2026-10-22T11:31:43.000Z"
       }
@@ -963,7 +1176,8 @@
       {
        "id": "910b6749-edc2-5665-8d99-738bdc3010d4",
        "sortOrder": 0,
-       "weightKg": 35.0,
+       "weightKg": null,
+       "pin": 8,
        "reps": 12,
        "completedAt": "2026-10-22T11:47:00.000Z"
       }
@@ -987,6 +1201,7 @@
        "id": "60f3dcc3-c484-5b27-b4c9-8d853216efa3",
        "sortOrder": 0,
        "weightKg": 40.0,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-18T10:05:30.000Z"
       }
@@ -1001,6 +1216,7 @@
        "id": "0d0a353b-421c-5a6d-94b9-1c4952e93de5",
        "sortOrder": 0,
        "weightKg": 27.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-18T10:11:00.000Z"
       },
@@ -1008,6 +1224,7 @@
        "id": "cfee006c-c739-5bf1-b152-9e966d1f6881",
        "sortOrder": 1,
        "weightKg": 27.5,
+       "pin": null,
        "reps": 8,
        "completedAt": "2026-10-18T10:16:30.000Z"
       }
@@ -1022,6 +1239,7 @@
        "id": "6e6f2e78-4c2f-5a7b-94a5-76575956e666",
        "sortOrder": 0,
        "weightKg": 22.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-18T10:22:00.000Z"
       }
@@ -1036,6 +1254,7 @@
        "id": "b415dc3e-9bab-537e-a7a5-749b4f8115e9",
        "sortOrder": 0,
        "weightKg": 45.0,
+       "pin": null,
        "reps": 11,
        "completedAt": "2026-10-18T10:27:30.000Z"
       }
@@ -1050,6 +1269,7 @@
        "id": "e9517cf2-fa47-5625-85f8-0dd78dedd072",
        "sortOrder": 0,
        "weightKg": 12.5,
+       "pin": null,
        "reps": 12,
        "completedAt": "2026-10-18T10:33:00.000Z"
       }
@@ -1073,6 +1293,7 @@
        "id": "1fb2a000-e22a-5ac6-b35a-cb5443dee6ed",
        "sortOrder": 0,
        "weightKg": 22.5,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-10-15T10:09:09.000Z"
       }
@@ -1087,6 +1308,7 @@
        "id": "fbe1648d-ec9f-5b2f-9fae-94ab7876acd5",
        "sortOrder": 0,
        "weightKg": 40.0,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-15T10:18:17.000Z"
       },
@@ -1094,6 +1316,7 @@
        "id": "7240edbd-515a-51d7-b375-18f05db9d849",
        "sortOrder": 1,
        "weightKg": 40.0,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-15T10:27:26.000Z"
       }
@@ -1108,6 +1331,7 @@
        "id": "0ad81ce2-6af4-5c14-83b6-f0065339b4ae",
        "sortOrder": 0,
        "weightKg": 27.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-15T10:36:34.000Z"
       },
@@ -1115,6 +1339,7 @@
        "id": "daff7e07-7313-5a00-8a12-8724a2b68f31",
        "sortOrder": 1,
        "weightKg": 27.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-15T10:45:43.000Z"
       }
@@ -1129,6 +1354,7 @@
        "id": "2a867c49-ced3-55f6-bcb3-c762d67be8d5",
        "sortOrder": 0,
        "weightKg": 10.0,
+       "pin": null,
        "reps": 11,
        "completedAt": "2026-10-15T10:54:51.000Z"
       }
@@ -1143,6 +1369,7 @@
        "id": "ce5f4bbb-2cee-59fb-8695-12dde2bc59b2",
        "sortOrder": 0,
        "weightKg": 7.5,
+       "pin": null,
        "reps": 14,
        "completedAt": "2026-10-15T11:04:00.000Z"
       }
@@ -1166,6 +1393,7 @@
        "id": "c6f5f4cd-4b64-52cc-a03b-b5ffecf420b6",
        "sortOrder": 0,
        "weightKg": 22.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-12T10:10:00.000Z"
       }
@@ -1180,6 +1408,7 @@
        "id": "b6fa99a9-0b0c-5284-b111-a00c4b1f58ee",
        "sortOrder": 0,
        "weightKg": 40.0,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-10-12T10:20:00.000Z"
       },
@@ -1187,6 +1416,7 @@
        "id": "fd0c5c2f-1cbd-53eb-9c95-b8540b7dcbf9",
        "sortOrder": 1,
        "weightKg": 40.0,
+       "pin": null,
        "reps": 8,
        "completedAt": "2026-10-12T10:30:00.000Z"
       }
@@ -1201,6 +1431,7 @@
        "id": "1cf76ec3-c28e-5295-958b-366073d473ad",
        "sortOrder": 0,
        "weightKg": 27.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-12T10:40:00.000Z"
       },
@@ -1208,6 +1439,7 @@
        "id": "06d8cb74-e551-5688-84f8-749259a1aa01",
        "sortOrder": 1,
        "weightKg": 27.5,
+       "pin": null,
        "reps": 8,
        "completedAt": "2026-10-12T10:50:00.000Z"
       }
@@ -1222,6 +1454,7 @@
        "id": "8c06a92e-b944-5e53-ad9d-b350ee563138",
        "sortOrder": 0,
        "weightKg": 10.0,
+       "pin": null,
        "reps": 12,
        "completedAt": "2026-10-12T11:00:00.000Z"
       }
@@ -1236,6 +1469,7 @@
        "id": "f6f0bb74-bc15-5d3b-befd-680bc379a2d5",
        "sortOrder": 0,
        "weightKg": 7.5,
+       "pin": null,
        "reps": 15,
        "completedAt": "2026-10-12T11:10:00.000Z"
       }
@@ -1259,6 +1493,7 @@
        "id": "0bb94909-9539-55aa-9522-c38c44002279",
        "sortOrder": 0,
        "weightKg": 100.0,
+       "pin": null,
        "reps": 5,
        "completedAt": "2026-10-08T10:09:53.000Z"
       },
@@ -1266,6 +1501,7 @@
        "id": "3eda1db2-5ac6-5801-9012-0d9920427822",
        "sortOrder": 1,
        "weightKg": 100.0,
+       "pin": null,
        "reps": 5,
        "completedAt": "2026-10-08T10:19:47.000Z"
       },
@@ -1273,6 +1509,7 @@
        "id": "68d917d3-b006-54a0-b183-4b7b59e9e910",
        "sortOrder": 2,
        "weightKg": 100.0,
+       "pin": null,
        "reps": 4,
        "completedAt": "2026-10-08T10:29:40.000Z"
       }
@@ -1287,6 +1524,7 @@
        "id": "763c1809-0103-5443-ad1b-015de55ffa90",
        "sortOrder": 0,
        "weightKg": 155.0,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-10-08T10:39:33.000Z"
       },
@@ -1294,6 +1532,7 @@
        "id": "7d169dd9-51dc-5746-a26a-60642c439e1f",
        "sortOrder": 1,
        "weightKg": 155.0,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-08T10:49:27.000Z"
       }
@@ -1308,6 +1547,7 @@
        "id": "2e5f6dd1-381a-5ff1-b2a4-c2259f05819b",
        "sortOrder": 0,
        "weightKg": 55.0,
+       "pin": null,
        "reps": 12,
        "completedAt": "2026-10-08T10:59:20.000Z"
       },
@@ -1315,6 +1555,7 @@
        "id": "ff28c345-570e-5b7f-95d6-4f4d41e10b85",
        "sortOrder": 1,
        "weightKg": 55.0,
+       "pin": null,
        "reps": 11,
        "completedAt": "2026-10-08T11:09:13.000Z"
       }
@@ -1329,6 +1570,7 @@
        "id": "1b25e4b0-f299-5b53-9307-080fb96647eb",
        "sortOrder": 0,
        "weightKg": 45.0,
+       "pin": null,
        "reps": 12,
        "completedAt": "2026-10-08T11:19:07.000Z"
       },
@@ -1336,6 +1578,7 @@
        "id": "72c82e30-1c51-5738-87a4-a1f53d90709f",
        "sortOrder": 1,
        "weightKg": 45.0,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-10-08T11:29:00.000Z"
       }
@@ -1359,6 +1602,7 @@
        "id": "4117c5f1-1b90-5cf2-aead-99e32fef0df8",
        "sortOrder": 0,
        "weightKg": 27.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-05T10:10:00.000Z"
       },
@@ -1366,6 +1610,7 @@
        "id": "16cfe194-b6ee-51a4-a3e7-d75264f418a0",
        "sortOrder": 1,
        "weightKg": 27.5,
+       "pin": null,
        "reps": 8,
        "completedAt": "2026-10-05T10:20:00.000Z"
       }
@@ -1380,6 +1625,7 @@
        "id": "360b3e61-98f5-5b8b-a60b-0b79e1b057e9",
        "sortOrder": 0,
        "weightKg": 45.0,
+       "pin": null,
        "reps": 12,
        "completedAt": "2026-10-05T10:30:00.000Z"
       }
@@ -1394,6 +1640,7 @@
        "id": "f7c76c00-f8b3-5e4d-b560-d9c862165d9c",
        "sortOrder": 0,
        "weightKg": 40.0,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-10-05T10:40:00.000Z"
       },
@@ -1401,6 +1648,7 @@
        "id": "b8eefa0d-7ee0-545e-8e7e-e7b25cec9c3c",
        "sortOrder": 1,
        "weightKg": 40.0,
+       "pin": null,
        "reps": 8,
        "completedAt": "2026-10-05T10:50:00.000Z"
       }
@@ -1415,6 +1663,7 @@
        "id": "a6d3e9e3-ff04-5c50-bba4-b5f49bac8cfb",
        "sortOrder": 0,
        "weightKg": 22.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-05T11:00:00.000Z"
       }
@@ -1428,7 +1677,8 @@
       {
        "id": "44bd53bc-0e37-532c-b999-64ed80a04de1",
        "sortOrder": 0,
-       "weightKg": 32.5,
+       "weightKg": null,
+       "pin": 8,
        "reps": 11,
        "completedAt": "2026-10-05T11:10:00.000Z"
       }
@@ -1452,6 +1702,7 @@
        "id": "95826c63-8b04-5130-8d30-bacd77a524f6",
        "sortOrder": 0,
        "weightKg": 37.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-01T10:08:15.000Z"
       },
@@ -1459,6 +1710,7 @@
        "id": "17b59467-7c79-5cb1-bd0b-3f4ed1e53173",
        "sortOrder": 1,
        "weightKg": 37.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-01T10:16:30.000Z"
       },
@@ -1466,6 +1718,7 @@
        "id": "867808db-1879-50f4-9c14-0c8925874f2a",
        "sortOrder": 2,
        "weightKg": 37.5,
+       "pin": null,
        "reps": 8,
        "completedAt": "2026-10-01T10:24:45.000Z"
       }
@@ -1480,6 +1733,7 @@
        "id": "990e9182-4a55-5bec-943c-39953dee4cac",
        "sortOrder": 0,
        "weightKg": 32.5,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-10-01T10:33:00.000Z"
       },
@@ -1487,6 +1741,7 @@
        "id": "cbaa005c-b204-59a8-9fad-f7adefa6ba1d",
        "sortOrder": 1,
        "weightKg": 32.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-01T10:41:15.000Z"
       },
@@ -1494,6 +1749,7 @@
        "id": "e4df2126-f47d-544d-94b7-764daee60563",
        "sortOrder": 2,
        "weightKg": 32.5,
+       "pin": null,
        "reps": 7,
        "completedAt": "2026-10-01T10:49:30.000Z"
       }
@@ -1508,6 +1764,7 @@
        "id": "d0b20745-36f1-596d-af96-841f4e0eefe2",
        "sortOrder": 0,
        "weightKg": 60.0,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-10-01T10:57:45.000Z"
       },
@@ -1515,6 +1772,7 @@
        "id": "d15615b7-9beb-556b-8cff-065f1bbddc6c",
        "sortOrder": 1,
        "weightKg": 60.0,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-10-01T11:06:00.000Z"
       }
@@ -1538,22 +1796,25 @@
        "id": "e7dccbef-875e-5319-a6cc-4119582abae6",
        "sortOrder": 0,
        "weightKg": 27.5,
+       "pin": null,
        "reps": 9,
-       "completedAt": "2026-09-28T10:11:15.000Z"
+       "completedAt": "2026-09-28T10:09:00.000Z"
       },
       {
        "id": "393488dd-c414-5512-b427-8335fe102b50",
        "sortOrder": 1,
        "weightKg": 27.5,
+       "pin": null,
        "reps": 8,
-       "completedAt": "2026-09-28T10:22:30.000Z"
+       "completedAt": "2026-09-28T10:18:00.000Z"
       },
       {
        "id": "1bbe2a5f-e133-520a-81f6-1285c23431ba",
        "sortOrder": 2,
        "weightKg": 27.5,
+       "pin": null,
        "reps": 8,
-       "completedAt": "2026-09-28T10:33:45.000Z"
+       "completedAt": "2026-09-28T10:27:00.000Z"
       }
      ]
     },
@@ -1566,41 +1827,69 @@
        "id": "a7ebc8e3-cad8-520e-beaf-524f6ec4ca5e",
        "sortOrder": 0,
        "weightKg": 45.0,
+       "pin": null,
        "reps": 11,
-       "completedAt": "2026-09-28T10:45:00.000Z"
+       "completedAt": "2026-09-28T10:36:00.000Z"
       },
       {
        "id": "6f78f3f2-d2c5-52d2-9b89-d9c825555810",
        "sortOrder": 1,
        "weightKg": 45.0,
+       "pin": null,
        "reps": 10,
-       "completedAt": "2026-09-28T10:56:15.000Z"
+       "completedAt": "2026-09-28T10:45:00.000Z"
       },
       {
        "id": "9584645e-827a-50d4-a377-8ea866f34665",
        "sortOrder": 2,
        "weightKg": 45.0,
+       "pin": null,
        "reps": 10,
-       "completedAt": "2026-09-28T11:07:30.000Z"
+       "completedAt": "2026-09-28T10:54:00.000Z"
       }
      ]
     },
     {
      "id": "61cd45bc-686f-5c66-b794-21fdbae1a4a4",
-     "exerciseId": "2e3f8075-ff75-5e68-a7e7-02e2921498af",
+     "exerciseId": "d0d87bd3-8bd6-533a-a101-3ffbcd3eaa8a",
      "sortOrder": 2,
      "sets": [
       {
        "id": "fc1c774e-56d3-5469-92c8-ec34423f7151",
        "sortOrder": 0,
-       "weightKg": 0.0,
+       "weightKg": 37.5,
+       "pin": null,
        "reps": 12,
-       "completedAt": "2026-09-28T11:18:45.000Z"
+       "completedAt": "2026-09-28T11:03:00.000Z"
       },
       {
        "id": "c8b153fc-24de-5b20-a20b-f8d052a6e6db",
        "sortOrder": 1,
+       "weightKg": 37.5,
+       "pin": null,
+       "reps": 11,
+       "completedAt": "2026-09-28T11:12:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "22cc250c-b9ba-5ee8-afb0-653ef56baa6a",
+     "exerciseId": "2e3f8075-ff75-5e68-a7e7-02e2921498af",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "989b4a6a-2a8e-5d08-b35e-3f8bc0651b8b",
+       "sortOrder": 0,
        "weightKg": 0.0,
+       "pin": null,
+       "reps": 12,
+       "completedAt": "2026-09-28T11:21:00.000Z"
+      },
+      {
+       "id": "fc880611-8edf-558f-afdf-e8403ce01276",
+       "sortOrder": 1,
+       "weightKg": 0.0,
+       "pin": null,
        "reps": 11,
        "completedAt": "2026-09-28T11:30:00.000Z"
       }
@@ -1624,21 +1913,24 @@
        "id": "de1343a8-b4da-5a00-bc4f-bb47b02b2d17",
        "sortOrder": 0,
        "weightKg": 87.5,
-       "reps": 8,
+       "pin": null,
+       "reps": 7,
        "completedAt": "2026-09-24T10:06:40.000Z"
       },
       {
        "id": "a0ba1eef-a6b8-550e-a8bf-6a7f08886148",
        "sortOrder": 1,
        "weightKg": 87.5,
-       "reps": 7,
+       "pin": null,
+       "reps": 6,
        "completedAt": "2026-09-24T10:13:20.000Z"
       },
       {
        "id": "359dbf6d-0e9e-5746-9fb4-68f70183f48a",
        "sortOrder": 2,
        "weightKg": 87.5,
-       "reps": 5,
+       "pin": null,
+       "reps": 6,
        "completedAt": "2026-09-24T10:20:00.000Z"
       }
      ]
@@ -1652,6 +1944,7 @@
        "id": "fd1876b5-6231-5545-b278-809d4e518df1",
        "sortOrder": 0,
        "weightKg": 42.5,
+       "pin": null,
        "reps": 11,
        "completedAt": "2026-09-24T10:26:40.000Z"
       },
@@ -1659,7 +1952,8 @@
        "id": "e5751131-f7ab-5553-9fa6-a1db59fc825a",
        "sortOrder": 1,
        "weightKg": 42.5,
-       "reps": 11,
+       "pin": null,
+       "reps": 10,
        "completedAt": "2026-09-24T10:33:20.000Z"
       }
      ]
@@ -1673,13 +1967,15 @@
        "id": "936aa50a-b189-544f-9de3-8d0ddd2f02b4",
        "sortOrder": 0,
        "weightKg": 22.5,
-       "reps": 9,
+       "pin": null,
+       "reps": 10,
        "completedAt": "2026-09-24T10:40:00.000Z"
       },
       {
        "id": "3729ce82-0eb1-5d01-bd9f-f4b5ef87ceeb",
        "sortOrder": 1,
        "weightKg": 22.5,
+       "pin": null,
        "reps": 8,
        "completedAt": "2026-09-24T10:46:40.000Z"
       }
@@ -1694,13 +1990,15 @@
        "id": "1801b0da-6e60-5da8-bbc3-409f5959dd89",
        "sortOrder": 0,
        "weightKg": 65.0,
-       "reps": 15,
+       "pin": null,
+       "reps": 14,
        "completedAt": "2026-09-24T10:53:20.000Z"
       },
       {
        "id": "c880b283-a0c8-5262-b028-9a26dad1b67f",
        "sortOrder": 1,
        "weightKg": 65.0,
+       "pin": null,
        "reps": 13,
        "completedAt": "2026-09-24T11:00:00.000Z"
       }
@@ -1724,6 +2022,7 @@
        "id": "8372bb20-2c7b-5085-9f15-665048bb633b",
        "sortOrder": 0,
        "weightKg": 42.5,
+       "pin": null,
        "reps": 11,
        "completedAt": "2026-09-21T10:08:30.000Z"
       },
@@ -1731,7 +2030,8 @@
        "id": "891b8d29-7112-5b59-b6b6-c756efee7024",
        "sortOrder": 1,
        "weightKg": 42.5,
-       "reps": 10,
+       "pin": null,
+       "reps": 11,
        "completedAt": "2026-09-21T10:17:00.000Z"
       }
      ]
@@ -1745,6 +2045,7 @@
        "id": "5803abd0-1217-5963-9003-d1cbef5fd38f",
        "sortOrder": 0,
        "weightKg": 37.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-09-21T10:25:30.000Z"
       },
@@ -1752,7 +2053,8 @@
        "id": "4c4a28c8-408f-51f0-8dd8-75cf0a8f07a6",
        "sortOrder": 1,
        "weightKg": 37.5,
-       "reps": 9,
+       "pin": null,
+       "reps": 8,
        "completedAt": "2026-09-21T10:34:00.000Z"
       }
      ]
@@ -1766,13 +2068,15 @@
        "id": "717d27b5-4c0a-516c-aa94-f4a0c851020c",
        "sortOrder": 0,
        "weightKg": 22.5,
-       "reps": 9,
+       "pin": null,
+       "reps": 10,
        "completedAt": "2026-09-21T10:42:30.000Z"
       },
       {
        "id": "84869796-439b-50df-8e0e-a9061f06228b",
        "sortOrder": 1,
        "weightKg": 22.5,
+       "pin": null,
        "reps": 8,
        "completedAt": "2026-09-21T10:51:00.000Z"
       }
@@ -1787,6 +2091,7 @@
        "id": "639fee39-13b4-59fe-83c7-a774aa2467d2",
        "sortOrder": 0,
        "weightKg": 7.5,
+       "pin": null,
        "reps": 15,
        "completedAt": "2026-09-21T10:59:30.000Z"
       },
@@ -1794,6 +2099,7 @@
        "id": "cc7a1d1c-6334-5634-99e7-b9937a54c367",
        "sortOrder": 1,
        "weightKg": 7.5,
+       "pin": null,
        "reps": 13,
        "completedAt": "2026-09-21T11:08:00.000Z"
       }
@@ -1808,6 +2114,7 @@
        "id": "16489fa4-9fe6-5275-ac58-c0baf4a32b63",
        "sortOrder": 0,
        "weightKg": 10.0,
+       "pin": null,
        "reps": 12,
        "completedAt": "2026-09-21T11:16:30.000Z"
       }
@@ -1821,8 +2128,9 @@
       {
        "id": "25b345b0-8aa4-5f32-b147-b4cc73301a69",
        "sortOrder": 0,
-       "weightKg": 32.5,
-       "reps": 11,
+       "weightKg": null,
+       "pin": 8,
+       "reps": 12,
        "completedAt": "2026-09-21T11:25:00.000Z"
       }
      ]
@@ -1845,13 +2153,15 @@
        "id": "7cad1ad8-caab-5006-856a-8e00f39c608b",
        "sortOrder": 0,
        "weightKg": 97.5,
-       "reps": 6,
+       "pin": null,
+       "reps": 5,
        "completedAt": "2026-09-17T10:09:06.000Z"
       },
       {
        "id": "8b3d1c47-9c61-5d19-bd55-727be73d74a1",
        "sortOrder": 1,
        "weightKg": 97.5,
+       "pin": null,
        "reps": 5,
        "completedAt": "2026-09-17T10:18:12.000Z"
       }
@@ -1866,13 +2176,15 @@
        "id": "b31ef386-e59c-52b6-9139-678c13714acd",
        "sortOrder": 0,
        "weightKg": 75.0,
-       "reps": 7,
+       "pin": null,
+       "reps": 8,
        "completedAt": "2026-09-17T10:27:18.000Z"
       },
       {
        "id": "120060b5-cfa1-5fa2-b86f-2819c9531f75",
        "sortOrder": 1,
        "weightKg": 75.0,
+       "pin": null,
        "reps": 7,
        "completedAt": "2026-09-17T10:36:24.000Z"
       }
@@ -1887,6 +2199,7 @@
        "id": "e8ab985d-35e6-5c7e-b68f-330f333feebe",
        "sortOrder": 0,
        "weightKg": 65.0,
+       "pin": null,
        "reps": 8,
        "completedAt": "2026-09-17T10:45:30.000Z"
       },
@@ -1894,7 +2207,8 @@
        "id": "e7773a8a-37dc-5f3d-bd97-31463c48044d",
        "sortOrder": 1,
        "weightKg": 65.0,
-       "reps": 7,
+       "pin": null,
+       "reps": 6,
        "completedAt": "2026-09-17T10:54:36.000Z"
       }
      ]
@@ -1908,6 +2222,7 @@
        "id": "a5c22390-c671-558d-9040-18436e9f81dd",
        "sortOrder": 0,
        "weightKg": 42.5,
+       "pin": null,
        "reps": 8,
        "completedAt": "2026-09-17T11:03:42.000Z"
       },
@@ -1915,7 +2230,8 @@
        "id": "2cb074cf-baf9-59d4-bcc5-60214df86e83",
        "sortOrder": 1,
        "weightKg": 42.5,
-       "reps": 6,
+       "pin": null,
+       "reps": 7,
        "completedAt": "2026-09-17T11:12:48.000Z"
       }
      ]
@@ -1929,6 +2245,7 @@
        "id": "93d7c9b7-355e-5a05-871c-0dfc386b7b09",
        "sortOrder": 0,
        "weightKg": 0.0,
+       "pin": null,
        "reps": 1,
        "completedAt": "2026-09-17T11:21:54.000Z"
       },
@@ -1936,6 +2253,7 @@
        "id": "278d0bfc-dfc3-5eff-b4e9-593419a43e53",
        "sortOrder": 1,
        "weightKg": 0.0,
+       "pin": null,
        "reps": 1,
        "completedAt": "2026-09-17T11:31:00.000Z"
       }
@@ -1959,22 +2277,25 @@
        "id": "b11486a9-3c8f-5f60-acd9-3e2da3242b6b",
        "sortOrder": 0,
        "weightKg": 75.0,
+       "pin": null,
        "reps": 8,
-       "completedAt": "2026-09-14T10:04:09.000Z"
+       "completedAt": "2026-09-14T10:03:36.000Z"
       },
       {
        "id": "0a21d630-df3f-5558-9a17-04d32f6d8194",
        "sortOrder": 1,
        "weightKg": 75.0,
-       "reps": 7,
-       "completedAt": "2026-09-14T10:08:18.000Z"
+       "pin": null,
+       "reps": 6,
+       "completedAt": "2026-09-14T10:07:12.000Z"
       },
       {
        "id": "85451685-4bfa-5af4-9178-4738e6dfdab1",
        "sortOrder": 2,
        "weightKg": 75.0,
-       "reps": 6,
-       "completedAt": "2026-09-14T10:12:28.000Z"
+       "pin": null,
+       "reps": 5,
+       "completedAt": "2026-09-14T10:10:48.000Z"
       }
      ]
     },
@@ -1987,22 +2308,25 @@
        "id": "2ea224c9-7ddf-5385-9511-dcb5e80d676a",
        "sortOrder": 0,
        "weightKg": 65.0,
-       "reps": 7,
-       "completedAt": "2026-09-14T10:16:37.000Z"
+       "pin": null,
+       "reps": 8,
+       "completedAt": "2026-09-14T10:14:24.000Z"
       },
       {
        "id": "e90f5dd4-72e3-59b5-a0e9-66eb3068e975",
        "sortOrder": 1,
        "weightKg": 65.0,
+       "pin": null,
        "reps": 6,
-       "completedAt": "2026-09-14T10:20:46.000Z"
+       "completedAt": "2026-09-14T10:18:00.000Z"
       },
       {
        "id": "ef843603-56d6-556e-97f2-67f2a83a7d1b",
        "sortOrder": 2,
        "weightKg": 65.0,
-       "reps": 6,
-       "completedAt": "2026-09-14T10:24:55.000Z"
+       "pin": null,
+       "reps": 5,
+       "completedAt": "2026-09-14T10:21:36.000Z"
       }
      ]
     },
@@ -2015,22 +2339,25 @@
        "id": "1cbc348d-f9e9-5e9c-91a2-ab493213f8c8",
        "sortOrder": 0,
        "weightKg": 42.5,
-       "reps": 7,
-       "completedAt": "2026-09-14T10:29:05.000Z"
+       "pin": null,
+       "reps": 8,
+       "completedAt": "2026-09-14T10:25:12.000Z"
       },
       {
        "id": "0bcce09e-dcd4-5114-a90d-5f12df12d2b5",
        "sortOrder": 1,
        "weightKg": 42.5,
-       "reps": 6,
-       "completedAt": "2026-09-14T10:33:14.000Z"
+       "pin": null,
+       "reps": 7,
+       "completedAt": "2026-09-14T10:28:48.000Z"
       },
       {
        "id": "cb2d564b-ca4d-54ec-998c-c411a41a0d0c",
        "sortOrder": 2,
        "weightKg": 42.5,
-       "reps": 6,
-       "completedAt": "2026-09-14T10:37:23.000Z"
+       "pin": null,
+       "reps": 5,
+       "completedAt": "2026-09-14T10:32:24.000Z"
       }
      ]
     },
@@ -2043,15 +2370,17 @@
        "id": "9100a976-48ee-5a84-bbf6-3311eba31c8a",
        "sortOrder": 0,
        "weightKg": 32.5,
+       "pin": null,
        "reps": 10,
-       "completedAt": "2026-09-14T10:41:32.000Z"
+       "completedAt": "2026-09-14T10:36:00.000Z"
       },
       {
        "id": "f6123c8c-bd10-5a5f-88d2-1e7940af7f0a",
        "sortOrder": 1,
        "weightKg": 32.5,
+       "pin": null,
        "reps": 8,
-       "completedAt": "2026-09-14T10:45:42.000Z"
+       "completedAt": "2026-09-14T10:39:36.000Z"
       }
      ]
     },
@@ -2064,14 +2393,39 @@
        "id": "7f744e57-3e9e-5b5d-be73-e077ac99cdee",
        "sortOrder": 0,
        "weightKg": 27.5,
-       "reps": 10,
-       "completedAt": "2026-09-14T10:49:51.000Z"
+       "pin": null,
+       "reps": 9,
+       "completedAt": "2026-09-14T10:43:12.000Z"
       },
       {
        "id": "4af7c39c-5b96-5d81-9180-9d977279a846",
        "sortOrder": 1,
        "weightKg": 27.5,
+       "pin": null,
        "reps": 8,
+       "completedAt": "2026-09-14T10:46:48.000Z"
+      }
+     ]
+    },
+    {
+     "id": "e9cc1fbe-f06f-55c6-aabb-f5c188e677fd",
+     "exerciseId": "cd664222-7ddb-5857-ac80-ab1695f003b4",
+     "sortOrder": 5,
+     "sets": [
+      {
+       "id": "a66830f7-e7d3-5932-a2d6-4a6af39a6c67",
+       "sortOrder": 0,
+       "weightKg": null,
+       "pin": 6,
+       "reps": 11,
+       "completedAt": "2026-09-14T10:50:24.000Z"
+      },
+      {
+       "id": "a5f14887-4c58-501a-91b5-179aac4250db",
+       "sortOrder": 1,
+       "weightKg": null,
+       "pin": 6,
+       "reps": 10,
        "completedAt": "2026-09-14T10:54:00.000Z"
       }
      ]
@@ -2094,13 +2448,15 @@
        "id": "a3a20df9-b4dc-5fd9-8702-ca62dde31a41",
        "sortOrder": 0,
        "weightKg": 95.0,
-       "reps": 5,
+       "pin": null,
+       "reps": 6,
        "completedAt": "2026-09-10T10:09:09.000Z"
       },
       {
        "id": "ae95bdc3-19a4-59be-a4e4-c5f2cf66c47a",
        "sortOrder": 1,
        "weightKg": 95.0,
+       "pin": null,
        "reps": 4,
        "completedAt": "2026-09-10T10:18:17.000Z"
       },
@@ -2108,6 +2464,7 @@
        "id": "35f54431-abc4-50de-8d5a-a6aa9a0eb2b9",
        "sortOrder": 2,
        "weightKg": 95.0,
+       "pin": null,
        "reps": 3,
        "completedAt": "2026-09-10T10:27:26.000Z"
       }
@@ -2122,14 +2479,16 @@
        "id": "48036ec6-6715-5e47-a9f7-1cbd84230f19",
        "sortOrder": 0,
        "weightKg": 85.0,
-       "reps": 7,
+       "pin": null,
+       "reps": 8,
        "completedAt": "2026-09-10T10:36:34.000Z"
       },
       {
        "id": "95832a13-34c2-5447-bebc-de8de958c0b7",
        "sortOrder": 1,
        "weightKg": 85.0,
-       "reps": 7,
+       "pin": null,
+       "reps": 6,
        "completedAt": "2026-09-10T10:45:43.000Z"
       }
      ]
@@ -2143,6 +2502,7 @@
        "id": "95a301f8-d3c3-5324-bc4b-818241559088",
        "sortOrder": 0,
        "weightKg": 150.0,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-09-10T10:54:51.000Z"
       },
@@ -2150,7 +2510,8 @@
        "id": "7a510fae-d425-52f6-aa5b-7e8e59f60769",
        "sortOrder": 1,
        "weightKg": 150.0,
-       "reps": 8,
+       "pin": null,
+       "reps": 9,
        "completedAt": "2026-09-10T11:04:00.000Z"
       }
      ]
@@ -2173,7 +2534,8 @@
        "id": "b9b22de2-4a8c-5d29-aaa1-4fa0057d5dbe",
        "sortOrder": 0,
        "weightKg": 20.0,
-       "reps": 10,
+       "pin": null,
+       "reps": 9,
        "completedAt": "2026-09-07T10:13:00.000Z"
       }
      ]
@@ -2187,14 +2549,16 @@
        "id": "6379ac73-1f2a-5420-a9c1-6451fa1bd2b2",
        "sortOrder": 0,
        "weightKg": 37.5,
-       "reps": 9,
+       "pin": null,
+       "reps": 10,
        "completedAt": "2026-09-07T10:26:00.000Z"
       },
       {
        "id": "c4089e42-8498-5d28-8082-73927363427d",
        "sortOrder": 1,
        "weightKg": 37.5,
-       "reps": 8,
+       "pin": null,
+       "reps": 9,
        "completedAt": "2026-09-07T10:39:00.000Z"
       }
      ]
@@ -2208,6 +2572,7 @@
        "id": "4488c70e-b828-5e1d-a2dd-d01cab14a4fb",
        "sortOrder": 0,
        "weightKg": 25.0,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-09-07T10:52:00.000Z"
       },
@@ -2215,7 +2580,8 @@
        "id": "6bca2f12-9548-5ab8-8437-0f0edc3ceab3",
        "sortOrder": 1,
        "weightKg": 25.0,
-       "reps": 8,
+       "pin": null,
+       "reps": 9,
        "completedAt": "2026-09-07T11:05:00.000Z"
       }
      ]
@@ -2229,6 +2595,7 @@
        "id": "a9f95988-4181-512f-b047-8d572326650c",
        "sortOrder": 0,
        "weightKg": 10.0,
+       "pin": null,
        "reps": 12,
        "completedAt": "2026-09-07T11:18:00.000Z"
       }
@@ -2243,6 +2610,7 @@
        "id": "fb52a6f2-e0b6-56e1-b577-50178faf6225",
        "sortOrder": 0,
        "weightKg": 7.5,
+       "pin": null,
        "reps": 15,
        "completedAt": "2026-09-07T11:31:00.000Z"
       }
@@ -2266,6 +2634,7 @@
        "id": "6296479a-d9a2-597f-a8cb-1ce5a6200b89",
        "sortOrder": 0,
        "weightKg": 95.0,
+       "pin": null,
        "reps": 6,
        "completedAt": "2026-09-03T10:09:00.000Z"
       },
@@ -2273,6 +2642,7 @@
        "id": "be94b4c6-f17c-5ff6-a5aa-deb4da87b770",
        "sortOrder": 1,
        "weightKg": 95.0,
+       "pin": null,
        "reps": 5,
        "completedAt": "2026-09-03T10:18:00.000Z"
       },
@@ -2280,6 +2650,7 @@
        "id": "291a551a-6ca0-58b4-9a09-03a21e823f7c",
        "sortOrder": 2,
        "weightKg": 95.0,
+       "pin": null,
        "reps": 4,
        "completedAt": "2026-09-03T10:27:00.000Z"
       }
@@ -2294,14 +2665,16 @@
        "id": "8f27618d-dd63-5a51-a33d-87d9b814f380",
        "sortOrder": 0,
        "weightKg": 147.5,
-       "reps": 10,
+       "pin": null,
+       "reps": 9,
        "completedAt": "2026-09-03T10:36:00.000Z"
       },
       {
        "id": "d5ddac2f-ca1e-59dd-8a89-940f4e182119",
        "sortOrder": 1,
        "weightKg": 147.5,
-       "reps": 9,
+       "pin": null,
+       "reps": 8,
        "completedAt": "2026-09-03T10:45:00.000Z"
       }
      ]
@@ -2315,13 +2688,15 @@
        "id": "91f0c0c9-4940-5a8f-9fb7-ca8e1b1fe7b3",
        "sortOrder": 0,
        "weightKg": 52.5,
-       "reps": 12,
+       "pin": null,
+       "reps": 11,
        "completedAt": "2026-09-03T10:54:00.000Z"
       },
       {
        "id": "c280100a-440c-55be-826c-5210b05bfcbe",
        "sortOrder": 1,
        "weightKg": 52.5,
+       "pin": null,
        "reps": 11,
        "completedAt": "2026-09-03T11:03:00.000Z"
       }
@@ -2336,14 +2711,16 @@
        "id": "42cd25cd-a747-539c-af36-cf8f858be5e0",
        "sortOrder": 0,
        "weightKg": 42.5,
-       "reps": 11,
+       "pin": null,
+       "reps": 12,
        "completedAt": "2026-09-03T11:12:00.000Z"
       },
       {
        "id": "3fe14de5-bc3d-51a8-8442-49eff9061369",
        "sortOrder": 1,
        "weightKg": 42.5,
-       "reps": 10,
+       "pin": null,
+       "reps": 11,
        "completedAt": "2026-09-03T11:21:00.000Z"
       }
      ]
@@ -2366,13 +2743,15 @@
        "id": "6593e5e1-034c-51ad-98cb-25e5275ed67b",
        "sortOrder": 0,
        "weightKg": 25.0,
-       "reps": 9,
+       "pin": null,
+       "reps": 10,
        "completedAt": "2026-08-31T10:10:26.000Z"
       },
       {
        "id": "ebe6b67b-7e30-5a81-85fd-0dffa04f71bd",
        "sortOrder": 1,
        "weightKg": 25.0,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-08-31T10:20:51.000Z"
       }
@@ -2387,7 +2766,8 @@
        "id": "2ca4c1f9-7a67-52f6-b7be-26c7d924b82e",
        "sortOrder": 0,
        "weightKg": 42.5,
-       "reps": 12,
+       "pin": null,
+       "reps": 11,
        "completedAt": "2026-08-31T10:31:17.000Z"
       }
      ]
@@ -2401,13 +2781,15 @@
        "id": "1ac33ccb-8e16-5dc4-a1c1-d8a1861efe91",
        "sortOrder": 0,
        "weightKg": 37.5,
-       "reps": 10,
+       "pin": null,
+       "reps": 9,
        "completedAt": "2026-08-31T10:41:43.000Z"
       },
       {
        "id": "f00f267c-9d9d-591c-8364-126be495cad2",
        "sortOrder": 1,
        "weightKg": 37.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-08-31T10:52:09.000Z"
       }
@@ -2422,6 +2804,7 @@
        "id": "7082ba92-7c62-54ac-9ca6-640d1104ea72",
        "sortOrder": 0,
        "weightKg": 20.0,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-08-31T11:02:34.000Z"
       }
@@ -2435,8 +2818,9 @@
       {
        "id": "72d34195-6afc-5eae-b17a-e4b58e299223",
        "sortOrder": 0,
-       "weightKg": 32.5,
-       "reps": 11,
+       "weightKg": null,
+       "pin": 7,
+       "reps": 12,
        "completedAt": "2026-08-31T11:13:00.000Z"
       }
      ]
@@ -2459,21 +2843,24 @@
        "id": "e670b58d-c7b7-53bf-90eb-f8c19d922b94",
        "sortOrder": 0,
        "weightKg": 37.5,
-       "reps": 9,
+       "pin": null,
+       "reps": 10,
        "completedAt": "2026-08-27T10:09:15.000Z"
       },
       {
        "id": "a4685157-1004-51ce-bfc5-76481788f591",
        "sortOrder": 1,
        "weightKg": 37.5,
-       "reps": 9,
+       "pin": null,
+       "reps": 8,
        "completedAt": "2026-08-27T10:18:30.000Z"
       },
       {
        "id": "08f3e70d-3b8d-5a6a-8cae-5c550ec89466",
        "sortOrder": 2,
        "weightKg": 37.5,
-       "reps": 8,
+       "pin": null,
+       "reps": 7,
        "completedAt": "2026-08-27T10:27:45.000Z"
       }
      ]
@@ -2487,6 +2874,7 @@
        "id": "c5e93abb-6d60-5630-b335-03c6fe5bb351",
        "sortOrder": 0,
        "weightKg": 30.0,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-08-27T10:37:00.000Z"
       },
@@ -2494,13 +2882,15 @@
        "id": "b0630c44-8281-5a40-a76a-61c4b011491a",
        "sortOrder": 1,
        "weightKg": 30.0,
-       "reps": 9,
+       "pin": null,
+       "reps": 8,
        "completedAt": "2026-08-27T10:46:15.000Z"
       },
       {
        "id": "d60f01f2-1bd3-59ca-ab50-f330e5beac5c",
        "sortOrder": 2,
        "weightKg": 30.0,
+       "pin": null,
        "reps": 7,
        "completedAt": "2026-08-27T10:55:30.000Z"
       }
@@ -2515,6 +2905,7 @@
        "id": "f16bce65-1ec1-5c3f-949f-700c3d072012",
        "sortOrder": 0,
        "weightKg": 57.5,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-08-27T11:04:45.000Z"
       },
@@ -2522,7 +2913,8 @@
        "id": "c8565cb2-1791-5457-8eaa-41c7e62a27e5",
        "sortOrder": 1,
        "weightKg": 57.5,
-       "reps": 9,
+       "pin": null,
+       "reps": 8,
        "completedAt": "2026-08-27T11:14:00.000Z"
       }
      ]
@@ -2545,22 +2937,25 @@
        "id": "945729c5-1c13-59ae-bd67-7e1a47cc7523",
        "sortOrder": 0,
        "weightKg": 25.0,
+       "pin": null,
        "reps": 9,
-       "completedAt": "2026-08-24T10:05:45.000Z"
+       "completedAt": "2026-08-24T10:04:36.000Z"
       },
       {
        "id": "e83bae81-b114-5492-8e48-2ec3e07b47b4",
        "sortOrder": 1,
        "weightKg": 25.0,
-       "reps": 8,
-       "completedAt": "2026-08-24T10:11:30.000Z"
+       "pin": null,
+       "reps": 9,
+       "completedAt": "2026-08-24T10:09:12.000Z"
       },
       {
        "id": "1d88d14f-6d8b-56f3-8583-d7cb99c130b0",
        "sortOrder": 2,
        "weightKg": 25.0,
+       "pin": null,
        "reps": 7,
-       "completedAt": "2026-08-24T10:17:15.000Z"
+       "completedAt": "2026-08-24T10:13:48.000Z"
       }
      ]
     },
@@ -2573,41 +2968,69 @@
        "id": "d1510558-8b02-5209-b85b-e20ae9f915ff",
        "sortOrder": 0,
        "weightKg": 42.5,
-       "reps": 11,
-       "completedAt": "2026-08-24T10:23:00.000Z"
+       "pin": null,
+       "reps": 12,
+       "completedAt": "2026-08-24T10:18:24.000Z"
       },
       {
        "id": "2e9c22e3-9c64-5bc8-a377-9733185778ab",
        "sortOrder": 1,
        "weightKg": 42.5,
-       "reps": 10,
-       "completedAt": "2026-08-24T10:28:45.000Z"
+       "pin": null,
+       "reps": 11,
+       "completedAt": "2026-08-24T10:23:00.000Z"
       },
       {
        "id": "f0e620f3-7b6a-5912-bf5d-9d17847af56c",
        "sortOrder": 2,
        "weightKg": 42.5,
+       "pin": null,
        "reps": 10,
-       "completedAt": "2026-08-24T10:34:30.000Z"
+       "completedAt": "2026-08-24T10:27:36.000Z"
       }
      ]
     },
     {
      "id": "296fc1c3-7a76-5a0b-96fa-2999cb2fbd0c",
-     "exerciseId": "2e3f8075-ff75-5e68-a7e7-02e2921498af",
+     "exerciseId": "d0d87bd3-8bd6-533a-a101-3ffbcd3eaa8a",
      "sortOrder": 2,
      "sets": [
       {
        "id": "d41c40d4-a4e9-5d4e-9d83-3cbdbeca2bf8",
        "sortOrder": 0,
-       "weightKg": 0.0,
+       "weightKg": 37.5,
+       "pin": null,
        "reps": 11,
-       "completedAt": "2026-08-24T10:40:15.000Z"
+       "completedAt": "2026-08-24T10:32:12.000Z"
       },
       {
        "id": "d0cb8aeb-28b8-55d4-adff-4e76f8b2ebfd",
        "sortOrder": 1,
+       "weightKg": 37.5,
+       "pin": null,
+       "reps": 10,
+       "completedAt": "2026-08-24T10:36:48.000Z"
+      }
+     ]
+    },
+    {
+     "id": "29af2ac6-2202-5b52-b1f6-f17fe6421c6a",
+     "exerciseId": "2e3f8075-ff75-5e68-a7e7-02e2921498af",
+     "sortOrder": 3,
+     "sets": [
+      {
+       "id": "d18b3b68-c8ce-5657-bac5-be6d89cff7e3",
+       "sortOrder": 0,
        "weightKg": 0.0,
+       "pin": null,
+       "reps": 12,
+       "completedAt": "2026-08-24T10:41:24.000Z"
+      },
+      {
+       "id": "35af7f59-d6cd-595f-9c19-b760a4f1e73e",
+       "sortOrder": 1,
+       "weightKg": 0.0,
+       "pin": null,
        "reps": 11,
        "completedAt": "2026-08-24T10:46:00.000Z"
       }
@@ -2631,6 +3054,7 @@
        "id": "e5ecd153-a2fd-54a6-ab3f-6fa273553942",
        "sortOrder": 0,
        "weightKg": 82.5,
+       "pin": null,
        "reps": 8,
        "completedAt": "2026-08-20T10:07:33.000Z"
       },
@@ -2638,6 +3062,7 @@
        "id": "28534582-dc38-5c7d-a52f-cbf5a6c59de5",
        "sortOrder": 1,
        "weightKg": 82.5,
+       "pin": null,
        "reps": 7,
        "completedAt": "2026-08-20T10:15:07.000Z"
       },
@@ -2645,7 +3070,8 @@
        "id": "a8525748-8f77-54b5-a236-db03d0f8f845",
        "sortOrder": 2,
        "weightKg": 82.5,
-       "reps": 5,
+       "pin": null,
+       "reps": 6,
        "completedAt": "2026-08-20T10:22:40.000Z"
       }
      ]
@@ -2659,14 +3085,16 @@
        "id": "d8d34ad6-1d77-58d5-9117-b7e200be5342",
        "sortOrder": 0,
        "weightKg": 40.0,
-       "reps": 11,
+       "pin": null,
+       "reps": 12,
        "completedAt": "2026-08-20T10:30:13.000Z"
       },
       {
        "id": "8f9a3b66-5792-584c-94d2-f1b3ad0580ee",
        "sortOrder": 1,
        "weightKg": 40.0,
-       "reps": 11,
+       "pin": null,
+       "reps": 10,
        "completedAt": "2026-08-20T10:37:47.000Z"
       }
      ]
@@ -2680,6 +3108,7 @@
        "id": "3cb8ea4b-bd40-5e7d-84ed-b938adc5ea46",
        "sortOrder": 0,
        "weightKg": 20.0,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-08-20T10:45:20.000Z"
       },
@@ -2687,7 +3116,8 @@
        "id": "420f8e59-830d-5f01-a8c8-b87d9b5a018d",
        "sortOrder": 1,
        "weightKg": 20.0,
-       "reps": 9,
+       "pin": null,
+       "reps": 8,
        "completedAt": "2026-08-20T10:52:53.000Z"
       }
      ]
@@ -2701,6 +3131,7 @@
        "id": "9a3b4fe3-4f0f-5ec8-aa15-ea273cd36c87",
        "sortOrder": 0,
        "weightKg": 62.5,
+       "pin": null,
        "reps": 15,
        "completedAt": "2026-08-20T11:00:27.000Z"
       },
@@ -2708,6 +3139,7 @@
        "id": "2bcd37a2-0f84-5359-ae78-5ad887eaef5d",
        "sortOrder": 1,
        "weightKg": 62.5,
+       "pin": null,
        "reps": 14,
        "completedAt": "2026-08-20T11:08:00.000Z"
       }
@@ -2731,6 +3163,7 @@
        "id": "5d93a7e5-d979-5844-b51d-3f4b5446f2fa",
        "sortOrder": 0,
        "weightKg": 40.0,
+       "pin": null,
        "reps": 12,
        "completedAt": "2026-08-17T10:04:54.000Z"
       },
@@ -2738,6 +3171,7 @@
        "id": "657690cd-ee9e-562b-becc-05ed1634839a",
        "sortOrder": 1,
        "weightKg": 40.0,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-08-17T10:09:48.000Z"
       }
@@ -2752,14 +3186,16 @@
        "id": "897e71c1-4824-505a-bb8e-3e2bf30a352a",
        "sortOrder": 0,
        "weightKg": 35.0,
-       "reps": 10,
+       "pin": null,
+       "reps": 9,
        "completedAt": "2026-08-17T10:14:42.000Z"
       },
       {
        "id": "bd0ee401-de34-57e3-82b6-ff3f8d8a548e",
        "sortOrder": 1,
        "weightKg": 35.0,
-       "reps": 8,
+       "pin": null,
+       "reps": 9,
        "completedAt": "2026-08-17T10:19:36.000Z"
       }
      ]
@@ -2773,6 +3209,7 @@
        "id": "0d4ae358-073c-54db-a065-075523c2f3dd",
        "sortOrder": 0,
        "weightKg": 20.0,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-08-17T10:24:30.000Z"
       },
@@ -2780,6 +3217,7 @@
        "id": "ffffbf0a-3133-5180-b3d9-ab2988779dc0",
        "sortOrder": 1,
        "weightKg": 20.0,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-08-17T10:29:24.000Z"
       }
@@ -2794,14 +3232,16 @@
        "id": "8dbc41b6-7f24-50a5-b480-416abf4d2466",
        "sortOrder": 0,
        "weightKg": 7.5,
-       "reps": 15,
+       "pin": null,
+       "reps": 14,
        "completedAt": "2026-08-17T10:34:18.000Z"
       },
       {
        "id": "be783d7a-0476-5bb5-b4fb-0f06fb98d3c6",
        "sortOrder": 1,
        "weightKg": 7.5,
-       "reps": 13,
+       "pin": null,
+       "reps": 14,
        "completedAt": "2026-08-17T10:39:12.000Z"
       }
      ]
@@ -2815,6 +3255,7 @@
        "id": "5364141f-1d3b-5bb8-b821-bc274e6d9518",
        "sortOrder": 0,
        "weightKg": 10.0,
+       "pin": null,
        "reps": 11,
        "completedAt": "2026-08-17T10:44:06.000Z"
       }
@@ -2828,8 +3269,9 @@
       {
        "id": "dfc86a08-a014-557b-a080-3bae0ef53cb9",
        "sortOrder": 0,
-       "weightKg": 30.0,
-       "reps": 12,
+       "weightKg": null,
+       "pin": 7,
+       "reps": 11,
        "completedAt": "2026-08-17T10:49:00.000Z"
       }
      ]
@@ -2852,14 +3294,16 @@
        "id": "3860a45f-7407-5ac6-8800-0ee3c415eb8b",
        "sortOrder": 0,
        "weightKg": 92.5,
-       "reps": 6,
+       "pin": null,
+       "reps": 5,
        "completedAt": "2026-08-13T10:07:36.000Z"
       },
       {
        "id": "9322e9c1-1819-5936-8b1f-302e157b5d77",
        "sortOrder": 1,
        "weightKg": 92.5,
-       "reps": 5,
+       "pin": null,
+       "reps": 4,
        "completedAt": "2026-08-13T10:15:12.000Z"
       }
      ]
@@ -2873,6 +3317,7 @@
        "id": "40643c7c-0252-5978-a9b6-8bf717e3677b",
        "sortOrder": 0,
        "weightKg": 70.0,
+       "pin": null,
        "reps": 7,
        "completedAt": "2026-08-13T10:22:48.000Z"
       },
@@ -2880,6 +3325,7 @@
        "id": "eb395498-db26-5b28-955b-c58da630c05e",
        "sortOrder": 1,
        "weightKg": 70.0,
+       "pin": null,
        "reps": 7,
        "completedAt": "2026-08-13T10:30:24.000Z"
       }
@@ -2894,13 +3340,15 @@
        "id": "ea480bd0-ddd1-512e-ac8c-6d9bc1a45335",
        "sortOrder": 0,
        "weightKg": 60.0,
-       "reps": 7,
+       "pin": null,
+       "reps": 8,
        "completedAt": "2026-08-13T10:38:00.000Z"
       },
       {
        "id": "8a04ad9d-6223-5ac6-b9ae-ed567737c314",
        "sortOrder": 1,
        "weightKg": 60.0,
+       "pin": null,
        "reps": 6,
        "completedAt": "2026-08-13T10:45:36.000Z"
       }
@@ -2915,13 +3363,15 @@
        "id": "fa5f6e81-4678-5524-ae7c-f3c6fb2fa601",
        "sortOrder": 0,
        "weightKg": 40.0,
-       "reps": 7,
+       "pin": null,
+       "reps": 8,
        "completedAt": "2026-08-13T10:53:12.000Z"
       },
       {
        "id": "d3f6bb26-4609-5abd-92f9-dad2d96755ea",
        "sortOrder": 1,
        "weightKg": 40.0,
+       "pin": null,
        "reps": 6,
        "completedAt": "2026-08-13T11:00:48.000Z"
       }
@@ -2936,6 +3386,7 @@
        "id": "d3ee7dda-e005-5f60-a634-7ab6d0fc787e",
        "sortOrder": 0,
        "weightKg": 0.0,
+       "pin": null,
        "reps": 1,
        "completedAt": "2026-08-13T11:08:24.000Z"
       },
@@ -2943,6 +3394,7 @@
        "id": "cf8d3586-d551-5c4f-89ff-f3cebad6d8ae",
        "sortOrder": 1,
        "weightKg": 0.0,
+       "pin": null,
        "reps": 1,
        "completedAt": "2026-08-13T11:16:00.000Z"
       }
@@ -2966,22 +3418,25 @@
        "id": "0664713e-d186-5720-8daa-f3aa21d1b625",
        "sortOrder": 0,
        "weightKg": 70.0,
+       "pin": null,
        "reps": 7,
-       "completedAt": "2026-08-10T10:03:28.000Z"
+       "completedAt": "2026-08-10T10:03:00.000Z"
       },
       {
        "id": "30e0c196-5b3e-555c-a360-eb518ca28380",
        "sortOrder": 1,
        "weightKg": 70.0,
+       "pin": null,
        "reps": 7,
-       "completedAt": "2026-08-10T10:06:55.000Z"
+       "completedAt": "2026-08-10T10:06:00.000Z"
       },
       {
        "id": "d39daff2-6496-5372-b9a5-653884f9a838",
        "sortOrder": 2,
        "weightKg": 70.0,
-       "reps": 6,
-       "completedAt": "2026-08-10T10:10:23.000Z"
+       "pin": null,
+       "reps": 5,
+       "completedAt": "2026-08-10T10:09:00.000Z"
       }
      ]
     },
@@ -2994,22 +3449,25 @@
        "id": "fa6535ea-cfd9-5c34-9ce0-75a68da2db4c",
        "sortOrder": 0,
        "weightKg": 60.0,
+       "pin": null,
        "reps": 7,
-       "completedAt": "2026-08-10T10:13:51.000Z"
+       "completedAt": "2026-08-10T10:12:00.000Z"
       },
       {
        "id": "7425f091-e6cc-5423-9e77-c801f4ff4c1d",
        "sortOrder": 1,
        "weightKg": 60.0,
+       "pin": null,
        "reps": 7,
-       "completedAt": "2026-08-10T10:17:18.000Z"
+       "completedAt": "2026-08-10T10:15:00.000Z"
       },
       {
        "id": "b6e0cd96-0dd6-5378-90c6-58784e323ce2",
        "sortOrder": 2,
        "weightKg": 60.0,
-       "reps": 5,
-       "completedAt": "2026-08-10T10:20:46.000Z"
+       "pin": null,
+       "reps": 6,
+       "completedAt": "2026-08-10T10:18:00.000Z"
       }
      ]
     },
@@ -3022,22 +3480,25 @@
        "id": "2020e6ec-57b8-5e81-a9bd-9744a01a9490",
        "sortOrder": 0,
        "weightKg": 40.0,
+       "pin": null,
        "reps": 7,
-       "completedAt": "2026-08-10T10:24:14.000Z"
+       "completedAt": "2026-08-10T10:21:00.000Z"
       },
       {
        "id": "e19ebab0-ddd6-5143-b27b-2c06df223afa",
        "sortOrder": 1,
        "weightKg": 40.0,
-       "reps": 7,
-       "completedAt": "2026-08-10T10:27:42.000Z"
+       "pin": null,
+       "reps": 6,
+       "completedAt": "2026-08-10T10:24:00.000Z"
       },
       {
        "id": "2aad6fdf-97bb-5352-942b-571f27fba29b",
        "sortOrder": 2,
        "weightKg": 40.0,
-       "reps": 5,
-       "completedAt": "2026-08-10T10:31:09.000Z"
+       "pin": null,
+       "reps": 6,
+       "completedAt": "2026-08-10T10:27:00.000Z"
       }
      ]
     },
@@ -3050,15 +3511,17 @@
        "id": "24964c60-5b48-554f-b779-4671a33db356",
        "sortOrder": 0,
        "weightKg": 30.0,
+       "pin": null,
        "reps": 9,
-       "completedAt": "2026-08-10T10:34:37.000Z"
+       "completedAt": "2026-08-10T10:30:00.000Z"
       },
       {
        "id": "34c3fdd1-34d2-5f56-90c2-de034c90377c",
        "sortOrder": 1,
        "weightKg": 30.0,
-       "reps": 9,
-       "completedAt": "2026-08-10T10:38:05.000Z"
+       "pin": null,
+       "reps": 8,
+       "completedAt": "2026-08-10T10:33:00.000Z"
       }
      ]
     },
@@ -3071,14 +3534,39 @@
        "id": "d49902b9-fdef-591e-b9b5-b0ccff1e31d0",
        "sortOrder": 0,
        "weightKg": 25.0,
-       "reps": 10,
-       "completedAt": "2026-08-10T10:41:32.000Z"
+       "pin": null,
+       "reps": 9,
+       "completedAt": "2026-08-10T10:36:00.000Z"
       },
       {
        "id": "31d653ca-4242-565b-85f6-97cf2672aea0",
        "sortOrder": 1,
        "weightKg": 25.0,
+       "pin": null,
        "reps": 8,
+       "completedAt": "2026-08-10T10:39:00.000Z"
+      }
+     ]
+    },
+    {
+     "id": "28a7564e-543e-5c3d-bef7-329872baa75e",
+     "exerciseId": "cd664222-7ddb-5857-ac80-ab1695f003b4",
+     "sortOrder": 5,
+     "sets": [
+      {
+       "id": "41b11f46-3a1a-5203-9802-da22de773e9d",
+       "sortOrder": 0,
+       "weightKg": null,
+       "pin": 6,
+       "reps": 12,
+       "completedAt": "2026-08-10T10:42:00.000Z"
+      },
+      {
+       "id": "6ba36300-7542-5389-a1b2-c2158c29a829",
+       "sortOrder": 1,
+       "weightKg": null,
+       "pin": 6,
+       "reps": 11,
        "completedAt": "2026-08-10T10:45:00.000Z"
       }
      ]
@@ -3101,6 +3589,7 @@
        "id": "fb8f4048-efea-547c-8954-c44a8b91f71f",
        "sortOrder": 0,
        "weightKg": 90.0,
+       "pin": null,
        "reps": 5,
        "completedAt": "2026-08-06T10:10:26.000Z"
       },
@@ -3108,14 +3597,16 @@
        "id": "6546ee87-a11c-5262-a2e4-af6ed5425001",
        "sortOrder": 1,
        "weightKg": 90.0,
-       "reps": 5,
+       "pin": null,
+       "reps": 4,
        "completedAt": "2026-08-06T10:20:51.000Z"
       },
       {
        "id": "3c579f3b-2c67-575a-acc3-f067816d4c38",
        "sortOrder": 2,
        "weightKg": 90.0,
-       "reps": 3,
+       "pin": null,
+       "reps": 4,
        "completedAt": "2026-08-06T10:31:17.000Z"
       }
      ]
@@ -3129,13 +3620,15 @@
        "id": "3804db28-5bc0-5b6a-92b5-7dc5b86133b7",
        "sortOrder": 0,
        "weightKg": 80.0,
-       "reps": 7,
+       "pin": null,
+       "reps": 8,
        "completedAt": "2026-08-06T10:41:43.000Z"
       },
       {
        "id": "cbf10b35-e4cf-5d98-a9f5-f62bf3d73cbb",
        "sortOrder": 1,
        "weightKg": 80.0,
+       "pin": null,
        "reps": 6,
        "completedAt": "2026-08-06T10:52:09.000Z"
       }
@@ -3150,6 +3643,7 @@
        "id": "308976d8-346b-5a6f-bf8d-f051a53fc9fc",
        "sortOrder": 0,
        "weightKg": 140.0,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-08-06T11:02:34.000Z"
       },
@@ -3157,6 +3651,7 @@
        "id": "b37a8c4c-1b0a-5ec8-bf71-24fdaba950ca",
        "sortOrder": 1,
        "weightKg": 140.0,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-08-06T11:13:00.000Z"
       }
@@ -3180,7 +3675,8 @@
        "id": "f6610e8a-35cd-5b15-9f3d-6ab8d9e08dba",
        "sortOrder": 0,
        "weightKg": 20.0,
-       "reps": 10,
+       "pin": null,
+       "reps": 9,
        "completedAt": "2026-08-03T10:13:17.000Z"
       }
      ]
@@ -3194,14 +3690,16 @@
        "id": "0dacb1b7-929e-5333-a737-34c925a68dae",
        "sortOrder": 0,
        "weightKg": 35.0,
-       "reps": 9,
+       "pin": null,
+       "reps": 10,
        "completedAt": "2026-08-03T10:26:34.000Z"
       },
       {
        "id": "015591f8-f7ed-5f1d-9a46-9294027edcff",
        "sortOrder": 1,
        "weightKg": 35.0,
-       "reps": 8,
+       "pin": null,
+       "reps": 9,
        "completedAt": "2026-08-03T10:39:51.000Z"
       }
      ]
@@ -3215,6 +3713,7 @@
        "id": "85a9355e-55aa-5b24-bb75-c09b3fb6e6fa",
        "sortOrder": 0,
        "weightKg": 25.0,
+       "pin": null,
        "reps": 10,
        "completedAt": "2026-08-03T10:53:09.000Z"
       },
@@ -3222,6 +3721,7 @@
        "id": "7e2ad294-2e15-5bc5-9219-d24956d532d7",
        "sortOrder": 1,
        "weightKg": 25.0,
+       "pin": null,
        "reps": 9,
        "completedAt": "2026-08-03T11:06:26.000Z"
       }
@@ -3236,6 +3736,7 @@
        "id": "ce0ac745-b704-5f62-96ad-19dc71762c38",
        "sortOrder": 0,
        "weightKg": 10.0,
+       "pin": null,
        "reps": 11,
        "completedAt": "2026-08-03T11:19:43.000Z"
       }
@@ -3250,6 +3751,7 @@
        "id": "6bd37492-4322-57ae-bc49-211a145af3d7",
        "sortOrder": 0,
        "weightKg": 7.5,
+       "pin": null,
        "reps": 14,
        "completedAt": "2026-08-03T11:33:00.000Z"
       }
@@ -3262,7 +3764,7 @@
   {
    "id": "60b9a3ee-1a1f-5916-a49a-ebf51d7eeb24",
    "date": "2026-08-03",
-   "weightKg": 82.3
+   "weightKg": 81.9
   },
   {
    "id": "bd65ebc9-408d-5c4f-850a-a9e2cfbd213c",
@@ -3272,37 +3774,37 @@
   {
    "id": "10de0bc0-a621-5349-a3bd-3facd2d163e5",
    "date": "2026-08-10",
-   "weightKg": 81.8
+   "weightKg": 81.7
   },
   {
    "id": "ceecf891-6e32-5a9e-8e38-8c8b20cc6ffa",
    "date": "2026-08-14",
-   "weightKg": 81.6
+   "weightKg": 81.5
   },
   {
    "id": "ce8ef819-5ab5-543c-935e-68a17a3d8cac",
    "date": "2026-08-18",
-   "weightKg": 81.4
+   "weightKg": 81.3
   },
   {
    "id": "00121b53-e035-50eb-92d1-df55bd219525",
    "date": "2026-08-22",
-   "weightKg": 81.2
+   "weightKg": 81.7
   },
   {
    "id": "fca96b98-f0f2-569d-938f-8abf5f9f2547",
    "date": "2026-08-26",
-   "weightKg": 81.2
+   "weightKg": 81.5
   },
   {
    "id": "042ddb4d-f744-5b81-966a-481207a6483d",
    "date": "2026-08-30",
-   "weightKg": 81.0
+   "weightKg": 81.4
   },
   {
    "id": "c41613dd-f35a-57c1-b6b0-2eac5cba18b3",
    "date": "2026-09-03",
-   "weightKg": 80.9
+   "weightKg": 81.4
   },
   {
    "id": "76734eab-f88a-5e2d-8d25-d564dad6c7c4",
@@ -3312,47 +3814,47 @@
   {
    "id": "83d2efc3-3169-5a07-9367-e500d808d192",
    "date": "2026-09-11",
-   "weightKg": 81.0
+   "weightKg": 81.1
   },
   {
    "id": "060207a2-0062-5725-9332-05ae1e5cb32f",
    "date": "2026-09-15",
-   "weightKg": 80.9
+   "weightKg": 80.8
   },
   {
    "id": "b3fef635-5cab-57e8-a3a5-ae4d0656364a",
    "date": "2026-09-19",
-   "weightKg": 80.9
+   "weightKg": 80.5
   },
   {
    "id": "b1cc5303-d667-5630-927e-2a8e56007dba",
    "date": "2026-09-23",
-   "weightKg": 80.7
+   "weightKg": 80.8
   },
   {
    "id": "aa931255-7c65-5ec3-a99a-dd40f350a002",
    "date": "2026-09-27",
-   "weightKg": 80.6
+   "weightKg": 80.4
   },
   {
    "id": "24b0177c-f69b-5725-8c40-23cec4fec958",
    "date": "2026-10-01",
-   "weightKg": 80.3
+   "weightKg": 80.5
   },
   {
    "id": "f4b3abea-dc0e-538f-875b-28dd5e8ac2cb",
    "date": "2026-10-05",
-   "weightKg": 80.1
+   "weightKg": 80.4
   },
   {
    "id": "dcb743aa-391b-5a00-9109-52c95c123eef",
    "date": "2026-10-09",
-   "weightKg": 80.3
+   "weightKg": 80.4
   },
   {
    "id": "09f8ad5a-ac65-5e47-8d8f-b0f968b70683",
    "date": "2026-10-13",
-   "weightKg": 79.9
+   "weightKg": 79.7
   },
   {
    "id": "9f88e3c0-9d82-5305-bbfb-e656841b7a83",
@@ -3362,17 +3864,17 @@
   {
    "id": "45dcfbf9-20ce-57f4-9c1e-3cfa8d509e2e",
    "date": "2026-10-21",
-   "weightKg": 80.0
+   "weightKg": 79.9
   },
   {
    "id": "e9f194f3-6254-5db9-9ca9-0cd99b4545ab",
    "date": "2026-10-25",
-   "weightKg": 79.9
+   "weightKg": 79.7
   },
   {
    "id": "91a3d848-fca0-50fe-a5e7-8a361ecb6481",
    "date": "2026-10-29",
-   "weightKg": 79.3
+   "weightKg": 79.6
   }
  ],
  "settings": {}

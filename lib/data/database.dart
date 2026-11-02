@@ -1,6 +1,7 @@
 import 'package:drift/drift.dart';
 import 'package:drift_flutter/drift_flutter.dart';
 
+import '../core/format.dart';
 import 'seed_exercises.dart';
 import 'tables.dart';
 
@@ -8,6 +9,7 @@ part 'database.g.dart';
 
 @DriftDatabase(
   tables: [
+    Gyms,
     Exercises,
     Routines,
     RoutineExercises,
@@ -23,7 +25,7 @@ class AppDatabase extends _$AppDatabase {
     : super(executor ?? driftDatabase(name: 'hakwat'));
 
   @override
-  int get schemaVersion => 1;
+  int get schemaVersion => 2;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -54,6 +56,7 @@ class AppDatabase extends _$AppDatabase {
               id: exerciseIdFor(name),
               name: name,
               category: entry.key,
+              isMachine: Value(seedMachineExercises.contains(name)),
             ),
       ]);
     });
@@ -71,6 +74,7 @@ class AppDatabase extends _$AppDatabase {
       await delete(bodyweightEntries).go();
       await delete(settings).go();
       await delete(exercises).go();
+      await delete(gyms).go();
     });
   }
 

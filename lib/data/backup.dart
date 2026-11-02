@@ -1,9 +1,11 @@
 import 'dart:convert';
 
+import '../core/format.dart';
 import 'database.dart';
+import 'seed_exercises.dart';
 
 /// The format every export writes.
-const currentSchemaVersion = 1;
+const currentSchemaVersion = 2;
 
 const _appId = 'hakwat';
 
@@ -23,6 +25,7 @@ Future<Map<String, dynamic>> buildExport(
   AppDatabase db, {
   DateTime? now,
 }) async {
+  final gyms = await db.select(db.gyms).get();
   final exercises = await db.select(db.exercises).get();
   final routines = await db.select(db.routines).get();
   final routineExercises = await db.select(db.routineExercises).get();
@@ -49,6 +52,9 @@ Future<Map<String, dynamic>> buildExport(
     'app': _appId,
     'schemaVersion': currentSchemaVersion,
     'exportedAt': _time(now ?? DateTime.now()),
+    'gyms': [
+      for (final g in gyms) {'id': g.id, 'name': g.name},
+    ],
     'exercises': [
       for (final e in exercises)
         {
@@ -56,6 +62,9 @@ Future<Map<String, dynamic>> buildExport(
           'name': e.name,
           'category': e.category,
           'isCustom': e.isCustom,
+          'isMachine': e.isMachine,
+          'gymId': e.gymId,
+          'weightMode': e.weightMode?.name,
           'archivedAt': e.archivedAt == null ? null : _time(e.archivedAt!),
         },
     ],
@@ -66,7 +75,8 @@ Future<Map<String, dynamic>> buildExport(
           'name': r.name,
           'sortOrder': r.sortOrder,
           'exercises': [
-            for (final item in itemsByRoutine[r.id] ?? const <RoutineExercise>[])
+            for (final item
+                in itemsByRoutine[r.id] ?? const <RoutineExercise>[])
               {
                 'id': item.id,
                 'exerciseId': item.exerciseId,
@@ -92,11 +102,13 @@ Future<Map<String, dynamic>> buildExport(
                 'exerciseId': item.exerciseId,
                 'sortOrder': item.sortOrder,
                 'sets': [
-                  for (final s in setsByExercise[item.id] ?? const <WorkoutSet>[])
+                  for (final s
+                      in setsByExercise[item.id] ?? const <WorkoutSet>[])
                     {
                       'id': s.id,
                       'sortOrder': s.sortOrder,
                       'weightKg': s.weightKg,
+                      'pin': s.pin,
                       'reps': s.reps,
                       'completedAt': s.completedAt == null
                           ? null
@@ -116,14 +128,13 @@ Future<Map<String, dynamic>> buildExport(
 }
 
 Future<String> buildExportJson(AppDatabase db, {DateTime? now}) async =>
-    const JsonEncoder.withIndent(
-      ' ',
-    ).convert(await buildExport(db, now: now));
+    const JsonEncoder.withIndent(' ').convert(await buildExport(db, now: now));
 
 /// A fully checked export, ready to write. Nothing touches the database until
 /// parsing has succeeded, so a bad file leaves existing data alone.
 class ParsedBackup {
   ParsedBackup({
+    required this.gyms,
     required this.exercises,
     required this.routines,
     required this.routineExercises,
@@ -135,6 +146,7 @@ class ParsedBackup {
     required this.exportedAt,
   });
 
+  final List<Gym> gyms;
   final List<Exercise> exercises;
   final List<Routine> routines;
   final List<RoutineExercise> routineExercises;
@@ -184,6 +196,17 @@ List<Map<String, dynamic>> _list(
 /// Brings an older export up to [currentSchemaVersion]. Each format change adds
 /// a step here, so newer app versions can still read old files.
 Map<String, dynamic> _upgrade(Map<String, dynamic> root, int fromVersion) {
+  if (fromVersion < 2) {
+    // Version 1 had no gyms, machines or per-exercise units.
+    root['gyms'] ??= <dynamic>[];
+    final exercises = root['exercises'];
+    if (exercises is List) {
+      for (final e in exercises.whereType<Map<String, dynamic>>()) {
+        e['isMachine'] =
+            e['isCustom'] == false && seedMachineExercises.contains(e['name']);
+      }
+    }
+  }
   return root;
 }
 
@@ -204,7 +227,9 @@ ParsedBackup parseBackup(String source) {
     _bad('This file has no valid schemaVersion.');
   }
   if (version > currentSchemaVersion) {
-    _bad('This file comes from a newer version of hakwat. Update the app first.');
+    _bad(
+      'This file comes from a newer version of hakwat. Update the app first.',
+    );
   }
   final root = _upgrade(decoded, version);
 
@@ -215,15 +240,41 @@ ParsedBackup parseBackup(String source) {
     return id;
   }
 
+  final gyms = <Gym>[];
+  final gymNames = <String>{};
+  for (final g in _list(root, 'gyms', 'The file')) {
+    const where = 'A gym';
+    final name = _field<String>(g, 'name', where);
+    if (!gymNames.add(name)) _bad('This file has two gyms named $name.');
+    gyms.add(Gym(id: uniqueId(g, where), name: name));
+  }
+  final gymIds = {for (final g in gyms) g.id};
+
   final exercises = <Exercise>[];
   for (final e in _list(root, 'exercises', 'The file')) {
     const where = 'An exercise';
+    final isMachine = _field<bool>(e, 'isMachine', where);
+    final gymId = e['gymId'];
+    if (gymId != null && (gymId is! String || !gymIds.contains(gymId))) {
+      _bad('$where refers to an unknown gym.');
+    }
+    final modeName = e['weightMode'];
+    final mode = WeightMode.values.where((m) => m.name == modeName).firstOrNull;
+    if (modeName != null && mode == null) {
+      _bad('$where has an invalid weight mode.');
+    }
+    if (!isMachine && (gymId != null || mode == WeightMode.pin)) {
+      _bad('$where is a free weight with a gym or a pin number.');
+    }
     exercises.add(
       Exercise(
         id: uniqueId(e, where),
         name: _field<String>(e, 'name', where),
         category: _field<String>(e, 'category', where),
         isCustom: _field<bool>(e, 'isCustom', where),
+        isMachine: isMachine,
+        gymId: gymId as String?,
+        weightMode: mode,
         archivedAt: _optionalTime(e, 'archivedAt', where),
       ),
     );
@@ -231,7 +282,9 @@ ParsedBackup parseBackup(String source) {
   final exerciseIds = {for (final e in exercises) e.id};
   String exerciseRef(Map<String, dynamic> map, String where) {
     final id = _field<String>(map, 'exerciseId', where);
-    if (!exerciseIds.contains(id)) _bad('$where refers to an unknown exercise.');
+    if (!exerciseIds.contains(id)) {
+      _bad('$where refers to an unknown exercise.');
+    }
     return id;
   }
 
@@ -297,12 +350,15 @@ ParsedBackup parseBackup(String source) {
         const setWhere = 'A set';
         final reps = s['reps'];
         if (reps != null && reps is! int) _bad('$setWhere has invalid reps.');
+        final pin = s['pin'];
+        if (pin != null && pin is! int) _bad('$setWhere has an invalid pin.');
         sets.add(
           WorkoutSet(
             id: uniqueId(s, setWhere),
             workoutExerciseId: itemId,
             sortOrder: _field<int>(s, 'sortOrder', setWhere),
             weightKg: _optionalDouble(s, 'weightKg', setWhere),
+            pin: pin as int?,
             reps: reps as int?,
             completedAt: _optionalTime(s, 'completedAt', setWhere),
           ),
@@ -333,7 +389,11 @@ ParsedBackup parseBackup(String source) {
     );
   }
 
-  final settingsMap = _field<Map<String, dynamic>>(root, 'settings', 'The file');
+  final settingsMap = _field<Map<String, dynamic>>(
+    root,
+    'settings',
+    'The file',
+  );
   final settings = <SettingRow>[
     for (final entry in settingsMap.entries)
       if (entry.value is String)
@@ -343,6 +403,7 @@ ParsedBackup parseBackup(String source) {
   ];
 
   return ParsedBackup(
+    gyms: gyms,
     exercises: exercises,
     routines: routines,
     routineExercises: routineExercises,
@@ -363,6 +424,7 @@ Future<void> replaceAllData(AppDatabase db, ParsedBackup data) {
   return db.transaction(() async {
     await db.deleteEverything();
     await db.batch((b) {
+      b.insertAll(db.gyms, data.gyms);
       b.insertAll(db.exercises, data.exercises);
       b.insertAll(db.routines, data.routines);
       b.insertAll(db.routineExercises, data.routineExercises);
