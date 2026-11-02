@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../app/providers.dart';
 import '../../app/theme.dart';
+import '../../data/database.dart';
 import '../../data/seed_exercises.dart';
 import 'exercise_form.dart';
 
@@ -21,6 +22,7 @@ class _ExercisePickerScreenState extends ConsumerState<ExercisePickerScreen> {
   final _selected = <String>[];
   String _query = '';
   String? _category;
+  String? _gymId;
 
   void _toggle(String id) {
     setState(() {
@@ -40,9 +42,17 @@ class _ExercisePickerScreenState extends ConsumerState<ExercisePickerScreen> {
       for (final exercise in ref.watch(exercisesProvider).value ?? const [])
         if (exercise.archivedAt == null &&
             (_category == null || exercise.category == _category) &&
+            // A gym's view keeps free weights and generic exercises, since
+            // those can be done anywhere.
+            (_gymId == null ||
+                exercise.gymId == null ||
+                exercise.gymId == _gymId) &&
             exercise.name.toLowerCase().contains(query))
           exercise,
     ];
+
+    final gyms = ref.watch(gymsProvider).value ?? const <Gym>[];
+    final gymNames = ref.watch(gymNamesProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -87,6 +97,26 @@ class _ExercisePickerScreenState extends ConsumerState<ExercisePickerScreen> {
               ],
             ),
           ),
+          if (gyms.isNotEmpty)
+            SizedBox(
+              height: 48,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                children: [
+                  for (final gym in gyms)
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8),
+                      child: FilterChip(
+                        label: Text(gym.name),
+                        selected: _gymId == gym.id,
+                        onSelected: (selected) =>
+                            setState(() => _gymId = selected ? gym.id : null),
+                      ),
+                    ),
+                ],
+              ),
+            ),
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.only(bottom: 16),
@@ -96,7 +126,9 @@ class _ExercisePickerScreenState extends ConsumerState<ExercisePickerScreen> {
                 return CheckboxListTile(
                   value: _selected.contains(exercise.id),
                   title: Text(exercise.name),
-                  subtitle: Text(exercise.category),
+                  subtitle: Text(
+                    [exercise.category, ?gymNames[exercise.gymId]].join(' · '),
+                  ),
                   onChanged: (_) => _toggle(exercise.id),
                 );
               },

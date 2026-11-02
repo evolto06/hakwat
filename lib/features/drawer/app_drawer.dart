@@ -51,6 +51,11 @@ class AppDrawer extends ConsumerWidget {
               onTap: () => _open(context, '/exercises'),
             ),
             ListTile(
+              leading: const Icon(Icons.location_on_outlined),
+              title: const Text('Gyms'),
+              onTap: () => _open(context, '/gyms'),
+            ),
+            ListTile(
               leading: const Icon(Icons.monitor_weight_outlined),
               title: const Text('Bodyweight'),
               onTap: () => _open(context, '/bodyweight'),
@@ -77,18 +82,14 @@ class AppDrawer extends ConsumerWidget {
               ListTile(
                 leading: const Icon(Icons.dataset_outlined),
                 title: const Text('Load mock data'),
-                onTap: () => _devAction(
-                  context,
-                  ref,
-                  'Mock data loaded',
-                  () async {
-                    final source = await rootBundle.loadString(mockDataAsset);
-                    await replaceAllData(
-                      ref.read(databaseProvider),
-                      parseBackup(source),
-                    );
-                  },
-                ),
+                onTap: () =>
+                    _devAction(context, ref, 'Mock data loaded', () async {
+                      final source = await rootBundle.loadString(mockDataAsset);
+                      await replaceAllData(
+                        ref.read(databaseProvider),
+                        parseBackup(source),
+                      );
+                    }),
               ),
               ListTile(
                 leading: const Icon(Icons.delete_sweep_outlined),

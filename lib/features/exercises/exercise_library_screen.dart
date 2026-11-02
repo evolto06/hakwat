@@ -58,7 +58,10 @@ class _ExerciseLibraryScreenState extends ConsumerState<ExerciseLibraryScreen> {
           : ListView(
               padding: const EdgeInsets.fromLTRB(16, 0, 16, listBottomPadding),
               children: [
-                for (final category in {...categories, ...visible.map((e) => e.category)})
+                for (final category in {
+                  ...categories,
+                  ...visible.map((e) => e.category),
+                })
                   ..._section(category, visible),
               ],
             ),
@@ -84,10 +87,22 @@ class _ExerciseLibraryScreenState extends ConsumerState<ExerciseLibraryScreen> {
           index: index,
           count: items.length,
           title: Text(exercise.name),
+          subtitle: _details(exercise),
           trailing: _Menu(exercise: exercise),
           onTap: () => showExerciseForm(context, existing: exercise),
         ),
     ];
+  }
+
+  /// The gym and logging mode, left out where there's nothing to say.
+  Widget? _details(Exercise exercise) {
+    final gymName = ref.watch(gymNamesProvider)[exercise.gymId];
+    final parts = [
+      ?gymName,
+      if (gymName == null && exercise.isMachine) 'Machine',
+      ?exercise.weightMode?.label,
+    ];
+    return parts.isEmpty ? null : Text(parts.join(' · '));
   }
 }
 
@@ -107,9 +122,15 @@ class _Menu extends ConsumerWidget {
           onTap: () => showExerciseForm(context, existing: exercise),
           child: const Text('Edit'),
         ),
+        if (exercise.isMachine && exercise.gymId == null)
+          PopupMenuItem(
+            onTap: () => showExerciseForm(context, template: exercise),
+            child: const Text('Add to a gym'),
+          ),
         PopupMenuItem(
-          onTap: () =>
-              archived ? repo.unarchive(exercise.id) : repo.archive(exercise.id),
+          onTap: () => archived
+              ? repo.unarchive(exercise.id)
+              : repo.archive(exercise.id),
           child: Text(archived ? 'Restore' : 'Archive'),
         ),
       ],
