@@ -99,6 +99,37 @@ class GroupedTile extends StatelessWidget {
   }
 }
 
+/// Says that a number includes the rough weight given to pin sets.
+class PinEstimateNote extends StatelessWidget {
+  const PinEstimateNote({super.key, required this.incrementLb});
+  final int incrementLb;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Icon(
+          Icons.info_outline,
+          size: 16,
+          color: AppColors.textSecondary,
+        ),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Text(
+            'Pin sets are estimated at $incrementLb lb per pin. Actual stack '
+            'weights vary by machine, so volume is approximate.',
+            style: const TextStyle(
+              fontSize: 12,
+              color: AppColors.textSecondary,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
 class SectionHeader extends StatelessWidget {
   const SectionHeader(this.text, {super.key});
   final String text;
@@ -198,11 +229,8 @@ Future<String?> promptForText(
 }) {
   return showDialog<String>(
     context: context,
-    builder: (context) => _TextPrompt(
-      title: title,
-      initial: initial,
-      action: action,
-    ),
+    builder: (context) =>
+        _TextPrompt(title: title, initial: initial, action: action),
   );
 }
 
