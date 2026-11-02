@@ -1,12 +1,34 @@
 import 'package:drift/drift.dart';
 
+import '../core/format.dart';
+
 /// Every table uses a UUID primary key and all timestamps are stored in UTC.
+
+class Gyms extends Table {
+  TextColumn get id => text()();
+  TextColumn get name => text().unique()();
+
+  @override
+  Set<Column> get primaryKey => {id};
+}
 
 class Exercises extends Table {
   TextColumn get id => text()();
   TextColumn get name => text()();
   TextColumn get category => text()();
   BoolColumn get isCustom => boolean().withDefault(const Constant(false))();
+
+  /// Machines differ between gyms. Free weights are the same everywhere, so
+  /// they never have a gym or a pin number.
+  BoolColumn get isMachine => boolean().withDefault(const Constant(false))();
+
+  /// The gym that owns this machine. Empty means a generic exercise. Names only
+  /// have to be unique within a gym, and each gym's machine keeps its own
+  /// history.
+  TextColumn get gymId => text().nullable().references(Gyms, #id)();
+
+  /// Empty means the exercise follows the app's weight unit setting.
+  TextColumn get weightMode => textEnum<WeightMode>().nullable()();
 
   /// Archived rather than deleted, so history survives.
   DateTimeColumn get archivedAt => dateTime().nullable()();
@@ -81,6 +103,10 @@ class WorkoutSets extends Table {
       text().references(WorkoutExercises, #id, onDelete: KeyAction.cascade)();
   IntColumn get sortOrder => integer()();
   RealColumn get weightKg => real().nullable()();
+
+  /// The pin position on an unlabeled machine. A set holds this or a weight,
+  /// and a pin never counts towards volume.
+  IntColumn get pin => integer().nullable()();
   IntColumn get reps => integer().nullable()();
 
   /// Empty means the set was planned but not done yet.

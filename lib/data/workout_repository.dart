@@ -220,12 +220,8 @@ class WorkoutRepository {
     return result;
   }
 
-  Future<String> startEmpty({DateTime? now}) => _start(
-    name: 'Workout',
-    routineId: null,
-    now: now,
-    items: const [],
-  );
+  Future<String> startEmpty({DateTime? now}) =>
+      _start(name: 'Workout', routineId: null, now: now, items: const []);
 
   Future<String> startFromRoutine(String routineId, {DateTime? now}) async {
     final routine = await (db.select(
@@ -364,6 +360,7 @@ class WorkoutRepository {
               workoutExerciseId: workoutExerciseId,
               sortOrder: last == null ? 0 : last.sortOrder + 1,
               weightKg: Value(last?.weightKg),
+              pin: Value(last?.pin),
               reps: Value(last?.reps),
             ),
           );
@@ -378,19 +375,27 @@ class WorkoutRepository {
         WorkoutSetsCompanion(weightKg: Value(weightKg)),
       );
 
+  Future<void> updateSetPin(String setId, int? pin) =>
+      (db.update(db.workoutSets)..where((s) => s.id.equals(setId))).write(
+        WorkoutSetsCompanion(pin: Value(pin)),
+      );
+
   Future<void> updateSetReps(String setId, int? reps) =>
       (db.update(db.workoutSets)..where((s) => s.id.equals(setId))).write(
         WorkoutSetsCompanion(reps: Value(reps)),
       );
 
+  /// Saves the set as done with either a weight or a pin, clearing the other.
   Future<void> completeSet(
     String setId, {
-    required double weightKg,
+    double? weightKg,
+    int? pin,
     required int reps,
     required DateTime at,
   }) => (db.update(db.workoutSets)..where((s) => s.id.equals(setId))).write(
     WorkoutSetsCompanion(
-      weightKg: Value(weightKg),
+      weightKg: Value(pin == null ? weightKg : null),
+      pin: Value(pin),
       reps: Value(reps),
       completedAt: Value(at.toUtc()),
     ),
@@ -419,7 +424,8 @@ class WorkoutRepository {
         )..where((s) => s.workoutExerciseId.equals(link.id))).get();
         final done = sets.where((s) => s.completedAt != null);
         for (final set in done) {
-          if (lastCompleted == null || set.completedAt!.isAfter(lastCompleted)) {
+          if (lastCompleted == null ||
+              set.completedAt!.isAfter(lastCompleted)) {
             lastCompleted = set.completedAt;
           }
         }
@@ -430,7 +436,8 @@ class WorkoutRepository {
         } else {
           await (db.delete(db.workoutSets)..where(
                 (s) =>
-                    s.workoutExerciseId.equals(link.id) & s.completedAt.isNull(),
+                    s.workoutExerciseId.equals(link.id) &
+                    s.completedAt.isNull(),
               ))
               .go();
         }

@@ -21,12 +21,20 @@ class SetFact {
     required this.category,
     required this.weightKg,
     required this.reps,
+    this.pin,
+    this.weightMode,
   });
   final DateTime startedAt;
+
+  /// Includes the gym for a gym's machine, so two gyms' Chest Flys stay apart.
   final String exerciseName;
   final String category;
+
+  /// For a set logged by pin, this is the estimate from [pinWeightKg].
   final double weightKg;
   final int reps;
+  final int? pin;
+  final WeightMode? weightMode;
 
   double get volumeKg => weightKg * reps;
 }
@@ -48,43 +56,58 @@ class StatsRepository {
 
   /// Only finished workouts count, so an open workout never affects a stat.
   Stream<List<WorkoutFact>> watchWorkouts() =>
-      (db.select(db.workouts)..where((w) => w.finishedAt.isNotNull()))
-          .watch()
-          .map(
-            (rows) => [
-              for (final w in rows)
-                WorkoutFact(startedAt: w.startedAt, finishedAt: w.finishedAt!),
-            ],
-          );
+      (db.select(
+        db.workouts,
+      )..where((w) => w.finishedAt.isNotNull())).watch().map(
+        (rows) => [
+          for (final w in rows)
+            WorkoutFact(startedAt: w.startedAt, finishedAt: w.finishedAt!),
+        ],
+      );
 
   /// Only completed sets in finished workouts count.
-  Stream<List<SetFact>> watchSets() {
-    final query = db.select(db.workoutSets).join([
-      innerJoin(
-        db.workoutExercises,
-        db.workoutExercises.id.equalsExp(db.workoutSets.workoutExerciseId),
-      ),
-      innerJoin(
-        db.workouts,
-        db.workouts.id.equalsExp(db.workoutExercises.workoutId),
-      ),
-      innerJoin(
-        db.exercises,
-        db.exercises.id.equalsExp(db.workoutExercises.exerciseId),
-      ),
-    ])..where(
-      db.workouts.finishedAt.isNotNull() &
-          db.workoutSets.completedAt.isNotNull(),
-    );
+  Stream<List<SetFact>> watchSets({
+    int pinIncrementLb = defaultPinIncrementLb,
+  }) {
+    final query =
+        db.select(db.workoutSets).join([
+          innerJoin(
+            db.workoutExercises,
+            db.workoutExercises.id.equalsExp(db.workoutSets.workoutExerciseId),
+          ),
+          innerJoin(
+            db.workouts,
+            db.workouts.id.equalsExp(db.workoutExercises.workoutId),
+          ),
+          innerJoin(
+            db.exercises,
+            db.exercises.id.equalsExp(db.workoutExercises.exerciseId),
+          ),
+          leftOuterJoin(db.gyms, db.gyms.id.equalsExp(db.exercises.gymId)),
+        ])..where(
+          db.workouts.finishedAt.isNotNull() &
+              db.workoutSets.completedAt.isNotNull(),
+        );
     return query.watch().map(
       (rows) => [
         for (final row in rows)
           SetFact(
             startedAt: row.readTable(db.workouts).startedAt,
-            exerciseName: row.readTable(db.exercises).name,
+            exerciseName: exerciseLabel(
+              row.readTable(db.exercises).name,
+              row.readTableOrNull(db.gyms)?.name,
+            ),
             category: row.readTable(db.exercises).category,
-            weightKg: row.readTable(db.workoutSets).weightKg ?? 0,
+            weightKg: switch (row.readTable(db.workoutSets)) {
+              WorkoutSet(pin: final int pin) => pinWeightKg(
+                pin,
+                pinIncrementLb,
+              ),
+              final set => set.weightKg ?? 0,
+            },
             reps: row.readTable(db.workoutSets).reps ?? 0,
+            pin: row.readTable(db.workoutSets).pin,
+            weightMode: row.readTable(db.exercises).weightMode,
           ),
       ],
     );
@@ -302,10 +325,18 @@ enum CategoryMetric {
 }
 
 class BestSet {
-  const BestSet(this.exerciseName, this.weightKg, this.reps);
+  const BestSet(
+    this.exerciseName,
+    this.weightKg,
+    this.reps, {
+    this.pin,
+    this.weightMode,
+  });
   final String exerciseName;
   final double weightKg;
   final int reps;
+  final int? pin;
+  final WeightMode? weightMode;
 }
 
 class CategoryStats {
@@ -316,8 +347,9 @@ class CategoryStats {
 
   int get setCount => sets.length;
 
-  /// The best set per exercise: the heaviest, and the most reps at that
-  /// weight. Sorted by exercise name.
+  /// The best set per exercise: the heaviest or highest pin, and the most reps
+  /// at that load. Pins compare by their estimated weight, which only meets a
+  /// real weight if an exercise changed how it's logged. Sorted by name.
   List<BestSet> get bestSets {
     final best = <String, SetFact>{};
     for (final set in sets) {
@@ -325,13 +357,21 @@ class CategoryStats {
       final better =
           current == null ||
           set.weightKg > current.weightKg ||
-          (set.weightKg == current.weightKg && set.reps > current.reps);
+          (set.weightKg == current.weightKg &&
+              ((set.pin ?? 0) > (current.pin ?? 0) ||
+                  (set.pin == current.pin && set.reps > current.reps)));
       if (better) best[set.exerciseName] = set;
     }
     final names = best.keys.toList()..sort();
     return [
       for (final name in names)
-        BestSet(name, best[name]!.weightKg, best[name]!.reps),
+        BestSet(
+          name,
+          best[name]!.weightKg,
+          best[name]!.reps,
+          pin: best[name]!.pin,
+          weightMode: best[name]!.weightMode,
+        ),
     ];
   }
 

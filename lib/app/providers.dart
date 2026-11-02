@@ -21,6 +21,9 @@ final routineRepositoryProvider = Provider(
 final exerciseRepositoryProvider = Provider(
   (ref) => ExerciseRepository(ref.watch(databaseProvider)),
 );
+final gymRepositoryProvider = Provider(
+  (ref) => GymRepository(ref.watch(databaseProvider)),
+);
 final bodyweightRepositoryProvider = Provider(
   (ref) => BodyweightRepository(ref.watch(databaseProvider)),
 );
@@ -61,6 +64,17 @@ final routineDetailProvider = StreamProvider.autoDispose
 final exercisesProvider = StreamProvider<List<Exercise>>(
   (ref) => ref.watch(exerciseRepositoryProvider).watchAll(),
 );
+final gymsProvider = StreamProvider<List<Gym>>(
+  (ref) => ref.watch(gymRepositoryProvider).watchAll(),
+);
+
+/// Gym names by ID, for showing which gym a machine belongs to.
+final gymNamesProvider = Provider<Map<String, String>>(
+  (ref) => {
+    for (final gym in ref.watch(gymsProvider).value ?? const <Gym>[])
+      gym.id: gym.name,
+  },
+);
 final bodyweightProvider = StreamProvider<List<BodyweightEntry>>(
   (ref) => ref.watch(bodyweightRepositoryProvider).watchAll(),
 );
@@ -78,7 +92,13 @@ final _statWorkoutsProvider = StreamProvider<List<WorkoutFact>>(
   (ref) => ref.watch(statsRepositoryProvider).watchWorkouts(),
 );
 final _statSetsProvider = StreamProvider<List<SetFact>>(
-  (ref) => ref.watch(statsRepositoryProvider).watchSets(),
+  (ref) => ref
+      .watch(statsRepositoryProvider)
+      .watchSets(
+        pinIncrementLb: ref.watch(
+          settingsProvider.select((s) => s.pinIncrementLb),
+        ),
+      ),
 );
 
 final statsDataProvider = Provider<StatsData>(
