@@ -2,6 +2,12 @@
 
 An offline workout logger for Android, built with Flutter. Data stays on the device in SQLite and can be exported to a JSON file.
 
+#Features:
+- - Gym specific workouts and exercises
+  - Full export capability
+  - Rest timers
+    
+
 ## Commands
 
 ```sh
